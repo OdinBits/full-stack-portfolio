@@ -1,58 +1,85 @@
 import assets from "../../shared/constants/images";
+import { globalStyles } from "../../AppGlobalStyles";
 
 const headerStyle = {
     headerContainer: {
         backgroundImage: `url(${assets.bgIMG})`,
         backgroundSize: 'cover',
-        marginTop: '5px',
-        border:'solid 2px blue'
+        border:'solid 2px blue',
+        zIndex:-2,
+        ...globalStyles.centeredStyles
     },
     headerContent: {
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
         border:'solid 2px green',
-        width:{xs:'100%',md:'80%'}
+        margin:'10px',
+        width:{md:'80%',xs:'100%'}
     },
     introContainer: {
-        width: '20%',
-        flexDirection:'column',
-        border:'solid 2px green'
+        display:{xs:'block',md:'flex'},
+        width:{xs:'50%',md:'20%'},
+        flexDirection: 'column',
+        border: '2px solid blue',
+        justifyContent:'center',
+        margin:{xs:'10px',md:'0px'},
+        wrap:'flex-wrap'
     },
     introText: {
-        margin: '20px',
         borderRadius: '15px',
-        DivShadow: '0 7px 18px 0 rgba(2,118,179,0.13)',
+        boxShadow: '0 7px 18px 0 rgba(2,118,179,0.13)',
         border:'solid 2px green',
-        width:'200px'
+        width:'100%',
+        ...globalStyles.centeredStyles
+    },
+    intro:{
+        marginLeft:20
     },
     introBox: {
-        margin: '20px',
-        padding: '5px',
+        marginTop:'10px',
         borderRadius: '15px',
-        DivShadow: '0 7px 18px 0 rgba(2,118,179,0.13)',
-        border:'solid 2px purple'
+        boxShadow: '0 7px 18px 0 rgba(2,118,179,0.13)',
+        border:'solid 2px green',
+        minWidth:'fit-content',
+        widht:'fit-content',
+        flexWrap: 'wrap',
+        ...globalStyles.centeredStyles
     },
     introRole: {
         position: 'relative',
-        border:'solid 2px '
+        border:'solid 2px ',
+        width:{xs:'100%',md:'60%'},
+        zIndex:5
+    },
+    introRoleText:{
+        margin: '3px',
+        minWidth:'fit-content',
     },
     portfolioImages: {
-        width: { xs: '90%', zIndex: 1 }
+        width:'100%',
     },
     circleImage: {
         position: 'absolute',
         top: 40,
         left: 0,
         width: '100%',
+        zIndex:-1,
     },
     skillsContainer: {
-        flexdirection: { xs: 'row', md: 'column' }
+        display:'flex',
+        flexDirection: { xs: 'row', md: 'column' },
+        border:'solid green 2px',
+        justifyContent:'center',
+        minWidth:'fit-content',
+        width:{xs:'100%',md:'20%'}
     },
     skillItem: {
         borderRadius: '50%',
         background: 'var(--white-color)',
         DivShadow: '0 0 20px rgba(0,0,0,0.1)',
         margin: '10px',
+        border:'solid green 2px',
+        ...globalStyles.centeredStyles
     },
     skillItemImage: {
         width: '60%',

@@ -10,7 +10,7 @@ function App() {
       <Grid item xs={12} >
         <Navbar />
         <Header />
-        {/* <About /> */}
+        <About />
         <Work />
         <Skills />
         <Testimonial />
