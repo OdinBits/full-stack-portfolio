@@ -68,6 +68,8 @@ const navStyle = {
     },
     container: {
         backgroundColor: 'white',
+        padding: "2px 20px", 
+        boxSizing: "border-box",
     }
 }
 

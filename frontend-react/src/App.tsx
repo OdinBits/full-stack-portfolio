@@ -2,21 +2,19 @@ import React from 'react';
 import { About, Footer, Header, Skills, Testimonial, Work } from './container';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Navbar } from './components';
-import { Grid } from '@mui/material';
+import { Box} from '@mui/material';
 
 function App() {
   return (
-    <Grid container>
-      <Grid item xs={12} >
-        <Navbar />
-        <Header />
-        <About />
-        <Work />
-        <Skills />
-        <Testimonial />
-        <Footer />
-      </Grid>
-    </Grid>
+    <>
+      <Navbar />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonial />
+      <Footer />
+    </>
     // <BrowserRouter>
     //   <Route>
     //   </Route>

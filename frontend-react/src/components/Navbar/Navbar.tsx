@@ -35,7 +35,7 @@ const Navbar = () => {
   };
   return (
     <AppBar position="sticky" >
-      <Container sx={navStyle.container}>
+      <Box sx={navStyle.container}>
         <Toolbar disableGutters >
           <Box component='img' alt='logo' src={assets.logo} sx={navStyle.imgDesktop} />
           <Typography
@@ -174,7 +174,7 @@ const Navbar = () => {
             </Menu>
           </Box>
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar>
   )
 }

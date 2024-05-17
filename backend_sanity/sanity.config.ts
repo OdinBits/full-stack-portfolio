@@ -5,9 +5,9 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'jsm_portfolio',
+  title: 'content-management-portfolio',
 
-  projectId: 'ohtul477',
+  projectId: 'cvk6nwek',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],

@@ -3,16 +3,15 @@ import { globalStyles } from "../../AppGlobalStyles";
 
 const headerStyle = {
     headerContainer: {
+        width:'100%',
         backgroundImage: `url(${assets.bgIMG})`,
         backgroundSize: 'cover',
-        border:'solid 2px blue',
         zIndex:-2,
         ...globalStyles.centeredStyles
     },
     headerContent: {
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
-        border:'solid 2px green',
         margin:'10px',
         width:{md:'80%',xs:'100%'}
     },
@@ -20,7 +19,6 @@ const headerStyle = {
         display:{xs:'block',md:'flex'},
         width:{xs:'50%',md:'20%'},
         flexDirection: 'column',
-        border: '2px solid blue',
         justifyContent:'center',
         margin:{xs:'10px',md:'0px'},
         wrap:'flex-wrap'
@@ -28,7 +26,6 @@ const headerStyle = {
     introText: {
         borderRadius: '15px',
         boxShadow: '0 7px 18px 0 rgba(2,118,179,0.13)',
-        border:'solid 2px green',
         width:'100%',
         ...globalStyles.centeredStyles
     },
@@ -39,7 +36,6 @@ const headerStyle = {
         marginTop:'10px',
         borderRadius: '15px',
         boxShadow: '0 7px 18px 0 rgba(2,118,179,0.13)',
-        border:'solid 2px green',
         minWidth:'fit-content',
         widht:'fit-content',
         flexWrap: 'wrap',
@@ -47,7 +43,6 @@ const headerStyle = {
     },
     introRole: {
         position: 'relative',
-        border:'solid 2px ',
         width:{xs:'100%',md:'60%'},
         zIndex:5
     },
@@ -68,17 +63,15 @@ const headerStyle = {
     skillsContainer: {
         display:'flex',
         flexDirection: { xs: 'row', md: 'column' },
-        border:'solid green 2px',
         justifyContent:'center',
         minWidth:'fit-content',
-        width:{xs:'100%',md:'20%'}
+        width:{xs:'100%',md:'20%'},
     },
     skillItem: {
         borderRadius: '50%',
-        background: 'var(--white-color)',
+        background: 'white',
         DivShadow: '0 0 20px rgba(0,0,0,0.1)',
         margin: '10px',
-        border:'solid green 2px',
         ...globalStyles.centeredStyles
     },
     skillItemImage: {
