@@ -2,8 +2,10 @@ import assets from "../../shared/constants/images";
 import { globalStyles } from "../../AppGlobalStyles";
 
 const headerStyle = {
-    headerContainer: {
-        width:'100%',
+    headerSection: {
+        flexGrow: 1,
+        height: '100%',
+        minHeight:'100vh',
         backgroundImage: `url(${assets.bgIMG})`,
         backgroundSize: 'cover',
         zIndex:-2,
@@ -13,7 +15,7 @@ const headerStyle = {
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
         margin:'10px',
-        width:{md:'80%',xs:'100%'}
+        width:{md:'60%',xs:'100%'},
     },
     introContainer: {
         display:{xs:'block',md:'flex'},
@@ -64,7 +66,6 @@ const headerStyle = {
         display:'flex',
         flexDirection: { xs: 'row', md: 'column' },
         justifyContent:'center',
-        minWidth:'fit-content',
         width:{xs:'100%',md:'20%'},
     },
     skillItem: {

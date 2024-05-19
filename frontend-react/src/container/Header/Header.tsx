@@ -3,10 +3,11 @@ import assets from '../../shared/constants/images';
 import { headerSkills } from '../../shared/types/HeaderSkills';
 import headerStyle from './HeaderStyle';
 import { headerConfig } from '../../shared/config/Header';
+import { AppWrap } from '../../wrapper';
 
 const Header = () => {
     return (
-        <Box id='header-container' sx={headerStyle.headerContainer}>
+        <Box id='header-section' sx={headerStyle.headerSection}>
             {/* Main content container */}
             <Box data-id='header-content' sx={headerStyle.headerContent}>
                 {/* Introduction container */}
@@ -44,4 +45,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default AppWrap({Component:Header,idName:'header-section'});

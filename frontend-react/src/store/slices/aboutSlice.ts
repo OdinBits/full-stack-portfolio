@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { aboutThunk } from "../thunks/aboutThunk";
+import aboutThunk from "../thunks/aboutThunk";
 import { initialAboutThunkState } from "../../shared/types/About";
 
 
