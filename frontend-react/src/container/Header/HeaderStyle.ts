@@ -43,9 +43,13 @@ const headerStyle = {
         flexWrap: 'wrap',
         ...globalStyles.centeredStyles
     },
-    introRole: {
+    portfolioContent:{
+        width:{xs:'90%',md:'60%'},
+        ...globalStyles.centeredStyles
+    },
+    portfolioImage: {
         position: 'relative',
-        width:{xs:'100%',md:'60%'},
+        width:'100%',
         zIndex:5
     },
     introRoleText:{

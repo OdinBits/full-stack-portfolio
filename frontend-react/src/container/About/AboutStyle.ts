@@ -55,8 +55,9 @@ const aboutStyle = {
         alignItems: 'center',
     },
     skillImage: {
-        width: { xs: '100%', md: "200px" },
-        height: { xs: '100%', md: "200px" },
+        minHeight:'150px',
+        width: { xs: '60%', md: "90%" },
+        height: { xs: '100%', md:'150px'},
         borderRadius: "10px",
     },
     skillTitle: {

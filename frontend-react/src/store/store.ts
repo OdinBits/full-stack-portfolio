@@ -3,10 +3,12 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import aboutReducer from './slices/aboutSlice';
 import navigationReducer from './slices/navigationSlice';
+import workReducer from './slices/workSlice';
 
 const rootReducer = combineReducers({
     about : aboutReducer,
     navigation: navigationReducer,
+    work : workReducer
 })
 
 const persistConfig = {

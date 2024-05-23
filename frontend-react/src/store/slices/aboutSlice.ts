@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import aboutThunk from "../thunks/aboutThunk";
-import { initialAboutThunkState } from "../../shared/types/About";
+import { about } from "../../shared/types/About";
 
 
 
 const aboutSlice = createSlice({
     name: 'about',
-    initialState: initialAboutThunkState,
+    initialState: about.initialAboutThunkState,
     reducers:{},
     extraReducers: (builder) => {
         builder

@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from "../../store";
 import { urlFor } from "../../shared/config/client";
 import aboutThunk from "../../store/thunks/aboutThunk";
 import { AppWrap } from "../../wrapper";
+import VividTextBuilder from "../../components/TextBuilder/VividTextBuilder";
 
 const About = () => {
     const dispatch = useAppDispatch();
@@ -17,25 +18,11 @@ const About = () => {
     const { data } = useAppSelector((state) => state.about);
 
     return (
-        <Box id='about-section' sx={aboutStyle.aboutSection}>
+        <Box id='about' sx={aboutStyle.aboutSection}>
             {/* Main content section */}
             <Box data-id='about-content' sx={aboutStyle.aboutContent}>
                 {/* Acceptance container */}
-                <Box data-id='acceptance-container' >
-                    {/* Acceptance message box */}
-                    <Box data-id='acceptance-message' sx={aboutStyle.acceptanceMessage}>
-                        {aboutConfig.aboutIntroText.map((message, index) => (
-                            <Typography
-                                key={message.id}
-                                component="span"
-                                sx={message.isColored ? aboutStyle.acceptanceMsgColor : aboutStyle.acceptanceMessage}
-                            >
-                                {message.text}
-                                {(index === 1 || index === 3) && <br />}
-                            </Typography>
-                        ))}
-                    </Box>
-                </Box>
+                    <VividTextBuilder data={aboutConfig.aboutIntroText} defaultStyle={aboutStyle.acceptanceMessage} highLightStyle={aboutStyle.acceptanceMsgColor}/>
                 {/* Skill Container */}
                 <Grid container sx={aboutStyle.skillContainer}>
                     {data?.map((about:any) => (
@@ -61,4 +48,4 @@ const About = () => {
     );
 };
 
-export default AppWrap({Component: About ,idName:'about-section'})
+export default AppWrap({Component: About ,idName:'about',showCopyright:true})

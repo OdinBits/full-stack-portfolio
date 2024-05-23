@@ -7,7 +7,7 @@ import { AppWrap } from '../../wrapper';
 
 const Header = () => {
     return (
-        <Box id='header-section' sx={headerStyle.headerSection}>
+        <Box id='home' sx={headerStyle.headerSection}>
             {/* Main content container */}
             <Box data-id='header-content' sx={headerStyle.headerContent}>
                 {/* Introduction container */}
@@ -21,16 +21,18 @@ const Header = () => {
                         </Box>
                     </Box>
                     {/* Roles */}
-                    <Box data-id='intro-role' sx={headerStyle.introBox}>
+                    <Box data-id='intro-box' sx={headerStyle.introBox}>
                         {headerConfig.headerText.roles.map((role) => (
                             <Typography key={role.id} sx={headerStyle.introRoleText}>{role.name}</Typography>
                         ))}
                     </Box>
                 </Box>
                 {/* Portfolio images */}
-                <Box data-id='portfolio-images' sx={headerStyle.introRole}>
-                    <Box data-id='profile-image' sx={headerStyle.portfolioImages} component='img' alt='portfolioImg' src={assets.profile} />
-                    <Box data-id='circle-image' sx={headerStyle.circleImage} component='img' alt='portfolioCircle' src={assets.circle} />
+                <Box data-id='portfolio-image' sx={headerStyle.portfolioImage}>
+                    <Box data-id='portfolio-content'>
+                        <Box data-id='profile-image' sx={headerStyle.portfolioImages} component='img' alt='portfolioImg' src={assets.profile} />
+                        <Box data-id='circle-image' sx={headerStyle.circleImage} component='img' alt='portfolioCircle' src={assets.circle} />
+                    </Box>
                 </Box>
                 {/* Skills icons*/}
                 <Box data-id='skills-container' sx={headerStyle.skillsContainer}>
@@ -45,4 +47,4 @@ const Header = () => {
     )
 }
 
-export default AppWrap({Component:Header,idName:'header-section'});
+export default AppWrap({ Component: Header, idName: 'home', showCopyright: false });

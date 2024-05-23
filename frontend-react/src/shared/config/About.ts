@@ -1,8 +1,8 @@
 export const aboutConfig = {
     aboutIntroText: [
-        { id: 'message1', text: 'I Know That ', isColored: false },
-        { id: 'message1_2', text: 'Good Design', isColored: true },
-        { id: 'message2', text: 'Means', isColored: false },
-        { id: 'message2_2', text: 'Good Business', isColored: true }
+        { id: 1, text: 'I Know That ', isColored: false },
+        { id: 2, text: 'Good Design', isColored: true },
+        { id: 3, text: 'Means', isColored: false },
+        { id: 4, text: 'Good Business', isColored: true }
     ]
 };

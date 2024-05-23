@@ -1,11 +1,19 @@
+import { globalStyles } from "../../AppGlobalStyles";
 
-const aboutStyle = {
-    div:{
-
+const workStyle = {
+    workIntroMessage: {
+        fontfamily:'',
+        fontWeight: "bold",
+        fontSize: "30px",
     },
-    head:{
-
+    workIntroHighlight: {
+        color: "#5c05f2",
+        fontWeight: "bold",
+        fontSize: "30px",
+    },
+    workFilterContainer: {
+        ...globalStyles.centeredStyles
     }
 }
 
-export default aboutStyle;
+export default workStyle;
