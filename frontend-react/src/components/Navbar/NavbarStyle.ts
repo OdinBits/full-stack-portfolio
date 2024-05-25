@@ -1,3 +1,4 @@
+import { Opacity } from "@mui/icons-material";
 import assets from "../../shared/constants/images";
 
 
@@ -111,7 +112,9 @@ const navStyle = {
         color: 'black'
     },
     container: {
-        backgroundColor: 'white',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        backdropFilter: 'blur(2px)',
+        color: 'black',
         padding: "2px 20px",
         boxSizing: "border-box",
     }

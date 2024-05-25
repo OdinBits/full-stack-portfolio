@@ -26,8 +26,8 @@ const AppWrap = ({ Component, idName, classNames, showCopyright }: AppWrapParams
             <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
                 <Component />
                 {showCopyright && (
-                    <Box sx={{ alignSelf: 'flex-end', width: '100%', textAlign: 'right', letterSpacing: '0.1rem', display: { xs: 'none', md: 'block' }, margin: '5px 20px 5px 0px' }}>
-                        <p style={{ fontSize: '15px', margin: 0 }}>@2020 MICHAEL</p>
+                    <Box sx={{ alignSelf: 'flex-end', width: '100%', textAlign: 'right', letterSpacing: '0.1rem', display: { xs: 'none', md: 'block' }, padding: '5px 30px 5px 0px',background:'#F3F5F7' }}>
+                        <p style={{ fontSize: '15px', margin: 0 }}>@2024 NISHANT</p>
                         <p style={{ fontSize: '15px', margin: 0 }}>All rights reserved</p>
                     </Box>
                 )}

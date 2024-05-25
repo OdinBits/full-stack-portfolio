@@ -1,18 +1,20 @@
 import { globalStyles } from "../../AppGlobalStyles";
 
 const aboutStyle = {
-    aboutSection: {
+    aboutContainer: {
         flexGrow: 1,
         height: '100%',
         minHeight:'100vh',
+        background:'#F3F5F7',
         ...globalStyles.centeredStyles,
     },
     aboutContent: {
-        width: { xs: '100%', md: '60%' },
+        width: { xs: '100%', md: '80%' },
         height: '100%',
         flexDirection: 'column',
         margin: 'auto',
-        padding:'10px'
+        padding:'10px',
+        ...globalStyles.centeredStyles
     },
     aboutSignificance: {
         width: '100%',
@@ -41,24 +43,19 @@ const aboutStyle = {
         flexWrap: 'wrap',
         display:'flex',
         justifyContent:'center',
-        alignItems: { xs: 'center', md: 'stretch' }
-
+        alignItems: { xs: 'center', md: 'stretch' },
+        margin:'auto'
     },
     skillItems: {
         textAlign: "center",
-        margin: "5px",
-        borderRadius: "10px",
-        padding: '10px',
-        width: { xs: '90%', md: '30%' },
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        margin:'10px',
+        display:'flex',
+        height:'300px',
+        justifyContent:'center'
     },
     skillImage: {
-        minHeight:'150px',
-        width: { xs: '60%', md: "90%" },
-        height: { xs: '100%', md:'150px'},
-        borderRadius: "10px",
+        height:'165px',
+        width: '100%',
     },
     skillTitle: {
         marginTop: '10px',

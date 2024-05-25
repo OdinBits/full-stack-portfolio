@@ -1,10 +1,10 @@
 const navAttributes = {
     navPages : [
-        'home', 
-        'about', 
-        'contact', 
-        'work', 
-        'skills', 
+        'HOME', 
+        'ABOUT', 
+        'CONTACT', 
+        'WORK', 
+        'SKILLS', 
     ],
     settings: [
         'Profile', 
