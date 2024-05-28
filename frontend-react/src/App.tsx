@@ -1,12 +1,12 @@
 import React from 'react';
-import { About, Footer, Header, Skills, Testimonial, Work } from './container';
+import { About, Footer, Header, SkillsExperience, Testimonial, Work } from './container';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Navbar } from './components';
 import { Box, ThemeProvider } from '@mui/material';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from './store/store';
-import { globalTheme } from './AppGlobalStyles';
+import { globalTheme } from './STYLGlobal';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Header />
           <About />
           <Work />
-          <Skills />
+          <SkillsExperience />
           <Testimonial />
           <Footer />
         </ThemeProvider>

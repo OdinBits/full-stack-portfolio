@@ -1,14 +1,16 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import aboutReducer from './slices/aboutSlice';
-import navigationReducer from './slices/navigationSlice';
-import workReducer from './slices/workSlice';
+import SLCAbout from './slices/SLCAbout';
+import SLCSkill from './slices/SLCSkill';
+import SLCNavigation from './slices/SLCNavigation';
+import SLCWork from './slices/SLCWork';
 
 const rootReducer = combineReducers({
-    about : aboutReducer,
-    navigation: navigationReducer,
-    work : workReducer
+    about : SLCAbout,
+    navigation: SLCNavigation,
+    work : SLCWork,
+    skills : SLCSkill  
 })
 
 const persistConfig = {

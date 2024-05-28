@@ -1,9 +1,9 @@
-import NavigationDots from './NavigationDots';
-import SocialMedia from './SocialMedia';
-import Navbar from '../Navbar/Navbar';
+import COMPNavigationDots from './COMPNavigationDots';
+import COMPSocialMedia from './COMPSocialMedia';
+import COMPNavbar from '../Navbar';
 
 export {
-    NavigationDots,
-    SocialMedia,
-    Navbar,
+    COMPNavigationDots,
+    COMPSocialMedia,
+    COMPNavbar,
 };

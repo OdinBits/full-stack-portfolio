@@ -1,5 +1,5 @@
-import { Navbar } from "./Tools";
+import { COMPNavbar } from "./Tools";
 
 export {
-    Navbar
+    COMPNavbar
 };
