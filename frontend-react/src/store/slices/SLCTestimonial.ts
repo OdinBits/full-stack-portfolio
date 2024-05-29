@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import THKSkills from "../thunks/THKSkills";
-import { TSkills } from "../../shared/types/TSkills";
+import { TTestimonial } from "../../shared/types/TTestimonial";
+import THKTestimonial from "../thunks/THKTestimonial";
 
-const SLCSkill = createSlice({
-    name: 'about',
-    initialState: TSkills.ThunkState,
+const SLCTestimonial = createSlice({
+    name: 'test',
+    initialState: TTestimonial.ThunkState,
     reducers: {
         setFilterData: (state, action) => {
             const filter = action.payload;
@@ -17,20 +17,20 @@ const SLCSkill = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(THKSkills.pending, (state) => {
+            .addCase(THKTestimonial.pending, (state) => {
                 state.loading = true
             })
-            .addCase(THKSkills.fulfilled, (state, action) => {
+            .addCase(THKTestimonial.fulfilled, (state, action) => {
                 state.loading = false;
                 state.data = action.payload;
                 state.filteredData = action.payload; 
                 state.message = 'Successful';
             })
-            .addCase(THKSkills.rejected, (state, action) => {
+            .addCase(THKTestimonial.rejected, (state, action) => {
                 state.loading = false;
             });
     }
 });
 
-export const { setFilterData } = SLCSkill.actions;
-export default SLCSkill.reducer;
+export const { setFilterData } = SLCTestimonial.actions;
+export default SLCTestimonial.reducer;

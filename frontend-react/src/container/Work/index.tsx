@@ -14,7 +14,7 @@ import TNavbar from '../../shared/types/TNavbar';
 
 const Work = () => {
 
-    const [clickedButton, setClickedButton] = useState<string>(''); 
+    const [clickedButton, setClickedButton] = useState<string>('');
     const dispatch = useAppDispatch();
 
     function handleWorkFilter(title: string): void {
@@ -35,27 +35,44 @@ const Work = () => {
 
     const handleViewportChange = (desktop: any) => setIsDesktop(desktop); // Function to handle viewport change
 
-    const sectionRef = useIntersectionObserver(TNavbar.navPages[2].name, handleEnter, handleExit, handleViewportChange);
+    const sectionRef = useIntersectionObserver(TNavbar.navPages[2].name, handleEnter, handleExit);
 
     const { filteredData } = useAppSelector((state) => state.work);
-    
+
     useEffect(() => {
         dispatch(THKwork());
     }, [dispatch]);
 
     return (
-        <Box ref={sectionRef} id='WORK' sx={STYLWork.workContainer}>
+        <Box
+            ref={sectionRef}
+            id='WORK'
+            sx={STYLWork.workContainer}
+        >
             {/*Main content container*/}
-            <Box data-id='work-content' sx={STYLWork.workContent}>
+            <Box
+                data-id='work-content'
+                sx={STYLWork.workContent}
+            >
                 {/*Intro Work Text*/}
-                <COMPVividTextBuilder data={CFGWork.workIntroText} defaultStyle={STYLWork.workIntro.workIntroMessage} highLightStyle={STYLWork.workIntro.workIntroHighlight} />
+                <COMPVividTextBuilder
+                    data={CFGWork.workIntroText}
+                    defaultStyle={STYLWork.workIntro.workIntroMessage}
+                    highLightStyle={STYLWork.workIntro.workIntroHighlight}
+                />
                 {/*Work skills container*/}
-                <COMPFilter clickedButton={clickedButton} handleWorkFilter={handleWorkFilter}/>
+                <COMPFilter
+                    clickedButton={clickedButton}
+                    handleWorkFilter={handleWorkFilter}
+                />
                 {/*Work filter container*/}
-                <COMPWorkItems filteredData={filteredData} isDesktop={isDesktop}/>
+                <COMPWorkItems
+                    filteredData={filteredData}
+                    isDesktop={isDesktop}
+                />
             </Box>
         </Box>
     )
 }
 
-export default AppWrap({ Component: Work, idName: 'WORK', showCopyright:false});
+export default AppWrap({ Component: Work, idName: 'WORK', showCopyright: false });

@@ -6,15 +6,13 @@ const STYLSkills = {
         height: '100%',
         minHeight:'100vh',
         display:'flex',
-        alignItems:'center',
+        justifyContent:'center',
     },
     skillsContent: {
-        width: { xs: '100%', md: '70%' },
+        width: { xs: '80%', md: '70%' },
         height: '100%',
         flexDirection: 'column',
-        margin: 'auto',
         display:'flex',
-        alignItems:'center',
     },
     introMessage: {
         width: "100%",
@@ -35,7 +33,9 @@ const STYLSkills = {
         display:'flex',
         justifyContent:'space-between',
         alignItems: { xs: 'center', md: 'stretch' },
-        margin:'auto',
+        },
+        stillContent:{
+
         },
         // motionDivContent: {
         //     border:'solid 2px blue',
@@ -43,7 +43,6 @@ const STYLSkills = {
         //     display:'flex'
         // },
         skillsGrid: {
-            border:'solid 2px blue',
             width:'30%',
             textAlign:'center'
         },

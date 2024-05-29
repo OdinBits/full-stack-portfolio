@@ -88,6 +88,7 @@ const STYLNavbar = {
     navDesktop: {
         flexGrow: 1,
         display: { xs: 'none', md: 'flex' },
+        marginLeft:'30px'
     },
     navDesktopButtons: {
         my: 2,

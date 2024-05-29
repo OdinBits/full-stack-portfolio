@@ -63,10 +63,13 @@ const Navbar = () => {
         >
           <Typography
             sx={STYLNavbar.logoName}
-          >NISHANT</Typography>
+          >
+            NISHANT</Typography>
           <Typography
             sx={STYLNavbar.title}
-          >Dev</Typography>
+          >
+            Dev
+          </Typography>
         </Box>
 
         <Box
@@ -82,8 +85,8 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          {isOpen 
-            && 
+          {isOpen
+            &&
             renderMobileMenu(isOpen, handleCloseUserMenu, toggleOpen)}
         </Box>
 

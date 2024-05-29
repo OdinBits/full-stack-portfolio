@@ -1,7 +1,5 @@
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 
-
-
 export const TSocialAttributes = {
     media : [
         {id:'1',name:'twitter',item:Twitter},

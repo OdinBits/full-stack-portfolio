@@ -4,7 +4,7 @@ export const TSkills = {
     ThunkState: {
         loading: false,
         message: "",
-        error: "",
+        error: "" ,
         data: [],
         filteredData: [],
     } as ISkills.ThunkState

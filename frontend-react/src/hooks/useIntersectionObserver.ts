@@ -3,7 +3,7 @@ import { useAppDispatch } from './useStoreRootState';
 import { setActiveSection } from '../store/slices/SLCNavigation';
 import { useTheme } from '@mui/material';
 
-const useIntersectionObserver = (idName: string, onEnter?: () => void, onExit?: () => void, onViewChange?: (isDesktop: boolean) => void) => {
+const useIntersectionObserver = (idName: string, onEnter?: () => void, onExit?: () => void) => {
     const dispatch = useAppDispatch();
     const sectionRef = useRef<HTMLDivElement | null>(null);
     const theme = useTheme(); 
@@ -38,19 +38,19 @@ const useIntersectionObserver = (idName: string, onEnter?: () => void, onExit?: 
         };
     }, [idName, dispatch, onEnter, onExit]);
 
-    useEffect(() => {
-        const handleResize = () => {
-            const isDesktop = theme.breakpoints.values.sm >= 600; 
-            onViewChange?.(isDesktop);
-        };
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         const isDesktop = theme.breakpoints.values.sm >= 600; 
+    //         onViewChange?.(isDesktop);
+    //     };
 
-        handleResize(); 
-        window.addEventListener('resize', handleResize);
+    //     handleResize(); 
+    //     window.addEventListener('resize', handleResize);
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [onViewChange, theme.breakpoints.values.sm]);
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     };
+    // }, [onViewChange, theme.breakpoints.values.sm]);
 
     return sectionRef;
 };

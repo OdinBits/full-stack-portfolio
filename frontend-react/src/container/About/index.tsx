@@ -21,7 +21,7 @@ const About = () => {
     const handleExit = () => setInView(false);
     const handleViewportChange = (desktop: boolean) => setIsDesktop(desktop);
 
-    const sectionRef = useIntersectionObserver(TNavbar.navPages[1].name, handleEnter, handleExit, handleViewportChange);
+    const sectionRef = useIntersectionObserver(TNavbar.navPages[1].name, handleEnter, handleExit);
 
     React.useEffect(() => {
         dispatch(THKAbout());
@@ -36,13 +36,29 @@ const About = () => {
     ), [data, isDesktop]);
 
     return (
-        <Box ref={sectionRef} id='ABOUT' sx={STYLAbout.aboutContainer}>
+        <Box
+            ref={sectionRef}
+            id='ABOUT'
+            sx={STYLAbout.aboutContainer}
+        >
             {/* Main content section */}
-            <Box data-id='about-content' sx={STYLAbout.aboutContent}>
+            <Box
+                data-id='about-content'
+                sx={STYLAbout.aboutContent}
+            >
                 {/* Acceptance container */}
-                <COMPVividTextBuilder data={CFGAbout.aboutIntroText} defaultStyle={STYLAbout.acceptanceMessage} highLightStyle={STYLAbout.acceptanceMsgColor} />
+                <COMPVividTextBuilder
+                    data={CFGAbout.aboutIntroText}
+                    defaultStyle={STYLAbout.acceptanceMessage}
+                    highLightStyle={STYLAbout.acceptanceMsgColor}
+                />
                 {/* Skill Container */}
-                <Box sx={{display:'flex',flexDirection:{xs:'column',md:'row'}}}>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: { xs: 'column', md: 'row' }
+                    }}
+                >
                     {aboutComponents}
                 </Box>
             </Box>

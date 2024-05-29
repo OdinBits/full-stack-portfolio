@@ -4,8 +4,8 @@ import { TWork } from '../../shared/types/TWork';
 import STYLWork from './STYLWork';
 import { IWork } from '../../shared/interfaces/IWork';
 
-const COMPFilter: React.FC<IWork.fiterProps> = ({clickedButton,handleWorkFilter}) => {
-    
+const COMPFilter: React.FC<IWork.fiterProps> = ({ clickedButton, handleWorkFilter }) => {
+
     const getButtonStyles = (title: string) => ({
         ...STYLWork.workSkills.skillButtons,
         transform: clickedButton === title ? 'scale(1.05) translateY(-5px)' : 'none',
@@ -15,7 +15,10 @@ const COMPFilter: React.FC<IWork.fiterProps> = ({clickedButton,handleWorkFilter}
     });
 
     return (
-        <Box data-id='work-filter-container' sx={STYLWork.workSkills.workFilterContainer}>
+        <Box
+            data-id='work-filter-container'
+            sx={STYLWork.workSkills.workFilterContainer}
+        >
             {TWork.workSkills.map((item, index) => (
                 <Button
                     key={`work-skills-${item.id}`}
