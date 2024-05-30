@@ -2,19 +2,19 @@ import React from 'react';
 import { AppBar, Avatar, Backdrop, Box, Button, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Cancel } from '@mui/icons-material';
-import STYLNavbar from './STYLNavbar';
-import TNavbar from '../../shared/types/TNavbar';
+import style from './style';
+import NavbarTypes from '../../shared/types/NavbarTypes';
 
 const renderMobileMenu = (isOpen: any, handleCloseUserMenu: any, toggleOpen: any) => (
   <>
-    <Backdrop open={isOpen} sx={STYLNavbar.backDrop} />
-    <Box sx={STYLNavbar.mobileMenu}>
-      <IconButton onClick={handleCloseUserMenu} sx={STYLNavbar.closeIcon}>
+    <Backdrop open={isOpen} sx={style.backDrop} />
+    <Box sx={style.mobileMenu}>
+      <IconButton onClick={handleCloseUserMenu} sx={style.closeIcon}>
         <Cancel onClick={toggleOpen} />
       </IconButton>
-      {TNavbar.navPages.map((page) => (
-        <Box key={page.id} onClick={handleCloseUserMenu} sx={STYLNavbar.mobileMenuContainer}>
-          <Button sx={STYLNavbar.mobileMenuButtons}> {page.name} </Button>
+      {NavbarTypes.navPages.map((page) => (
+        <Box key={page.id} onClick={handleCloseUserMenu} sx={style.mobileMenuContainer}>
+          <Button sx={style.mobileMenuButtons}> {page.name} </Button>
         </Box>
       ))}
     </Box>
@@ -22,9 +22,9 @@ const renderMobileMenu = (isOpen: any, handleCloseUserMenu: any, toggleOpen: any
 );
 
 const renderDesktopNav = (handleCloseUserMenu: any) => (
-  <Box sx={STYLNavbar.navDesktop}>
-    {TNavbar.navPages.map((page) => (
-      <Button key={page.id} onClick={handleCloseUserMenu} sx={STYLNavbar.navDesktopButtons}>
+  <Box sx={style.navDesktop}>
+    {NavbarTypes.navPages.map((page) => (
+      <Button key={page.id} onClick={handleCloseUserMenu} sx={style.navDesktopButtons}>
         {page.name}
       </Button>
     ))}
@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <AppBar
       position="sticky"
-      sx={STYLNavbar.container}
+      sx={style.container}
     >
       <Toolbar
         data-id='nav-content'
@@ -62,11 +62,11 @@ const Navbar = () => {
           sx={{ display: 'flex' }}
         >
           <Typography
-            sx={STYLNavbar.logoName}
+            sx={style.logoName}
           >
             NISHANT</Typography>
           <Typography
-            sx={STYLNavbar.title}
+            sx={style.title}
           >
             Dev
           </Typography>
@@ -74,7 +74,7 @@ const Navbar = () => {
 
         <Box
           data-id='hamburder-box'
-          sx={STYLNavbar.hamburgerBoxContainer}
+          sx={style.hamburgerBoxContainer}
         >
           <IconButton
             size="large"
@@ -96,17 +96,17 @@ const Navbar = () => {
           <Tooltip title="Open settings">
             <IconButton
               onClick={handleOpenUserMenu}
-              sx={STYLNavbar.iconButton}
+              sx={style.iconButton}
             >
               <Avatar
                 alt="Remy Sharp"
                 src="/static/images/avatar/2.jpg"
-                sx={STYLNavbar.muiAvatar}
+                sx={style.muiAvatar}
               />
             </IconButton>
           </Tooltip>
           <Menu
-            sx={STYLNavbar.avatarMenu}
+            sx={style.avatarMenu}
             id="menu-appbar"
             anchorEl={anchorElUser}
             open={Boolean(anchorElUser)}

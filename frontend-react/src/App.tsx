@@ -1,11 +1,11 @@
 import React from 'react';
-import { About, Footer, Header, SkillsExperience, Testimonial, Work } from './container';
+import { About, Footer, Header, SkillsExperience, Testimonial, Work } from './pages';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Box, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from './store/store';
-import { globalTheme } from './STYLGlobal';
+import { globalTheme } from './styleGlobal';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -13,12 +13,13 @@ function App() {
     <Provider store={store} >
       <PersistGate loading={null} persistor={persistor}>
         <ThemeProvider theme={globalTheme}>
+  
           <Navbar />
           <Header />
           <About />
           <Work />
           <SkillsExperience />
-          <Testimonial />
+          {/* <Testimonial /> */}
           <Footer />
         </ThemeProvider>
       </PersistGate>

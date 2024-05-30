@@ -1,9 +1,9 @@
-import { COMPNavigationDots, COMPSocialMedia } from '../components/Tools';
 import { IAppWrap } from '../shared/interfaces/IAppWrap';
 import { Box } from '@mui/material';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { motion } from 'framer-motion';
-const AppWrap = ({ Component, idName, classNames, showCopyright }: IAppWrap) => function HOC() {
+import { NavDots, SocialMedia } from '../components';
+const AppWrap = ({ Component, idName,showCopyright }: IAppWrap) => function HOC() {
 
     const sectionRef = useIntersectionObserver(idName);
 
@@ -22,7 +22,6 @@ const AppWrap = ({ Component, idName, classNames, showCopyright }: IAppWrap) => 
             <Box
                 ref={sectionRef}
                 id={idName}
-                className={`app__container ${classNames}`}
                 sx={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -32,19 +31,24 @@ const AppWrap = ({ Component, idName, classNames, showCopyright }: IAppWrap) => 
                     position: 'relative',
                 }}
             >
-                <COMPSocialMedia />
+                <SocialMedia />
 
-                <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                <Box sx={{ 
+                    flexGrow: 1, 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    justifyContent: 'space-between', 
+                    height: '100%' }}>
                     <Component />
                     {showCopyright && (
-                        <Box sx={{ alignSelf: 'flex-end', width: '100%', textAlign: 'right', letterSpacing: '0.1rem', display: { xs: 'none', md: 'block' }, padding: '5px 30px 5px 0px', background: '#F3F5F7' }}>
+                        <Box sx={{ alignSelf: 'flex-end', width: '100%', textAlign: 'right', letterSpacing: '0.1rem', display: { xs: 'none', md: 'block' }, padding: '40px 30px 5px 0px', background: '#F3F5F7' }}>
                             <p style={{ fontSize: '15px', margin: 0 }}>@2024 NISHANT</p>
                             <p style={{ fontSize: '15px', margin: 0 }}>All rights reserved</p>
                         </Box>
                     )}
                 </Box>
 
-                <COMPNavigationDots />
+                <NavDots />
             </Box>
         </motion.div>
     );

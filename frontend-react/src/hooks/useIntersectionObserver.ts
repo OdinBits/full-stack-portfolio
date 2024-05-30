@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useAppDispatch } from './useStoreRootState';
-import { setActiveSection } from '../store/slices/SLCNavigation';
+import { setActiveSection } from '../store/slices/navigationSlice';
 import { useTheme } from '@mui/material';
 
 const useIntersectionObserver = (idName: string, onEnter?: () => void, onExit?: () => void) => {
