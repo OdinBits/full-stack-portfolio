@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { Formik } from 'formik';
 import { FormTypes } from '../../../shared/types/FormTypes';
 import { FormSchema } from '../../../shared/enums/FormSchema';
@@ -14,11 +14,15 @@ const Form = () => {
             <Formik
                 initialValues={FormTypes.initialFields}
                 validationSchema={FormSchema}
-                onSubmit={async (values, actions) => {
+                onSubmit={(values, actions) => {
+                    console.log('all values', values);
+                    actions.resetForm();
                 }}
             >
                 {(meta) => (
                     <Box
+                        component="form" 
+                        onSubmit={meta.handleSubmit} 
                         data-id='content'
                         sx={style.form.content}
                     >
@@ -30,6 +34,8 @@ const Form = () => {
                                 sx={style.form.textField}
                             />
                         ))}
+
+                        <Button type='submit'>Submit</Button>
                     </Box>
                 )}
             </Formik>

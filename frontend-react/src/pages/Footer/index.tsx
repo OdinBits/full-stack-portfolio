@@ -7,6 +7,7 @@ import { TextBuilder } from '../../components';
 import { footerConfig } from '../../shared/config/footerConfig';
 import style from './style';
 import Contacts from './components/Contacts';
+import Form from './components/Form';
 
 const Footer = () => {
     const [inView, setInView] = useState(false);
@@ -36,6 +37,8 @@ const Footer = () => {
                 />
 
                 <Contacts/>
+
+                <Form/>
             </Box>
         </Box>
     )
