@@ -9,7 +9,6 @@ const skillsThunk = createAsyncThunk(
                 clientConfig.fetch('*[_type == "experiences"]'),
                 clientConfig.fetch('*[_type == "skills"]')
             ]);
-            console.log('my data' ,  { experiences, skills })
             return { experiences, skills };
 
         }

@@ -4,8 +4,9 @@ import { FormTypes } from '../../../shared/types/FormTypes';
 import { FormSchema } from '../../../shared/enums/FormSchema';
 import { InputFields } from '../../../components';
 import style from '../style';
+import { IForm } from '../../../shared/interfaces/IForm';
 
-const Form = () => {
+const Form: React.FC<IForm.submissionState> = ({submitForm}) => {
     return (
         <Box
             id='Form'
@@ -15,14 +16,15 @@ const Form = () => {
                 initialValues={FormTypes.initialFields}
                 validationSchema={FormSchema}
                 onSubmit={(values, actions) => {
-                    console.log('all values', values);
+                    submitForm(values,actions);
+                    console.log('all values and submit', values,actions);
                     actions.resetForm();
                 }}
             >
-                {(meta) => (
+                {(props) => (
                     <Box
                         component="form" 
-                        onSubmit={meta.handleSubmit} 
+                        onSubmit={props.handleSubmit} 
                         data-id='content'
                         sx={style.form.content}
                     >
@@ -30,12 +32,12 @@ const Form = () => {
                             <InputFields
                                 key={fields.id}
                                 fields={fields}
-                                meta={meta}
+                                props={props}
                                 sx={style.form.textField}
                             />
                         ))}
 
-                        <Button type='submit'>Submit</Button>
+                        <Button type='submit' sx={style.form.submit}>Submit</Button>
                     </Box>
                 )}
             </Formik>

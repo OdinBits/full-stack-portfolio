@@ -8,10 +8,19 @@ import { footerConfig } from '../../shared/config/footerConfig';
 import style from './style';
 import Contacts from './components/Contacts';
 import Form from './components/Form';
+import { useAppDispatch, useAppSelector } from '../../store';
+import { setSubmissionData } from '../../store/slices/submissionSlice';
 
 const Footer = () => {
+
+    const dispatch = useAppDispatch();
+
     const [inView, setInView] = useState(false);
     const [isDesktop, setIsDesktop] = useState(false);
+
+    const submitForm = (values:any,actions:any) => {
+        dispatch(setSubmissionData({ submissionSuccess: actions.isSubmitting, submitCount: actions.submitCount }));
+    }
 
     const handleEnter = () => setInView(true);
     const handleExit = () => setInView(false);
@@ -38,7 +47,7 @@ const Footer = () => {
 
                 <Contacts/>
 
-                <Form/>
+                <Form submitForm={submitForm} />
             </Box>
         </Box>
     )

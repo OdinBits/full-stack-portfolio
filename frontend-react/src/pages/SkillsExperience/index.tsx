@@ -36,7 +36,6 @@ const SkillsExperience: React.FC = () => {
         <ExperienceItems key={index} experience={experience} />
     ));
 
-    console.log('data from skills exp', data)
 
     return (
         <Grid

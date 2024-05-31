@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 
 export const FormSchema = Yup.object({
-    name: Yup.string().required("name is required"),
-    email: Yup.string().required("email is required"),
-    message: Yup.string().required("Message is required")
+    name: Yup.string().required("name required"),
+    email: Yup.string().email().matches(/\.com$/, 'email should end with ".com"').required("emai required"),
+    message: Yup.string().required("message required")
 })

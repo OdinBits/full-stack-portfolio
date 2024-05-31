@@ -3,6 +3,7 @@ import navigationSlice from './slices/navigationSlice';
 import skillsSlice from './slices/skillsSlice';
 import testimonialSlice from './slices/testimonialSlice';
 import workSlice from './slices/workSlice';
+import submissionSlice from './slices/submissionSlice';
 
 import aboutThunk from './thunks/aboutThunk';
 import skillsThunk from './thunks/skillsThunk';
@@ -18,7 +19,8 @@ export {
     navigationSlice,
     skillsSlice,
     testimonialSlice,
-    workSlice
+    workSlice,
+    submissionSlice
 };
 
 export {
