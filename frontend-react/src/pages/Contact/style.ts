@@ -10,10 +10,10 @@ const style = {
             display: 'flex',
             justifyContent: 'center',
             background: '#F3F5F7',
+            paddingBottom:{xs:'100px',md:'0px'}
         },
         content: {
             width: '80%',
-            border: 'solid 2px',
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column'
@@ -32,7 +32,6 @@ const style = {
             alignItems:'center',
             flexDirection: {xs:'column',md:'row'},
             padding: '5px',
-            border:'solid 2px',
         },
         email: {
             display: 'flex',
@@ -57,13 +56,13 @@ const style = {
             width: '100%',
             border:'none',
             textAlign: 'center',
+            textDecoration:'none',
             ...styleGlobal.centeredStyles
         }
     },
 
     form: {
         container: {
-            border:'solid 2px',
             width:{xs:'100%',md:'70%'},
             display:'flex',
             justifyContent:'center'
@@ -73,7 +72,6 @@ const style = {
             flexDirection:'column',
             margin:'20px 0px 0px 0px',
             width:{xs:'100%',md:'50%'},
-            border:'solid 2px blue',
             alignItems:'center'
         },
         textField: {

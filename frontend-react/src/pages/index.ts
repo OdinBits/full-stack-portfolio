@@ -1,15 +1,17 @@
 import About from './About';
-import Footer from './Footer';
+import Contact from './Contact';
 import Header from './Header';
 import SkillsExperience from './SkillsExperience';
 import Testimonial from './Testimonial';
 import Work from './Work';
+import Footer from './Footer';
 
 export {
     About,
-    Footer,
+    Contact,
     Header,
     SkillsExperience,
     Testimonial,
     Work,
+    Footer
 };

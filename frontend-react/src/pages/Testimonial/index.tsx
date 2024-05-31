@@ -57,4 +57,4 @@ const Testimonial: React.FC = () => {
     )
 }
 
-export default AppWrap({ Component: Testimonial, idName: 'Testimonial', showCopyright: false })
+export default AppWrap({ Component: Testimonial, idName: 'Testimonial'})

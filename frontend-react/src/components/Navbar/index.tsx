@@ -12,9 +12,18 @@ const renderMobileMenu = (isOpen: any, handleCloseUserMenu: any, toggleOpen: any
       <IconButton onClick={handleCloseUserMenu} sx={style.closeIcon}>
         <Cancel onClick={toggleOpen} />
       </IconButton>
-      {NavbarTypes.navPages.map((page) => (
+      {NavbarTypes.navPages.map((page,index) => (
         <Box key={page.id} onClick={handleCloseUserMenu} sx={style.mobileMenuContainer}>
-          <Button sx={style.mobileMenuButtons}> {page.name} </Button>
+          <Box
+            component='a'
+            href={`#${page.name}`}
+            key={page.id + index}
+            sx={{ textDecoration: 'none' }}
+          >
+            <Button key={page.id} onClick={toggleOpen} sx={style.navDesktopButtons}>
+              {page.name}
+            </Button>
+          </Box>
         </Box>
       ))}
     </Box>
@@ -23,10 +32,17 @@ const renderMobileMenu = (isOpen: any, handleCloseUserMenu: any, toggleOpen: any
 
 const renderDesktopNav = (handleCloseUserMenu: any) => (
   <Box sx={style.navDesktop}>
-    {NavbarTypes.navPages.map((page) => (
-      <Button key={page.id} onClick={handleCloseUserMenu} sx={style.navDesktopButtons}>
-        {page.name}
-      </Button>
+    {NavbarTypes.navPages.map((page, index) => (
+      <Box
+        component='a'
+        href={`#${page.name}`}
+        key={page.id + index}
+        sx={{ textDecoration: 'none' }}
+      >
+        <Button key={page.id} onClick={handleCloseUserMenu} sx={style.navDesktopButtons}>
+          {page.name}
+        </Button>
+      </Box>
     ))}
   </Box>
 );
@@ -93,7 +109,7 @@ const Navbar = () => {
         {renderDesktopNav(handleCloseUserMenu)}
 
         <Box>
-          <Tooltip title="Open settings">
+          {/* <Tooltip title="Open settings">
             <IconButton
               onClick={handleOpenUserMenu}
               sx={style.iconButton}
@@ -104,8 +120,8 @@ const Navbar = () => {
                 sx={style.muiAvatar}
               />
             </IconButton>
-          </Tooltip>
-          <Menu
+          </Tooltip> */}
+          {/* <Menu
             sx={style.avatarMenu}
             id="menu-appbar"
             anchorEl={anchorElUser}
@@ -123,7 +139,7 @@ const Navbar = () => {
                 >{setting}</Typography>
               </MenuItem>
             ))}
-          </Menu>
+          </Menu> */}
         </Box>
       </Toolbar>
     </AppBar>

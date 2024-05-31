@@ -83,21 +83,47 @@ const WorkItems: React.FC<IWork.workProps> = ({ filteredData, isDesktop }) => {
                                             cursor: 'pointer'
                                         }}
                                     >
-                                        <GitHub />
+                                        <Box
+                                            component='a'
+                                            href={work.codeLink}
+                                            sx={{textDecoration:'none', color:'white'}}
+                                        >
+                                            <GitHub />
+                                        </Box>
                                     </Typography>
                                 </Box>
                             </Box>
                         </Box>
                         <CardContent>
                             <Typography
-                                variant='h6'
+                                sx={{ fontSize: '18px', marginTop: '10px' }}
                             >
-                                {work.title}</Typography>
+                                {work.title}
+                            </Typography>
                             <Typography
-                                variant='body2'
-                                color='textSecondary'
+                                sx={{ fontSize: '17px', color: '#7ca8e6' }}
                             >
                                 {work.description}</Typography>
+
+                            <Box sx={{ width: 'fit-content', height: '100%', textAlign: 'left', padding: '10px', marginTop: '20px', borderRadius: '10px', background: '#e9f2f7' }}>
+                                {work?.bulletPoints?.map((points: any, index: any) => (
+                                    <Typography
+                                        key={index}
+                                        variant='body2'
+                                        color='textSecondary'
+                                        sx={{
+                                            marginTop: '1px',
+                                            color: '#8c9396',
+                                            '&:hover': {
+                                                color: 'rgba(255, 0, 0, 0.5)' // Faint reddish color
+                                            }
+                                        }}
+                                    >
+                                        {points}
+                                    </Typography>
+
+                                ))}
+                            </Box>
                         </CardContent>
                     </Card>
                 </Grid>

@@ -14,7 +14,10 @@ const style = {
     workContent: {
         width: '100%',
         height: '100%',
-
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center'
     },
 
     workIntro: {
@@ -54,12 +57,14 @@ const style = {
 
     workItems: {
         itemsContainer: {
-            width: '100%',
+            width: '90%',
             display:'flex',
-            justifyContent:'center'
+            justifyContent:'center',
+            flexWrap:'wrap'
         },
         cardContainer: {
             maxWidth:345,
+            height:'fit-content',
             borderRadius: '10px',
             background:'#FFFF',
             margin: 2,

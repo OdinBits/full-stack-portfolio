@@ -55,7 +55,12 @@ const About = () => {
                 <Box
                     sx={{
                         display: 'flex',
-                        flexDirection: { xs: 'column', md: 'row' }
+                        flexDirection: { xs: 'column', md: 'row' },
+                        width:'fit-content',
+                        padding:'30px',
+                        flexWrap:'wrap',
+                        alignItems:'center',
+                        justifyContent:'center'
                     }}
                 >
                     {aboutComponents}
@@ -65,4 +70,4 @@ const About = () => {
     );
 };
 
-export default AppWrap({ Component: About, idName: 'About', showCopyright: false });
+export default AppWrap({ Component: About, idName: 'About'});

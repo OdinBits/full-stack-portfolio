@@ -4,13 +4,24 @@ import { Grid, Typography, Card, CardContent, CardMedia } from '@mui/material';
 import { IAbout } from '../../../shared/interfaces/IAbout';
 import style from '../style';
 import { urlFor } from '../../../shared/config/clientConfig';
+import { MotionBox } from '../../../components';
 
 
 const Items: React.FC<IAbout.AboutItemProps> = ({ about, isDesktop }) => (
-        <Grid
-            id='about-items'
-            item
-            sx={style.skillItems.items}
+    <Grid
+        id='about-items'
+        item
+        sx={style.skillItems.items}
+    >
+        <MotionBox
+            id='items-motion'
+            sx={{ width: '100%', height: '100%' }}
+            motionProps={{
+                initial: { opacity: 0, scale: 0 },
+                animate: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 400, damping: 20 } },
+                whileHover: { scale: 1.1, boxShadow: '0px 0px 20px rgba(173, 216, 230, 0.5)' },
+                transition: { duration: 0.5 },
+            }}
         >
             <Card
                 data-id='card-container'
@@ -41,7 +52,9 @@ const Items: React.FC<IAbout.AboutItemProps> = ({ about, isDesktop }) => (
                     </Typography>
                 </CardContent>
             </Card>
-        </Grid>
+        </MotionBox>
+
+    </Grid>
 );
 
 export default React.memo(Items);

@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { motion } from 'framer-motion';
 import { NavDots, SocialMedia } from '../components';
-const AppWrap = ({ Component, idName,showCopyright }: IAppWrap) => function HOC() {
+const AppWrap = ({ Component, idName}: IAppWrap) => function HOC() {
 
     const sectionRef = useIntersectionObserver(idName);
 
@@ -31,7 +31,7 @@ const AppWrap = ({ Component, idName,showCopyright }: IAppWrap) => function HOC(
                     position: 'relative',
                 }}
             >
-                <SocialMedia />
+                {/* <SocialMedia /> */}
 
                 <Box sx={{ 
                     flexGrow: 1, 
@@ -40,12 +40,6 @@ const AppWrap = ({ Component, idName,showCopyright }: IAppWrap) => function HOC(
                     justifyContent: 'space-between', 
                     height: '100%' }}>
                     <Component />
-                    {showCopyright && (
-                        <Box sx={{ alignSelf: 'flex-end', width: '100%', textAlign: 'right', letterSpacing: '0.1rem', display: { xs: 'none', md: 'block' }, padding: '40px 30px 5px 0px', background: '#F3F5F7' }}>
-                            <p style={{ fontSize: '15px', margin: 0 }}>@2024 NISHANT</p>
-                            <p style={{ fontSize: '15px', margin: 0 }}>All rights reserved</p>
-                        </Box>
-                    )}
                 </Box>
 
                 <NavDots />

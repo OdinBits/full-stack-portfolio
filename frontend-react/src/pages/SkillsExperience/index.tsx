@@ -78,4 +78,4 @@ const SkillsExperience: React.FC = () => {
     );
 };
 
-export default AppWrap({ Component: SkillsExperience, idName: 'Skills', showCopyright: false });
+export default AppWrap({ Component: SkillsExperience, idName: 'Skills'});

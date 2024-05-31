@@ -8,11 +8,20 @@ export default {
             title: 'Title',
             type: 'string',
         },
-
         {
             name: 'description',
             title: 'Description',
             type: 'string',
+        },
+        {
+            name: 'bulletPoints',
+            title: 'Bullet Points',
+            type: 'array',
+            of: [
+                {
+                    type: 'string',
+                },
+            ],
         },
         {
             name: 'projectLink',
@@ -32,7 +41,6 @@ export default {
                 hotspot: true,
             },
         },
-
         {
             name: 'tags',
             title: 'Tags',
@@ -45,6 +53,5 @@ export default {
                 }
             ]
         },
-
     ],
 };

@@ -8,8 +8,8 @@ export const FormTypes = {
         { id: '3', label: 'message', name: 'message', placeholder: 'enter your message', type: 'string', multiline: true, rows: 5},
     ],
     initialFields: {
-        name: undefined,
-        email: undefined,
-        message: undefined
+        name: '',
+        email: '',
+        message: ''
     } as IForm.formState
 } 

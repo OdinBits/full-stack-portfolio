@@ -88,6 +88,7 @@ const style = {
         flexDirection: { xs: 'row', md: 'column' },
         justifyContent:'center',
         width:{xs:'100%',md:'50%'},
+        flexWrap:'wrap'
     },
     skillItem: {
         borderRadius: '50%',

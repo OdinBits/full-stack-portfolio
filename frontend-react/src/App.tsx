@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Footer, Header, SkillsExperience, Testimonial, Work } from './pages';
+import { About, Contact, Footer, Header, SkillsExperience, Testimonial, Work } from './pages';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import { Provider } from 'react-redux';
@@ -20,7 +20,8 @@ function App() {
           <Work />
           <SkillsExperience />
           {/* <Testimonial /> */}
-          <Footer />
+          <Contact />
+          <Footer/>
         </ThemeProvider>
       </PersistGate>
     </Provider>

@@ -32,14 +32,16 @@ const style = {
         justifyContent: 'flex-end'
     },
     backDrop: {
-        backdropFilter: 'blur(0.5px)',
+        backdropFilter: 'blur(1.5px)',
         backgroundColor: 'rgba(255, 255, 255, 0.5)'
     },
     mobileMenu: {
         position: 'absolute',
-        top: 'calc(100% + 1px)',
+        top: 'calc(100% + 5px)',
         left: 'calc(50% - 24%)',
         width: 'calc(100% - 20%)',
+        height:'90vh',
+        bottom: 'calc(100% + 5px)',
         borderTopLeftRadius: '15px',
         borderBottomLeftRadius: '15px',
         backgroundColor: 'white',
@@ -56,10 +58,9 @@ const style = {
     },
     mobileMenuContainer: {
         position: 'relative',
-        top: '20%',
-        padding: '10px',
-        width: '80%',
-        margin: '10px auto',
+        top: '10%',
+        width: 'fit-content',
+        margin: '30px',
     },
     mobileMenuButtons: {
         my: 1,

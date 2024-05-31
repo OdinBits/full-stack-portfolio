@@ -55,23 +55,24 @@ const style = {
     skillItems: {
         items: {
             textAlign: "center",
-            margin: '10px',
+            margin: '50px 10px 0px 10px',
             display: 'flex',
-            height: 265,
+            minHeight: 265,
+            heigh:'100%',
             justifyContent: 'center',
             width: 265
         },
         cardContainer: {
             margin: 'auto',
             width: '100%',
-            height: '100%'
+            height: '100%',
         },
         cardMedia: {
             height: 140, 
             objectFit: 'cover'
         },
         cardContent: {
-            height: 140, 
+            height: 150, 
             objectFit: 'cover'
         },
         skillTitle: {

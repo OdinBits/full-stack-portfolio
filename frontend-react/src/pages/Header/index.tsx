@@ -28,4 +28,4 @@ const Header = () => {
     )
 }
 
-export default AppWrap({ Component: Header, idName: 'Home', showCopyright: false });
+export default AppWrap({ Component: Header, idName: 'Home'});

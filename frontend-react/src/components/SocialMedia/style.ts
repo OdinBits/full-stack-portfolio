@@ -14,14 +14,13 @@ export const style = {
     },
     items : {
         borderRadius:'50%', 
-        background:'white', 
-        padding:'10px',
+        background:'#cafadf', 
+        padding:'20px',
         marginBottom:'15px',
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
         width:'10px',
         height:'10px',
-        border:'solid 2px'
     }
 }

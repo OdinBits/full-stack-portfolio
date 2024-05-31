@@ -75,4 +75,4 @@ const Work = () => {
     )
 }
 
-export default AppWrap({ Component: Work, idName: 'Work', showCopyright: false });
+export default AppWrap({ Component: Work, idName: 'Work'});

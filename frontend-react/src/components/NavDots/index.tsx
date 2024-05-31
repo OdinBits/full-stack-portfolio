@@ -14,7 +14,7 @@ const NavDots = () => {
             {NavbarTypes.navPages.map((item, index) => (
                 <Box
                     component='a'
-                    href={`#${item}`}
+                    href={`#${item.name}`}
                     key={item.id + index}
                     sx={{ ...style.pagesStyle, background: activePage === item.name ? '#313BAC' : '#D3D3D3', }}
                 />
