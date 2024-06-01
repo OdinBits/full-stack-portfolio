@@ -3,8 +3,10 @@ import style from '../style';
 import MotionBox from '../../../components/MotionBox';
 import MotionImage from '../../../components/MotionImage';
 import images from '../../../shared/constants/images';
+import { IHeader } from '../../../shared/interfaces/IHeader';
+import { urlFor } from '../../../shared/config/clientConfig';
 
-const PortfolioImage = () => {
+const PortfolioImage: React.FC<IHeader.image> = ({photo}) => {
     return (
         <Box id='portfolio-image' sx={style.portfolioImage}>
             {/* Content */}
@@ -14,7 +16,7 @@ const PortfolioImage = () => {
                     data-id='profile-image'
                     sx={style.porfolioImage.image}
                     alt='portfolioImg'
-                    src={images.MyPhoto}
+                    src={urlFor(photo)}
                     imgStyle={{ borderRadius: '50%' }}
                     motionProps={{
                         initial: { opacity: 0, scale: 0 },

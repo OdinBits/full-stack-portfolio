@@ -6,6 +6,7 @@ export const style = {
     text : {
         flexGrow: 1, 
         color:'blue', 
-        textAlign:'right'
+        textAlign:'right',
+        paddingRight:'30px'
     }
 }

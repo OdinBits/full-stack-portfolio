@@ -18,7 +18,6 @@ const Form: React.FC<IForm.submissionState> = ({ submitForm }) => {
                 validationSchema={FormSchema}
                 onSubmit={ async (values, actions) => {
                     await submitForm(values, formikRef.current.submitCount);
-                    console.log('actions form', actions);
                     actions.resetForm();
                 }}
             >

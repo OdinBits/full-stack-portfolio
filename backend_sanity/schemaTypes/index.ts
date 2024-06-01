@@ -7,6 +7,7 @@ import testimonialsType from "./testimonialsType";
 import workExpType from "./workExpType";
 import workType from "./workType";
 import filtersType from "./filtersType";
+import personType from "./personType";
 
 export const schemaTypes = [
     aboutType,
@@ -17,5 +18,6 @@ export const schemaTypes = [
     testimonialsType,
     workExpType,
     workType,
-    filtersType
+    filtersType,
+    personType
 ]

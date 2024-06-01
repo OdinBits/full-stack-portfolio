@@ -1,10 +1,10 @@
-import { Typography } from '@mui/material'
-import style from '../style'
-import MotionBox from '../../../components/MotionBox'
-import { headerConfig } from '../../../shared/config/headerConfig'
+import { Typography } from '@mui/material';
+import style from '../style';
+import MotionBox from '../../../components/MotionBox';
+import { IHeader } from '../../../shared/interfaces/IHeader';
 
 
-const Roles = () => {
+const Roles: React.FC<IHeader.role> = ({text}) => {
     return (
         <MotionBox
             data-id='intro-box'
@@ -15,11 +15,9 @@ const Roles = () => {
                 transition: { duration: 0.5 }
             }}
         >
-            {headerConfig.headerText.roles.map((role) => (
-                <Typography key={`header-text${role.id}`} sx={style.introRoleText}>
-                    {role.name}
+                <Typography  sx={style.introRoleText}>
+                    {text}
                 </Typography>
-            ))}
         </MotionBox>
 
 

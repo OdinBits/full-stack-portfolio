@@ -2,8 +2,9 @@ import { Box, Typography } from '@mui/material';
 import style from '../style';
 import { headerConfig } from '../../../shared/config/headerConfig';
 import { MotionBox } from '../../../components';
+import { IHeader } from '../../../shared/interfaces/IHeader';
 
-const Intro = () => {
+const Intro: React.FC<IHeader.intro> = ({text}) => {
     return (
         <MotionBox
             id='intro-text'
@@ -31,7 +32,7 @@ const Intro = () => {
                     data-id='intro-title'
                     sx={{ fontSize: '35px', color: '#4b5f80' }}
                 >
-                    {headerConfig.headerText.introTitle}
+                    {text}
                 </Typography>
             </Box>
         </MotionBox>

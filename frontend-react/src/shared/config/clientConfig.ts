@@ -8,7 +8,8 @@ export const clientConfig = createClient({
     dataset: process.env.REACT_APP_SANITY_DATASET,
     apiVersion: process.env.REACT_APP_SANITY_API_VERSION,
     useCdn: true,
-    token: process.env.REACT_APP_SANITY_TOKEN
+    token: process.env.REACT_APP_SANITY_TOKEN,
+    ignoreBrowserTokenWarning: true
 });
 
 const builder = imageUrlBuilder(clientConfig);

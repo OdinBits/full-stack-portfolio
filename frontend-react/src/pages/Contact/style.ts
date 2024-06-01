@@ -24,6 +24,20 @@ const style = {
             fontWeight: "bold",
             fontSize: "30px",
         },
+        textContainer:{
+            width: '100%', 
+            height: '100%', 
+            marginTop: '30px', 
+            display: 'flex', 
+            flexDirection: 'column' 
+        },
+        circularProgression: {
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            height: '100%', 
+            marginTop: '10px'
+        }
     },
 
     contacts: {

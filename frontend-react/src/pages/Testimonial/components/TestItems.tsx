@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material';
 import { memo } from 'react';
-import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import { ITest } from '../../../shared/interfaces/ITest';
 import { urlFor } from '../../../shared/config/clientConfig';
 

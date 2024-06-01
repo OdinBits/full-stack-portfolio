@@ -33,6 +33,7 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
+
           {/* Mobile view menu block */}
           {isOpen && <MobileView isOpen={isOpen} toggleOpen={toggleOpen} />}
         </Box>

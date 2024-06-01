@@ -5,6 +5,6 @@ export const footerConfig = {
         
     ],
     thankyou: [
-        {id:1, text:'Thank you for your Request', isColored: false }
+        {id:1, text:"Thank you for your request, I'll Soon Contact You", isColored: false }
     ]
 }

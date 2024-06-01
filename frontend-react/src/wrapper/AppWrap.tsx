@@ -2,7 +2,7 @@ import { IAppWrap } from '../shared/interfaces/IAppWrap';
 import { Box } from '@mui/material';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { motion } from 'framer-motion';
-import { NavDots, SocialMedia } from '../components';
+import { NavDots } from '../components';
 const AppWrap = ({ Component, idName}: IAppWrap) => function HOC() {
 
     const sectionRef = useIntersectionObserver(idName);

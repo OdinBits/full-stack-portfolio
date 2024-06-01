@@ -10,8 +10,8 @@ const MobileView: React.FC<INavbar.Mobile> = ({isOpen,toggleOpen}) => {
         <Box>
             <Backdrop open={isOpen} sx={style.backDrop} />
             <Box sx={style.mobileMenu}>
-                <IconButton sx={style.closeIcon}>
-                    <Cancel onClick={toggleOpen} />
+                <IconButton onClick={toggleOpen} sx={style.closeIcon}>
+                    <Cancel />
                 </IconButton>
                 {NavbarTypes.navPages.map((page, index) => (
                     <Box key={page.id} sx={style.mobileMenuContainer}>

@@ -2,7 +2,6 @@ import { Box, Button } from '@mui/material'
 import React from 'react'
 import style from '../style'
 import NavbarTypes from '../../../shared/types/NavbarTypes'
-import { INavbar } from '../../../shared/interfaces/INavbar'
 
 const DesktopView: React.FC = () => {
     return (

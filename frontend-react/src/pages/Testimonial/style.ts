@@ -1,4 +1,3 @@
-import { styleGlobal } from "../../styleGlobal";
 
 const style = {
     
