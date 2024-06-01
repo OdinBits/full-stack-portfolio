@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Card, CardContent, CardMedia, Box } from '@mui/material';
-import { GitHub, Visibility } from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 import { IWork } from '../../../shared/interfaces/IWork';
 import { urlFor } from '../../../shared/config/clientConfig';
 import style from '../style';
@@ -40,9 +40,9 @@ const WorkItems: React.FC<IWork.workProps> = ({ filteredData }) => {
                                     data-id='hover-box-content'
                                     sx={style.workItems.hoverContent}
                                 >
-                                    <Typography sx={style.workItems.visibilityIcon}>
+                                    {/* <Typography sx={style.workItems.visibilityIcon}>
                                         <Visibility />
-                                    </Typography>
+                                    </Typography> */}
                                     <Typography sx={style.workItems.gitHubIcon}>
                                         <Box
                                             component='a'

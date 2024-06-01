@@ -142,7 +142,7 @@ const style = {
             backdropFilter: 'blur(2px)',
         },
         bulletPointsContainer: {
-            width: 'fit-content',
+            width: '90%',
             height: '100%',
             textAlign: 'left',
             padding: '10px',
