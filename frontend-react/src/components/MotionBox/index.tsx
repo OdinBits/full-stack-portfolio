@@ -5,11 +5,8 @@ import { styleGlobal } from '../../styleGlobal';
 
 const MotionBox = ({ sx, motionProps, children }: any) => {
     return (
-        <Box sx={sx}>
-            <motion.div
-                style={styleGlobal.centeredStyles}
-            {...motionProps}
-            >
+        <Box id='motion-box' sx={sx}>
+            <motion.div style={styleGlobal.centeredStyles} {...motionProps}>
             {children}
         </motion.div>
         </Box >

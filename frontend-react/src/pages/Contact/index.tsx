@@ -1,8 +1,7 @@
-import { AppBar, Toolbar, Typography, Container, Box, Snackbar, Alert } from '@mui/material';
+import { Box } from '@mui/material';
 import { AppWrap } from '../../wrapper';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import NavbarTypes from '../../shared/types/NavbarTypes';
-import { useState } from 'react';
 import { MotionBox, TextBuilder } from '../../components';
 import { footerConfig } from '../../shared/config/footerConfig';
 import style from './style';
@@ -16,65 +15,47 @@ import { IForm } from '../../shared/interfaces/IForm';
 const Contact = () => {
 
     const dispatch = useAppDispatch();
-
-    const { status } = useAppSelector((state) => state.submission)
-
-
-    const [inView, setInView] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(false);
+    const { status } = useAppSelector((state) => state.submission);
+    const sectionRef = useIntersectionObserver(NavbarTypes.navPages[4].name);
 
     const submitForm = async (values: IForm.formState, submitCount: number) => {
         await dispatch(submissionThunk(values));
-
         setTimeout(() => {
             dispatch(setSubmissionData({ isSubmitting: false, submitCount: submitCount }));
         }, 15000);
     };
 
-
-    const handleEnter = () => setInView(true);
-    const handleExit = () => setInView(false);
-
-    const sectionRef = useIntersectionObserver(NavbarTypes.navPages[4].name, handleEnter, handleExit);
-
-
     return (
-
-        <Box
-            ref={sectionRef}
-            id='Contact'
-            sx={style.main.container}
-        >
-            <Box
-                data-id='content'
-                sx={style.main.content}
-            >
+        <Box ref={sectionRef} id='Contact' sx={style.main.container}>
+            {/* Content */}
+            <Box data-id='content' sx={style.main.content}>
+                {/* Intro */}
                 <TextBuilder
                     data={footerConfig.text}
                     defaultStyle={style.main.text}
                     highLightStyle={undefined}
                 />
-
+                {/* Contact - 2 types*/}
                 <Contacts />
-
-                {status ? 
-                        <TextBuilder
-                            data={footerConfig.thankyou}
-                            defaultStyle={style.main.text}
-                            highLightStyle={undefined}
-                        /> 
-                    : 
-                        <MotionBox
-                            id='form-submission'
-                            sx={{ width: '100%', height: '100%' }}
-                            motionProps={{
-                                initial: { opacity: 0, scale: 0 },
-                                animate: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 400, damping: 20 } },
-                                transition: { duration: 0.5 },
-                            }}
-                        >
-                            <Form submitForm={submitForm} />
-                        </MotionBox>
+                {/* Form and Feedback */}
+                {status ?
+                    <TextBuilder
+                        data={footerConfig.thankyou}
+                        defaultStyle={style.main.text}
+                        highLightStyle={undefined}
+                    />
+                    :
+                    <MotionBox
+                        id='form-submission'
+                        sx={{ width: '100%', height: '100%' }}
+                        motionProps={{
+                            initial: { opacity: 0, scale: 0 },
+                            animate: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 400, damping: 20 } },
+                            transition: { duration: 0.5 },
+                        }}
+                    >
+                        <Form submitForm={submitForm} />
+                    </MotionBox>
                 }
 
             </Box>
@@ -82,4 +63,4 @@ const Contact = () => {
     )
 }
 
-export default AppWrap({ Component: Contact, idName: 'Contact'})
+export default AppWrap({ Component: Contact, idName: 'Contact' })

@@ -2,15 +2,21 @@ import { styleGlobal } from "../../styleGlobal";
 
 const style = {
 
-    main: {
-
-    },
-
     aboutContainer: {
         flexGrow: 1,
         height: '100%',
         minHeight: '100vh',
         ...styleGlobal.centeredStyles,
+    },
+
+    aboutComponentContainer: {
+        display: 'flex',
+                        flexDirection: { xs: 'column', md: 'row' },
+                        width:'fit-content',
+                        padding:'30px',
+                        flexWrap:'wrap',
+                        alignItems:'center',
+                        justifyContent:'center'
     },
     aboutContent: {
         width: { xs: '100%', md: '80%' },

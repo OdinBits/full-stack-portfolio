@@ -1,10 +1,9 @@
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { IWork } from '../../../shared/interfaces/IWork';
 import style from '../style';
-import { WorkTypes } from '../../../shared/types/WorkTypes';
 
-const Filter: React.FC<IWork.fiterProps> = ({ clickedButton, handleWorkFilter }) => {
+const Filter: React.FC<IWork.fiterProps> = ({ clickedButton, handleWorkFilter, filterList }) => {
 
     const getButtonStyles = (title: string) => ({
         ...style.workSkills.skillButtons,
@@ -15,20 +14,19 @@ const Filter: React.FC<IWork.fiterProps> = ({ clickedButton, handleWorkFilter })
     });
 
     return (
-        <Box
-            data-id='work-filter-container'
-            sx={style.workSkills.workFilterContainer}
-        >
-            {WorkTypes.workSkills.map((item, index) => (
-                <Button
-                    key={`work-skills-${item.id}`}
-                    onClick={() => handleWorkFilter(item.title)}
-                    sx={getButtonStyles(item.title)}
-                >
-                    {item.title}
-                </Button>
+        <Grid data-id='work-filter-container' sx={style.workSkills.workFilterContainer}>
+            {/* Content */}
+            {filterList[0]?.options?.map((item:any, index:any) => (
+                <Grid item key={`work-skills-${index}`} sx={{width:'fit-content'}}>
+                    <Button
+                        onClick={() => handleWorkFilter(item)}
+                        sx={getButtonStyles(item)}
+                    >
+                        {item}
+                    </Button>
+                </Grid>
             ))}
-        </Box>
+        </Grid>
     );
 };
 

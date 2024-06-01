@@ -6,6 +6,5 @@ export const SkillsTypes = {
         message: "",
         error: "" ,
         data: [],
-        filteredData: [],
     } as ISkills.ThunkState
 }

@@ -1,22 +1,25 @@
 import { useEffect, useRef } from 'react';
 import { useAppDispatch } from './useStoreRootState';
 import { setActiveSection } from '../store/slices/navigationSlice';
-import { useTheme } from '@mui/material';
 
-const useIntersectionObserver = (idName: string, onEnter?: () => void, onExit?: () => void) => {
+type IntersectionCallback = (entry: IntersectionObserverEntry) => void;
+
+const useIntersectionObserver = (
+    idName: string,
+    onIntersect?: IntersectionCallback
+) => {
     const dispatch = useAppDispatch();
     const sectionRef = useRef<HTMLDivElement | null>(null);
-    const theme = useTheme(); 
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
+                    const isIntersecting = entry.isIntersecting;
+                    if (isIntersecting) {
                         dispatch(setActiveSection(idName));
-                        onEnter?.();
-                    } else {
-                        onExit?.();
                     }
+                    onIntersect?.(entry);
                 });
             },
             {
@@ -36,21 +39,7 @@ const useIntersectionObserver = (idName: string, onEnter?: () => void, onExit?: 
                 observer.unobserve(sectionElement);
             }
         };
-    }, [idName, dispatch, onEnter, onExit]);
-
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         const isDesktop = theme.breakpoints.values.sm >= 600; 
-    //         onViewChange?.(isDesktop);
-    //     };
-
-    //     handleResize(); 
-    //     window.addEventListener('resize', handleResize);
-
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize);
-    //     };
-    // }, [onViewChange, theme.breakpoints.values.sm]);
+    }, [idName, dispatch, onIntersect]);
 
     return sectionRef;
 };

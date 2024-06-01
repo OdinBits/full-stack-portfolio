@@ -6,7 +6,7 @@ import { ISkills } from '../../../shared/interfaces/ISkills';
 
 const ExperienceItem: React.FC<ISkills.APIResExperience> = ({ experience }) => (
     <Grid item sx={{display: 'flex', textAlign: 'center', height: '100%',flexWrap:'wrap' }}>
-        <Typography sx={{ width: '50px', marginRight: '20px', padding: '5px',marginBottom:'20px' }}>
+        <Typography sx={{ width: '60px', marginRight: '20px', padding: '5px',marginBottom:'20px' }}>
             {experience?.year}
         </Typography>
         <Box>

@@ -12,14 +12,8 @@ import TestItems from './components/TestItems';
 const Testimonial: React.FC = () => {
 
     const dispatch = useAppDispatch();
-    const [inView, setInView] = React.useState(false);
-    const [isDesktop, setIsDesktop] = React.useState(false);
 
-    const handleEnter = () => setInView(true);
-    const handleExit = () => setInView(false);
-    const handleViewportChange = (desktop: boolean) => setIsDesktop(desktop);
-
-    const sectionRef = useIntersectionObserver(NavbarTypes.navPages[4].name, handleEnter, handleExit);
+    const sectionRef = useIntersectionObserver(NavbarTypes.navPages[4].name);
 
     React.useEffect(() => {
         dispatch(testimonialThunk());
@@ -42,11 +36,7 @@ const Testimonial: React.FC = () => {
     // ), [data?.brands]);
 
     return (
-        <Box
-            ref={sectionRef}
-            id='Testimonial'
-            sx={style.main.container}
-        >
+        <Box id='Testimonial' ref={sectionRef} sx={style.main.container}>
             <Box
                 data-id='content'
                 sx={style.main.content}

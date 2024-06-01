@@ -1,11 +1,7 @@
 import React from 'react';
+import { IMap } from '../../shared/interfaces/IMap';
 
-interface mapProps {
-    items: any[];
-    Component: React.ComponentType<any>;
-}
-
-const Maper: React.FC<mapProps> = ({ items, Component }) => {
+const Maper: React.FC<IMap> = ({ items, Component }) => {
     return (
         <>
             {items?.map((item: any, index: number) => (

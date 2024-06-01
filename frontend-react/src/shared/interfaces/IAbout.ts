@@ -16,7 +16,6 @@ export namespace IAbout {
 
     export interface AboutItemProps {
         about: About;
-        isDesktop: boolean;
     }
 }
 

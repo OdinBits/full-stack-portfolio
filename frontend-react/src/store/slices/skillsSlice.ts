@@ -5,16 +5,7 @@ import { skillsThunk } from "..";
 const skillSlice = createSlice({
     name: 'skills',
     initialState: SkillsTypes.ThunkState,
-    reducers: {
-        setFilterData: (state, action) => {
-            const filter = action.payload;
-            if (filter === '') {
-                state.filteredData = state.data; 
-            } else {
-                state.filteredData = state.data.filter((item: any) => item.tags.includes(filter));
-            }
-        }
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(skillsThunk.pending, (state) => {
@@ -24,7 +15,6 @@ const skillSlice = createSlice({
             .addCase(skillsThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.data = action.payload;
-                state.filteredData = action.payload; 
                 state.message = 'Successful';
             })
             .addCase(skillsThunk.rejected, (state, action) => {
@@ -34,5 +24,4 @@ const skillSlice = createSlice({
     }
 });
 
-export const { setFilterData } = skillSlice.actions;
 export default skillSlice.reducer;

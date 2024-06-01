@@ -7,10 +7,7 @@ const NavDots = () => {
     const { activePage } = useAppSelector((state) => state.navigation);
 
     return (
-        <Box
-            id='navigaiton-dots'
-            sx={style.container}
-        >
+        <Box id='navigaiton-dots' sx={style.container}>
             {NavbarTypes.navPages.map((item, index) => (
                 <Box
                     component='a'

@@ -16,10 +16,7 @@ const Roles = () => {
             }}
         >
             {headerConfig.headerText.roles.map((role) => (
-                <Typography
-                    key={`header-text${role.id}`}
-                    sx={style.introRoleText}
-                >
+                <Typography key={`header-text${role.id}`} sx={style.introRoleText}>
                     {role.name}
                 </Typography>
             ))}

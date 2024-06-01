@@ -13,14 +13,8 @@ import Items from "./components/Items";
 const About = () => {
 
     const dispatch = useAppDispatch();
-    const [inView, setInView] = React.useState(false);
-    const [isDesktop, setIsDesktop] = React.useState(false);
 
-    const handleEnter = () => setInView(true);
-    const handleExit = () => setInView(false);
-    const handleViewportChange = (desktop: boolean) => setIsDesktop(desktop);
-
-    const sectionRef = useIntersectionObserver(NavbarType.navPages[1].name, handleEnter, handleExit);
+    const sectionRef = useIntersectionObserver(NavbarType.navPages[1].name);
 
     React.useEffect(() => {
         dispatch(aboutThunk());
@@ -30,21 +24,14 @@ const About = () => {
 
     const aboutComponents = React.useMemo(() => (
         data?.map((about: any, index: number) => (
-            <Items key={index} about={about} isDesktop={isDesktop} />
+            <Items key={index} about={about}/>
         ))
-    ), [data, isDesktop]);
+    ), [data]);
 
     return (
-        <Box
-            ref={sectionRef}
-            id='About'
-            sx={style.aboutContainer}
-        >
+        <Box ref={sectionRef} id='About' sx={style.aboutContainer}>
             {/* Main content section */}
-            <Box
-                data-id='about-content'
-                sx={style.aboutContent}
-            >
+            <Box data-id='about-content' sx={style.aboutContent}>
                 {/* Acceptance container */}
                 <TextBuilder
                     data={aboutConfig.aboutIntroText}
@@ -52,17 +39,7 @@ const About = () => {
                     highLightStyle={style.acceptanceMsgColor}
                 />
                 {/* Skill Container */}
-                <Box
-                    sx={{
-                        display: 'flex',
-                        flexDirection: { xs: 'column', md: 'row' },
-                        width:'fit-content',
-                        padding:'30px',
-                        flexWrap:'wrap',
-                        alignItems:'center',
-                        justifyContent:'center'
-                    }}
-                >
+                <Box data-id='skill-container' sx={style.aboutComponentContainer}>
                     {aboutComponents}
                 </Box>
             </Box>

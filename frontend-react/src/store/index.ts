@@ -10,7 +10,6 @@ import skillsThunk from './thunks/skillsThunk';
 import testimonialThunk from './thunks/testimonialThunk';
 import workThunk from './thunks/workThunk';
 
-
 export { useAppDispatch, useAppSelector } from '../hooks/useStoreRootState';
 export { store, type RootState, type AppDispatch } from './store';
 
@@ -20,12 +19,12 @@ export {
     skillsSlice,
     testimonialSlice,
     workSlice,
-    submissionSlice
+    submissionSlice,
 };
 
 export {
     aboutThunk,
     skillsThunk,
     testimonialThunk,
-    workThunk
+    workThunk,
 };

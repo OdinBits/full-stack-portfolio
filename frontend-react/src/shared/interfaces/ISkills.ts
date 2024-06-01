@@ -6,7 +6,6 @@ export namespace ISkills {
         message: string;
         error: string | undefined;
         data: any;
-        filteredData: any;
     }
 
     export interface PropsSkill {

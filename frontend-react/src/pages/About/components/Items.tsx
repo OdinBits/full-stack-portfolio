@@ -7,12 +7,9 @@ import { urlFor } from '../../../shared/config/clientConfig';
 import { MotionBox } from '../../../components';
 
 
-const Items: React.FC<IAbout.AboutItemProps> = ({ about, isDesktop }) => (
-    <Grid
-        id='about-items'
-        item
-        sx={style.skillItems.items}
-    >
+const Items: React.FC<IAbout.AboutItemProps> = ({ about }) => (
+    <Grid id='about-items' item sx={style.skillItems.items}>
+        {/* Content */}
         <MotionBox
             id='items-motion'
             sx={{ width: '100%', height: '100%' }}
@@ -23,10 +20,8 @@ const Items: React.FC<IAbout.AboutItemProps> = ({ about, isDesktop }) => (
                 transition: { duration: 0.5 },
             }}
         >
-            <Card
-                data-id='card-container'
-                sx={style.skillItems.cardContainer}
-            >
+            <Card data-id='card-container' sx={style.skillItems.cardContainer}>
+                {/* Image Media */}
                 <CardMedia
                     data-id='card-media'
                     component="img"
@@ -34,20 +29,13 @@ const Items: React.FC<IAbout.AboutItemProps> = ({ about, isDesktop }) => (
                     alt={about.title}
                     sx={style.skillItems.cardMedia}
                 />
-                <CardContent
-                    data-id='card-content'
-                    sx={style.skillItems.cardContent}
-                >
-                    <Typography
-                        variant="h5"
-                        sx={style.skillItems.skillTitle}
-                    >
+                <CardContent data-id='card-content' sx={style.skillItems.cardContent}>
+                    {/* Title */}
+                    <Typography variant="h5" sx={style.skillItems.skillTitle}>
                         {about.title}
                     </Typography>
-                    <Typography
-                        variant="subtitle1"
-                        sx={style.skillItems.skillDescription}
-                    >
+                    {/* Description */}
+                    <Typography variant="subtitle1" sx={style.skillItems.skillDescription}>
                         {about.description}
                     </Typography>
                 </CardContent>

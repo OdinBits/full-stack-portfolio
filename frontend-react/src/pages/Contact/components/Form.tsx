@@ -3,7 +3,7 @@ import { Box, Button } from '@mui/material';
 import { Formik } from 'formik';
 import { FormTypes } from '../../../shared/types/FormTypes';
 import { FormSchema } from '../../../shared/enums/FormSchema';
-import { InputFields } from '../../../components';
+import { TextFieldRewired } from '../../../components';
 import style from '../style';
 import { IForm } from '../../../shared/interfaces/IForm';
 
@@ -12,10 +12,7 @@ const Form: React.FC<IForm.submissionState> = ({ submitForm }) => {
     const formikRef = useRef<any>(null);
 
     return (
-        <Box
-            id='Form'
-            sx={style.form.container}
-        >
+        <Box id='Form' sx={style.form.container}>
             <Formik
                 initialValues={FormTypes.initialFields}
                 validationSchema={FormSchema}
@@ -35,7 +32,7 @@ const Form: React.FC<IForm.submissionState> = ({ submitForm }) => {
                             sx={style.form.content}
                         >
                             {FormTypes.fields.map((fields) => (
-                                <InputFields
+                                <TextFieldRewired
                                     key={fields.id}
                                     fields={fields}
                                     props={props}

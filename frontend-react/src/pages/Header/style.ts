@@ -39,6 +39,11 @@ const style = {
         marginLeft:20,
         flexGrow:1
     },
+    introGreetings:{
+        fontSize: '40px', 
+        flexGrow: 1, 
+        textAlign: 'center' 
+    },
     introBox: {
         marginTop:'10px',
         borderRadius: '15px',
@@ -78,8 +83,12 @@ const style = {
             position: 'absolute',
             bottom:{xs:0,md:'-100px'},
             zIndex:-1,
-    
         },
+        content: {
+            display: 'flex', 
+            height: 'fit-content', 
+            justifyContent: 'center'
+        }
     },
 
     

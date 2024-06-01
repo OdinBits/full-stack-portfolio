@@ -6,65 +6,59 @@ import images from '../../../shared/constants/images';
 
 const PortfolioImage = () => {
     return (
-        <Box
-            id='portfolio-image'
-            sx={style.portfolioImage}
-        >
-            <Box
-                data-id='portfolio-content'
-                sx={{ display: 'flex', height: 'fit-content', justifyContent: 'center' }}
-            >
+        <Box id='portfolio-image' sx={style.portfolioImage}>
+            {/* Content */}
+            <Box data-id='portfolio-content' sx={style.porfolioImage.content}>
+                {/* Motion image portfolio */}
                 <MotionImage
                     data-id='profile-image'
-                    sx={style.porfolioImage.image} 
+                    sx={style.porfolioImage.image}
                     alt='portfolioImg'
                     src={images.MyPhoto}
-                    imgStyle={{borderRadius:'50%'}}
+                    imgStyle={{ borderRadius: '50%' }}
                     motionProps={{
-                        initial: { opacity: 0, scale: 0 }, 
-                        animate: { opacity: 1, scale: 1 }, 
+                        initial: { opacity: 0, scale: 0 },
+                        animate: { opacity: 1, scale: 1 },
                         transition: {
-                            duration: 0.5, 
+                            duration: 0.5,
                             scale: {
-                                duration: 0.5, 
-                                delay: 0.5 
+                                duration: 0.5,
+                                delay: 0.5
                             }
                         }
                     }}
                 />
-
+                {/* Motion Box background circle */}
                 <MotionBox
                     sx={style.porfolioImage.circleImage}
                     motionProps={{
-                        initial: { opacity: 0, scale: 0 }, 
+                        initial: { opacity: 0, scale: 0 },
                         animate: {
                             opacity: 1,
                             scale: 1,
                             transition: {
-                                opacity: { duration: 0.5 }, 
-                                scale: { duration: 0.8, bounce: 0.6 } 
+                                opacity: { duration: 0.5 },
+                                scale: { duration: 0.8, bounce: 0.6 }
                             }
                         }
                     }}
                 >
                     <MotionImage
                         data-id='circle-image'
-                        sx={{}}
                         alt='portfolioCircle'
                         src={images.circle}
                         motionProps={{
-                            initial: { opacity: 0, scale: 0 }, 
-                            animate: { opacity: 1, scale: 1 }, 
+                            initial: { opacity: 0, scale: 0 },
+                            animate: { opacity: 1, scale: 1 },
                             transition: {
-                                duration: 0.5, 
+                                duration: 0.5,
                                 scale: {
-                                    duration: 0.5, 
-                                    delay: 0.5 
+                                    duration: 0.5,
+                                    delay: 0.5
                                 }
                             }
                         }}
                     />
-
                 </MotionBox>
             </Box>
         </Box>

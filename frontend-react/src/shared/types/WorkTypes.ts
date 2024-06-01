@@ -14,6 +14,5 @@ export const WorkTypes = {
         message: "",
         error: "",
         data: [],
-        filteredData: [],
     } as IWork.ThunkState
 }

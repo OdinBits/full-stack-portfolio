@@ -9,14 +9,16 @@ const style = {
             minHeight: '100vh',
             display: 'flex',
             justifyContent: 'center',
+            alignItems:'center',
             background: '#F3F5F7',
-            paddingBottom:{xs:'100px',md:'0px'}
+            
         },
         content: {
             width: '80%',
             display: 'flex',
             alignItems: 'center',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            marginBottom:'30px'
         },
         text: {
             fontWeight: "bold",
@@ -63,7 +65,7 @@ const style = {
 
     form: {
         container: {
-            width:{xs:'100%',md:'70%'},
+            width:{xs:'90%',md:'70%'},
             display:'flex',
             justifyContent:'center'
         },

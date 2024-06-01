@@ -5,7 +5,7 @@ import TextBuilder from "./TextBuilder";
 import MapComponents from "./Maper";
 import MotionBox from "./MotionBox";
 import MotionImage from "./MotionImage";
-import InputFields from "./TextFieldRewired";
+import TextFieldRewired from "./TextFieldRewired";
 
 
 export {
@@ -16,5 +16,5 @@ export {
     MapComponents,
     MotionBox,
     MotionImage,
-    InputFields
+    TextFieldRewired
 };

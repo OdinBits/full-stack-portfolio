@@ -5,15 +5,9 @@ import { style } from './style';
 
 const TextBuilder = ({ data, defaultStyle, highLightStyle }: IText) => {
     return (
-        <Box
-            data-id='text-container'
-            sx={style.textContainer}
-        >
-            <Box
-                data-id='text-content'
-                sx={style.textContent}
-            >
-                {data.map((message: any, index: any) => (
+        <Box data-id='text-container' sx={style.textContainer}>
+            <Box data-id='text-content'  sx={style.textContent}>
+                {data.map((message: any) => (
                     <Typography
                         key={message.id}
                         component="span"

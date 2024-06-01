@@ -14,7 +14,7 @@ const Intro = () => {
                 transition: { duration: 0.5 } 
             }}
         >
-            <Typography sx={{ fontSize: '40px', flexGrow: 1, textAlign: 'center' }}>{headerConfig.headerText.greeting}</Typography>
+            <Typography sx={style.introGreetings}>{headerConfig.headerText.greeting}</Typography>
             <Box
                 data-id='intro'
                 style={style.intro}

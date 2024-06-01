@@ -1,15 +1,14 @@
-import React from 'react';
 import { AppBar,Toolbar,Typography, Box } from '@mui/material';
+import { style } from './style';
 
 const Footer: React.FC = () => {
     return (
-        <AppBar position="static" sx={{background:'#d5ebdf'}}>
+        <AppBar id='footer' position="static" sx={style.container}>
             <Toolbar>
                 <Box sx={{width:'100%'}}>
-                    <Typography variant="body1" component="div" sx={{ flexGrow: 1 , color:'blue', textAlign:'right' }}>
-                        &copy; {new Date().getFullYear()} Nishant. All rights reserved.
+                    <Typography variant="body1" component="div" sx={style.text}>
+                        &copy; {new Date().getFullYear()} {process.env.REACT_APP_MY_RIGHTS}
                     </Typography>
-                    {/* Add additional footer components or actions here */}
                 </Box>
             </Toolbar>
         </AppBar>
