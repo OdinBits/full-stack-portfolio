@@ -17,7 +17,8 @@ const Header = () => {
         dispatch(personThunk());
     }, [dispatch]);
 
-    const { data } = useAppSelector((state) => state.person)
+    const { data } = useAppSelector((state) => state.person);
+    const person = data[0] || {};
 
     return (
         <Box id='Home' sx={style.headerSection}>
@@ -26,12 +27,12 @@ const Header = () => {
                 {/* Introduction container */}
                 <Box data-id='intro-container' sx={style.introContainer}>
                     {/* Greeting and name */}
-                    <Intro text={data[0]?.name} />
+                    <Intro text={person.name || 'None'} />
                     {/* Roles */}
-                    <Roles text={data[0]?.title} />
+                    <Roles text={person.title || 'None'} />
                 </Box>
                 {/* Portfolio images */}
-                <PortfolioImage photo={data[0]?.photo} />
+                <PortfolioImage photo={person.photo || null} />
                 {/* Skills icons*/}
                 <Skills />
             </Box>
@@ -39,4 +40,4 @@ const Header = () => {
     )
 }
 
-export default AppWrap({ Component: Header, idName: 'Home'});
+export default AppWrap({ Component: Header, idName: 'Home' });

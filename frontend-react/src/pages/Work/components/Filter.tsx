@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { IWork } from '../../../shared/interfaces/IWork';
 import style from '../style';
 
@@ -13,13 +13,27 @@ const Filter: React.FC<IWork.fiterProps> = ({ clickedButton, handleWorkFilter, f
         color: clickedButton === title ? '#FFFF' : ''
     });
 
+    // Check if filterList is defined and has at least one item with options
+    const hasValidFilterList = Array.isArray(filterList) && filterList.length > 0 && filterList[0]?.options?.length > 0;
+
+    // If no valid filterList is available, show a fallback message
+    if (!hasValidFilterList) {
+        return (
+            <Grid data-id='work-filter-container' sx={style.workSkills.workFilterContainer}>
+                <Typography variant="h6" color="textSecondary">
+                    No filters available
+                </Typography>
+            </Grid>
+        );
+    }
+
     return (
         <Grid data-id='work-filter-container' sx={style.workSkills.workFilterContainer}>
             {/* Content */}
-            {filterList[0]?.options?.map((item:any, index:any) => (
-                <Grid item key={`work-skills-${index}`} sx={{width:'fit-content'}}>
+            {filterList[0].options.map((item: any, index: any) => (
+                <Grid item key={`work-skills-${index}`} sx={{ width: 'fit-content' }}>
                     <Button
-                        onClick={() => handleWorkFilter(item)}
+                        onClick={() => handleWorkFilter ? handleWorkFilter(item) : null}
                         sx={getButtonStyles(item)}
                     >
                         {item}

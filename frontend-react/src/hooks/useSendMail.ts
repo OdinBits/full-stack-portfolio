@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import { useAppSelector } from '../store';
 
 const useSendMail = (status: boolean, emailData: any) => {
-    const { email } = useAppSelector((state) => state.person?.data);
+    const { email } = useAppSelector((state) => state.person?.data[0] || {});
 
     useEffect(() => {
         const sendEmail = async () => {
