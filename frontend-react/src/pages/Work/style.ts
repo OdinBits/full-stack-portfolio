@@ -74,9 +74,9 @@ const style = {
             flexDirection: { xs: 'column', md: 'row' },
             textAlign: 'center',
             padding: '10px',
-            transition: 'box-shadow 0.3s ease', // Add smooth transition for boxShadow
+            transition: 'box-shadow 0.3s ease',
             '&:hover': {
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Add box shadow on hover
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', 
             },
         },
         cardContainer: {
@@ -144,14 +144,14 @@ const style = {
         bulletPointsContainer: {
             width: '90%',
             height: '100%',
-            textAlign: 'left',
+            textAlign: 'center',
             padding: '10px',
             marginTop: '20px',
             borderRadius: '10px',
             background: '#ebf7f7',
         },
         bulletPoints: {
-            marginTop: '1px',
+            marginTop: '2px',
             color: '#8c9396',
             '&:hover': {
                 color: 'rgba(255, 0, 0, 0.5)'
