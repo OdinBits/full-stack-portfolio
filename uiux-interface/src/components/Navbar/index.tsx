@@ -3,7 +3,7 @@ import { style } from './style';
 import NavbarDesktop from './components/desktop';
 import NavbarMobile from './components/mobile';
 import MenuBlock from './components/menuBlock';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 
 const Navbar = () => {

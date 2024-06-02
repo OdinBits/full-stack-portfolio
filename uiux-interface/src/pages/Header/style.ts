@@ -2,10 +2,14 @@ import { globalStyle } from "../../app/globalStyle";
 
 export const style = {
         container: {
-
-            ...globalStyle.maxStrech
+            height:'100vh',
+            ...globalStyle.centerDiv,
         },
         content: {
-
+            width:'93%',
+            display:'flex',
+            marginTop:'100px',
+            height:'70vh',
+            flexDirection:{md:'row'},
         }
 }

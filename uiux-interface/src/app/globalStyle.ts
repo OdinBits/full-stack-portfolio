@@ -7,7 +7,7 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     textTransform: 'none',
-                    borderRadius: '18px',
+                    borderRadius: '1px',
                     '&:hover': {
                         backgroundColor: '#035FB2',
                         color: 'white',
@@ -47,10 +47,14 @@ export const globalStyle = {
     },
     verticallyCenter: {
         display:'flex',
-        justifyContent:'center',
+        alignItems:'center',
+        
     },
     horizontallyCenter: {
         display:'flex',
-        alignItems:'center'
+        justifyContent:'center',
+    },
+    textWrap: {
+        flexWrap:'wrap'
     }
 }
