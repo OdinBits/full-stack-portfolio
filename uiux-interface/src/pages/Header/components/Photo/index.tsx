@@ -1,12 +1,12 @@
-import { Box } from '@mui/material'
-import { myPhoto } from '../../../../shared/constants/image';
+import { Card, CardMedia } from '@mui/material';
 import { style } from './style';
+import { myPhoto } from '../../../../shared/constants/image';
 
 const Photo = () => {
     return (
-        <Box id='Photo' sx={style.container}>
-            <Box component='img' src={myPhoto} alt='photo' sx={style.photo}/>
-        </Box>
+        <Card id='Photo' sx={style.container}>
+            <CardMedia component='img' src={myPhoto} alt='photo' sx={style.photo} />
+        </Card>
     )
 }
 

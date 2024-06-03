@@ -4,14 +4,27 @@ import { globalStyle } from "../../../../app/globalStyle";
 export const style = {
 
     container: {
-        width: '50%',
-        border: 'solid 2px',
+        width: {md:'50%'},
         height: '100%',
-        paddingTop:'30px'
+        // border:'solid 2px',
+        display:'flex',
+        justifyContent:'center'
+    },
+    content:{
+        height:{xs:'100%',md:'100%',lg:'fit-content'},
+        width:'100%',
+        padding:'0px 20px',
+        margin:{xs:'1px 0px',md:'none'},
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:{md:'space-between'},
+        // border:'solid 2px'
+        '& > *': {
+        marginTop: '20px',
+    },
     },
     greet: {
-        border: 'solid 2px',
-        fontSize: '18px',
+        fontSize: '19px',
         color:'#69757d',
         fontFamiliy:'Nunito',
         letterSpacing: '0.5px',
@@ -20,21 +33,19 @@ export const style = {
         ...globalStyle.textWrap
     },
     brief: {
-        border: '2px solid #212529',
         color: '#212529',
         fontSize: '35px',
-        lineHeight: 1.5,
+        lineHeight: 1.2,
         fontWeight: 300,
-        letterSpacing: '-1px',
-        letterHeight:' 1px',
-        width:'95%',
+        letterSpacing: '0.3px',
         fontFamily: 'Fjalla One, sans-serif', 
         borderRadius: '5px',
+        margin:'5px auto',
         ...globalStyle.textWrap
     },
     button: {
-        border: 'solid 2px',
-        width:'240px',
-        padding:'20px'
+        width:{sm:'220px'},
+        padding:'20px',
+        border:'solid 1px green',
     }
 }

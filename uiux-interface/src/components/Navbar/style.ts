@@ -5,6 +5,7 @@ export const style = {
     container: {
         width:'100%',
         height:'35%',
+        
     },
     content: {
         ...globalStyle.maxStrech

@@ -48,7 +48,6 @@ export const globalStyle = {
     verticallyCenter: {
         display:'flex',
         alignItems:'center',
-        
     },
     horizontallyCenter: {
         display:'flex',

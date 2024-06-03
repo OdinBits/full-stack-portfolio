@@ -1,15 +1,20 @@
-import { globalStyle } from "../../app/globalStyle";
 
 export const style = {
         container: {
-            height:'100vh',
-            ...globalStyle.centerDiv,
+            minHeight:'100vh',
+            height:'100%',
+            width:'100%',
+            // border:'solid 2px',
         },
         content: {
-            width:'93%',
+            width:'100%',
             display:'flex',
-            marginTop:'100px',
-            height:'70vh',
-            flexDirection:{md:'row'},
+            height:'100%',
+            padding:{md:'0px 50px'},
+            flexDirection:{xs:'column',md:'row'},
+            justifyContent:{xs:'center',md:'space-between'},
+            alignItems:'center',
+            // border:'solid 2px green',
+            margin:'auto'
         }
 }
