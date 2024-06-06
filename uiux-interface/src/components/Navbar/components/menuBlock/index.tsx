@@ -1,7 +1,7 @@
 import { Cancel } from '@mui/icons-material';
 import { Box, Button, IconButton, Stack } from '@mui/material';
 import { style } from './style';
-import { NavType } from '../../../../shared/types/NavType';
+import { NavType } from '../../../../shared/types/NavTypes';
 import { INav } from '../../../../shared/interfaces/INav';
 import { useEffect } from 'react';
 import gsap from 'gsap';
@@ -23,12 +23,12 @@ const MenuBlock: React.FC<INav.toogleHandler> = ({ handleToggle }) => {
                 {NavType.navItems.map((item: any, index: any) => (
                     <Box
                         component='a'
-                        href={`#${item}`}
-                        key={item + index}
+                        href={`#${item?.name}`}
+                        key={item?.id + index}
                         sx={style.button}
                     >
-                        <Button key={item} onClick={handleToggle} sx={{}}>
-                            {item}
+                        <Button key={item?.id} onClick={handleToggle} sx={{}}>
+                            {item?.name}
                         </Button>
                     </Box>
                 ))}

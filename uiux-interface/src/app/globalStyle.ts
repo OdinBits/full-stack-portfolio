@@ -8,6 +8,7 @@ export const theme = createTheme({
                 root: {
                     textTransform: 'none',
                     borderRadius: '1px',
+                    color:'#69757d',
                     '&:hover': {
                         backgroundColor: '#035FB2',
                         color: 'white',

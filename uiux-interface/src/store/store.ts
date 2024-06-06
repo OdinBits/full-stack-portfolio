@@ -1,9 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import personSlice from './slices/personSlice';
+import aboutSlice from './slices/aboutSlice';
 
 const rootReducer = combineReducers({
-
+    person: personSlice,
+    about : aboutSlice
 })
 
 const persistConfig = {

@@ -10,23 +10,17 @@ export const style = {
         display:'flex',
         justifyContent:'center'
     },
-    content:{
-        height:{xs:'100%',md:'100%',lg:'fit-content'},
-        width:'100%',
-        padding:'0px 20px',
-        margin:{xs:'1px 0px',md:'none'},
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:{md:'space-between'},
-        // border:'solid 2px'
-        '& > *': {
-        marginTop: '20px',
-    },
+    content: {
+        height: '100%',
+        width: '100%',
+        padding: '10px 20px',
+        display: 'flex',
+        flexDirection: 'column',
+        // border: 'solid 1px',
     },
     greet: {
         fontSize: '19px',
         color:'#69757d',
-        fontFamiliy:'Nunito',
         letterSpacing: '0.5px',
         letterHeight:' 1px',
         fontWeight:100,
@@ -40,12 +34,12 @@ export const style = {
         letterSpacing: '0.3px',
         fontFamily: 'Fjalla One, sans-serif', 
         borderRadius: '5px',
-        margin:'5px auto',
+        margin:'0px auto',
         ...globalStyle.textWrap
     },
     button: {
         width:{sm:'220px'},
         padding:'20px',
-        border:'solid 1px green',
+        border:'solid 1px #69757d',
     }
 }

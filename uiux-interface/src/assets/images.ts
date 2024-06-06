@@ -1,12 +1,3 @@
-import myPhoto from '../../assets/MyPhoto.jpeg';
-import react from '../../assets/react.png';
-// import css from '../../assets/css.png';
-import powerApps from '../../assets/powerApps.png';
-import powerAutomate from '../../assets/powerAutomate.png';
-import sharepoint from '../../assets/sharepoint.png';
-import tableau from '../../assets/tableau.png';
-import typeScript from '../../assets/typeScript.png';
-
 import email from '../../assets/email.png';
 import mobile from '../../assets/mobile.png';
 import api from '../../assets/api.png';
@@ -21,7 +12,7 @@ import javascript from '../../assets/javascript.png';
 import mu5 from '../../assets/mu5.png';
 import node from '../../assets/node.png';
 import python from '../../assets/python.png';
-// import react from '../../assets/react.png';
+import react from '../../assets/react.png';
 import redux from '../../assets/redux.png';
 import sass from '../../assets/sass.png';
 import typescript from '../../assets/typescript.png';
@@ -48,20 +39,12 @@ import spotify from '../../assets/spotify.png';
 import bgWhite from '../../assets/bgWhite.png';
 import bgIMG from '../../assets/bgIMG.png';
 
-export const ConstImg = {
-    myPhoto,
-    react,
-    css,
-    powerApps,
-    powerAutomate,
-    sharepoint,
-    tableau,
-    typeScript,
+const CONSTImages = {
     email,
     mobile,
     api,
     cpp,
-    // css,
+    css,
     figma,
     flutter,
     git,
@@ -71,7 +54,7 @@ export const ConstImg = {
     mu5,
     node,
     python,
-    // react,
+    react,
     redux,
     sass,
     typescript,
@@ -95,3 +78,5 @@ export const ConstImg = {
     bgWhite,
     bgIMG
 };
+
+export default CONSTImages;

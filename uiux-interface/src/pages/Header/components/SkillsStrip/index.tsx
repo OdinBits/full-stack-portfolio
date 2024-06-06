@@ -1,12 +1,12 @@
 import { Box, CardMedia } from '@mui/material';
 import { style } from './style';
-import { HeaderType } from '../../../../shared/types/HeaderType';
+import { HeaderTypes } from '../../../../shared/types/HeaderTypes';
 
 const SkillsStrip = () => {
     return (
         <Box sx={style.container}>
             <Box sx={style.content}>
-                {HeaderType.skills.map((item) => (
+                {HeaderTypes.skills.map((item) => (
                     <CardMedia 
                         key={item.id} 
                         component="img" 

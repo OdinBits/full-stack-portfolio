@@ -6,6 +6,7 @@ import { persistor } from '../store/store';
 import Master from '../master';
 import { Header } from '../pages';
 import { theme } from './globalStyle';
+import About from '../pages/About';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <Master>
             <Header/>
+            <About/>
           </Master>
         </ThemeProvider>
       </PersistGate>
