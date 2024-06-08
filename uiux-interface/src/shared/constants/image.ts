@@ -47,9 +47,12 @@ import skype from '../../assets/skype.png';
 import spotify from '../../assets/spotify.png';
 import bgWhite from '../../assets/bgWhite.png';
 import bgIMG from '../../assets/bgIMG.png';
+import mongoDB from '../../assets/mongodb.svg';
+import powerPlatform from '../../assets/powerPlatform.png';
 
 export const ConstImg = {
     myPhoto,
+    powerPlatform,
     react,
     css,
     powerApps,
@@ -93,5 +96,6 @@ export const ConstImg = {
     skype,
     spotify,
     bgWhite,
-    bgIMG
+    bgIMG,
+    mongoDB
 };
