@@ -5,7 +5,7 @@ export const style = {
 
     container : {
         // border:'solid 2px',
-        padding:{md:'100px 0px'},
+        padding:{md:'30px 0px'},
     },
     content : {
         // border:'solid 5px blue',

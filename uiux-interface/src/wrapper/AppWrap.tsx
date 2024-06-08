@@ -1,11 +1,45 @@
+import { useEffect, useRef, useState } from 'react';
 import { Box } from '@mui/material';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import { gsap } from 'gsap';
+
 import NavDots from '../components/NavDots';
 import { IAppWrap } from '../shared/interfaces/IAppWrap';
 
 const AppWrap = ({ Component, idName }: IAppWrap) => function HOC() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
 
-    const sectionRef = useIntersectionObserver(idName);
+    useEffect(() => {
+        const section = sectionRef.current;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    gsap.to(section, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.0,
+                        ease: 'power1.out',
+                    });
+                }
+            },
+            {
+                threshold: 0.1, // Adjust the threshold as needed
+            }
+        );
+
+        if (section) {
+            gsap.set(section, { opacity: 0, y: 20 }); // Initial state
+            observer.observe(section);
+        }
+
+        return () => {
+            if (section) {
+                observer.unobserve(section);
+            }
+        };
+    }, []);
 
     return (
         <Box
@@ -19,7 +53,6 @@ const AppWrap = ({ Component, idName }: IAppWrap) => function HOC() {
                 position: 'relative',
             }}
         >
-
             <Box sx={{
                 flexGrow: 1,
                 display: 'flex',
@@ -29,8 +62,7 @@ const AppWrap = ({ Component, idName }: IAppWrap) => function HOC() {
             }}>
                 <Component />
             </Box>
-
-            <NavDots idName={idName}/>
+            <NavDots idName={idName} />
         </Box>
     );
 };
