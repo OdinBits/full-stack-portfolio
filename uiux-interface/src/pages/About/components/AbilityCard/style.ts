@@ -12,7 +12,7 @@ export const style = {
     },
     content: {
         // overflowY:'hidden',
-        width:{xs:'330px',lg:'400px'},
+        width:{xs:'330px',md:'400px',lg:'400px'},
         height:'100%',
         padding:'30px',
         // border: 'solid 2px green',
@@ -22,7 +22,7 @@ export const style = {
         // flex: 1,
         // border: 'solid 2px',
         width:'100%',
-        height:'100%',
+        height:{md:'300px',lg:'410px'},
         // margin: '10px 20px',
         // transition: 'transform 0.5s, opacity 0.5s'
     },

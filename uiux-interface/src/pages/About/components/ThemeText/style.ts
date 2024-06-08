@@ -23,7 +23,7 @@ export const style = {
         fontFamily: 'Fjalla One, sans-serif', 
     },
     paragraph: {
-        padding:'10px',
+        padding:'30px',
         fontSize:'19px',
         color:'#0e1015',
         lineHeight: 1.6,

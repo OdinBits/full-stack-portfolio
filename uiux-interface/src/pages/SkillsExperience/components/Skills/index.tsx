@@ -6,8 +6,6 @@ import { SkillsExperienceType } from '../../../../shared/types/SkillsExperienceT
 const Skills: React.FC = () => {
 
   const skillPoints = SkillsExperienceType.skillHeaders
-  
-  console.log('Received skillPoints:', skillPoints);
 
   const validSkillPoints: any = Array.isArray(skillPoints) ? skillPoints : [];
 

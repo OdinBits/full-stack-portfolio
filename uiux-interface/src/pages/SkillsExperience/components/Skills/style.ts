@@ -7,8 +7,7 @@ export const style = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '0px 20px',
-        minHeight: '90vh',
+        padding: '10px 40px',
         height: '100%'
     },
     content: {
