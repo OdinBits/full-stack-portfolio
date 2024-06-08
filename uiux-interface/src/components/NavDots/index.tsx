@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import { style } from './style';
 import { NavTypes } from '../../shared/types/NavTypes';
 
-const NavDots = () => {
+const NavDots = ({idName}:any) => {
     const { activePage } = useAppSelector((state) => state.navLinkStates);
 
     return (
@@ -13,7 +13,7 @@ const NavDots = () => {
                     component='a'
                     href={`#${item.name}`}
                     key={item.id + index}
-                    sx={{ ...style.pagesStyle, background: activePage === item.name ? '#313BAC' : '#D3D3D3', }}
+                    sx={{ ...style.pagesStyle, background: idName === item.name ? '#313BAC' : '#D3D3D3', }}
                 />
             ))}
         </Box>

@@ -30,7 +30,7 @@ const AppWrap = ({ Component, idName }: IAppWrap) => function HOC() {
                 <Component />
             </Box>
 
-            <NavDots />
+            <NavDots idName={idName}/>
         </Box>
     );
 };

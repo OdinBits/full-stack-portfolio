@@ -1,7 +1,7 @@
 
 export const style = {
 
-    container:{
+    container: {
         width: '50px',
         height: '100%',
         display: { xs: 'none', md: 'flex' },
@@ -17,6 +17,9 @@ export const style = {
         width: '10px',
         height: '10px',
         margin: '10px',
-        transition: 'background-color 0.3s ease' 
+        transition: 'background-color 0.3s ease',
+        '&:hover': {
+            backgroundColor: '#313BAC',
+        },
     }
 }

@@ -43,7 +43,7 @@ const SkillsExperience = () => {
         
 
     return (
-        <Box ref={ref} id='SkillS' bgcolor='#f2f2f2' padding='80px 0px'>
+        <Box ref={ref} id='SKILLS' bgcolor='#f2f2f2' padding='80px 0px'>
             <ToggleMenuDesktop isActive={isActive}/>
             <ToggleMenuMobile isActive={isActive}/>
             <SkillsExperienceRoutes/>
@@ -51,4 +51,4 @@ const SkillsExperience = () => {
     )
 }
 
-export default AppWrap({ Component: SkillsExperience, idName: 'SkillS'});
+export default AppWrap({ Component: SkillsExperience, idName: 'SKILLS'});
