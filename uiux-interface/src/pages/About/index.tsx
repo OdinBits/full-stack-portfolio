@@ -1,30 +1,43 @@
-import { Box } from '@mui/material'
-import React, { useEffect } from 'react'
-import ThemeText from './components/ThemeText'
-import Info from './components/Info'
-import { useAppDispatch, useAppSelector } from '../../store'
-import AbilityCard from './components/AbilityCard'
-import aboutThunk from '../../store/thunks/aboutThunk'
+import React from 'react';
+import { Box } from '@mui/material';
+import { useAppDispatch, useAppSelector } from '../../store';
+import ThemeText from './components/ThemeText';
+import Info from './components/Info';
+import AbilityCard from './components/AbilityCard';
+import TextBuilder from '../../components/TextBuilder/TextBuilder';
+import { aboutConfig } from '../../shared/config/aboutConfig';
+import { style } from './style';
+import { NavTypes } from '../../shared/types/NavTypes';
+import AppWrap from '../../wrapper/AppWrap';
+import { useInView } from 'react-intersection-observer';
+import { setActiveSection } from '../../store/slices/navigationSlice';
 
 const About = () => {
-
+    const { ref, inView } = useInView({
+        threshold: 0.6, // Adjust the threshold as needed
+    });
     const dispatch = useAppDispatch();
 
-    useEffect(() => {
-        dispatch(aboutThunk())
-    },[dispatch])
+    React.useEffect(() => {
+        if (inView) {
+            dispatch(setActiveSection(NavTypes.navItems[0].name));
+        }
+    }, [inView, dispatch]);
 
-    const { data } = useAppSelector((state) => state.about)
+    const { data } = useAppSelector((state) => state.about);
 
     return (
-        <Box>
-            <Box>
-                <ThemeText/>
-                <AbilityCard about={data}/>
-                {/* <Info/> */}
-            </Box>
+        <Box ref={ref} id='ABOUT' sx={style.container}>
+            <ThemeText />
+            <TextBuilder
+                data={aboutConfig.aboutIntroText}
+                defaultStyle={style.acceptanceMessage}
+                highLightStyle={style.acceptanceMsgColor}
+            />
+            <AbilityCard about={data} />
+            <Info />
         </Box>
-    )
-}
+    );
+};
 
-export default About
+export default AppWrap({ Component: About, idName: 'ABOUT' });

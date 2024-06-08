@@ -7,11 +7,8 @@ import SkillsStrip from './components/SkillsStrip';
 const Header = () => {
 
     return (
-        <Box id='Header' sx={style.container}>
-            <Box data-id='header-content' sx={style.content}>
-                <TextBox />
-                <Photo />
-            </Box>
+        <Box id='Header'>
+            <TextBox />
             <SkillsStrip />
         </Box>
     )

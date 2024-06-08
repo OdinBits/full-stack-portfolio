@@ -7,7 +7,7 @@ export const style = {
         minHeight:'70px',
         height:'100%',
         background:'#F5F5F5',
-        marginBottom:'30px',
+        marginBottom:'20px',
         flexWrap:'wrap',
         ...globalStyle.verticallyCenter
     },

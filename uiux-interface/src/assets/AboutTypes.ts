@@ -1,4 +1,6 @@
-import { IAbout } from "../interfaces/IAbout";
+import { ConstImg } from "../shared/constants/image";
+import { IAbout } from "../shared/interfaces/IAbout";
+
 
 
 export const AboutTypes = {
@@ -8,10 +10,10 @@ export const AboutTypes = {
         secondParagraph:"A full stack developer has the functional knowledge and ability to take a concept and turn it into a finished product. A full stack developer should have knowledge in front end and back end development. Front end developers build the visible parts of applications that users see and interact with. Back end developers on the other hand, are responsible for building the parts the user does not see, which include core computational logic, server and database." 
     },
     aboutSkills: [
-        { id: '1', title: 'Web Development', description: 'I am a good Developer', imgUrl: CONSTimages.about01 },
-        { id: '2', title: 'Web Design', description: 'I am a good Developer', imgUrl: CONSTimages.about02 },
-        { id: '3', title: 'UI/UX', description: 'I am a good Developer', imgUrl: CONSTimages.about03 },
-        { id: '4', title: 'Web Animation', description: 'I am a good Developer', imgUrl: CONSTimages.about04 },
+        { id: '1', title: 'Web Development', description: 'I am a good Developer', imgUrl: ConstImg.about01 },
+        { id: '2', title: 'Web Design', description: 'I am a good Developer', imgUrl: ConstImg.about02 },
+        { id: '3', title: 'UI/UX', description: 'I am a good Developer', imgUrl: ConstImg.about03 },
+        { id: '4', title: 'Web Animation', description: 'I am a good Developer', imgUrl: ConstImg.about04 },
     ],
     ThunkState: {
         loading: false,

@@ -8,7 +8,7 @@ export const style = {
         
     },
     content: {
-        ...globalStyle.maxStrech
+        // ...globalStyle.maxStrech
     },
     backdrop: {
         backdropFilter: 'blur(1.5px)',

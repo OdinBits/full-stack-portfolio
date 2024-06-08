@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
 import { style } from './style'
 import { AboutTypes } from '../../../../shared/types/AboutTypes'
 

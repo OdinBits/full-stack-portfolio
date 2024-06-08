@@ -1,6 +1,5 @@
 import { Box, CssBaseline } from '@mui/material'
 import React, { ReactNode } from 'react';
-import { style } from './style';
 import { Navbar } from '../components';
 
 interface MainProps {
@@ -9,13 +8,13 @@ interface MainProps {
 
 const Master: React.FC<MainProps> = ({ children }) => {
     return (
-        <Box id='master-container' sx={style.container}>
+        <div id='master-container'>
             <CssBaseline/>
             <Navbar/>
-            <Box data-id='master-content' sx={style.content}>
+            <div data-id='master-content'>
                 {children}
-            </Box>
-        </Box>
+            </div>
+        </div>
     )
 }
 

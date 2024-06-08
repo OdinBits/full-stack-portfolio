@@ -1,7 +1,7 @@
 import { Cancel } from '@mui/icons-material';
 import { Box, Button, IconButton, Stack } from '@mui/material';
 import { style } from './style';
-import { NavType } from '../../../../shared/types/NavTypes';
+import { NavTypes } from '../../../../shared/types/NavTypes';
 import { INav } from '../../../../shared/interfaces/INav';
 import { useEffect } from 'react';
 import gsap from 'gsap';
@@ -20,7 +20,7 @@ const MenuBlock: React.FC<INav.toogleHandler> = ({ handleToggle }) => {
                         <Cancel sx={style.cancelIcon} />
                     </IconButton>
                 </Box>
-                {NavType.navItems.map((item: any, index: any) => (
+                {NavTypes.navItems.map((item: any, index: any) => (
                     <Box
                         component='a'
                         href={`#${item?.name}`}
