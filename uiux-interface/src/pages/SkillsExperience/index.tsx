@@ -1,6 +1,5 @@
 import { Box } from '@mui/material';
 import { SkillsExperienceType } from '../../shared/types/SkillsExperienceTypes';
-import Skills from './components/Skills';
 import ToggleMenuDesktop from './components/ToggleMenuDesktop';
 import ToggleMenuMobile from './components/ToggleMenuMobile';
 import { useEffect } from 'react';
@@ -9,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 import { setActiveSection, updateHistory } from '../../store/slices/navigationSlice';
 import SkillsExperienceRoutes from '../../routes/SkillsExperience';
 import AppWrap from '../../wrapper/AppWrap';
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import { NavTypes } from '../../shared/types/NavTypes';
 import { useInView } from 'react-intersection-observer';
 import React from 'react';

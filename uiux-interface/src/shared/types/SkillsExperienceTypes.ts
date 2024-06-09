@@ -94,8 +94,31 @@ export const SkillsExperienceType = {
     ],
 
     expPorps : [
-        {id:'1',img:ConstImg.logo,Title:'1 full-stack developer | PowerTools developer | Tableau developer', workData: 'May 2023 - May 2024', description:'I started my carieer as a full-stack developer, for first 6 months i developed React applications , then started woking on No code low code Platforms for 3 months, then i worked on developer advanced full-stack web applications', developmentTools:['React','Redux','Tablue','PowerPlatform']},
-        {id:'2',img:ConstImg.logo,Title:'2 full-stack developer | PowerTools developer | Tableau developer', workData: 'May 2023 - May 2024', description:'I started my carieer as a full-stack developer, for first 6 months i developed React applications , then started woking on No code low code Platforms for 3 months, then i worked on developer advanced full-stack web applications', developmentTools:['React','Redux','Tablue','PowerPlatform']}
+        {id:'1',
+            img:ConstImg.logo,
+            Title:'1 full-stack developer | PowerTools developer | Tableau developer', 
+            workData: 'May 2023 - May 2024', 
+            description:[
+                {point1:'I Started my career a as full stack dev'},
+                {point1:'I Started my career a as full stack dev'},
+                {point1:'I Started my career a as full stack dev'},
+        ], 
+        developmentTools:[
+            'React',
+            'Redux',
+            'Tablue',
+            'PowerPlatform'
+        ]},
+        {id:'2',
+            img:ConstImg.logo,
+            Title:'2 full-stack developer | PowerTools developer | Tableau developer', 
+            workData: 'May 2023 - May 2024', 
+            description:[
+                {point1:'I Started my career a as full stack dev'},
+                {point1:'I Started my career a as full stack dev'},
+                {point1:'I Started my career a as full stack dev'},
+        ], 
+        developmentTools:['React','Redux','Tablue','PowerPlatform']}
     ]
 
 };
