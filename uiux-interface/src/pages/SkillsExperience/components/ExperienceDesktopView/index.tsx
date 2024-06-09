@@ -9,7 +9,7 @@ const ExperienceDesktopView = () => {
 
     const [selectedExp, setSelectedExp] = useState(validExpPoints[0] || {});
 
-    const handleImageClick = (exp: any) => {
+    const handleImageClick = (exp:any) => {
         setSelectedExp(exp);
     };
 
@@ -59,10 +59,21 @@ const ExperienceDesktopView = () => {
                         <Stack spacing={1.5} sx={style.expContainer}>
                             <Typography sx={style.title}>{selectedExp.Title}</Typography>
                             <Typography sx={style.date}>{selectedExp.workData}</Typography>
-                            {selectedExp.description.map((desc,index) => (
-                                <Typography variant="subtitle1" sx={style.description} key={index}>{desc.point1}</Typography>
-                            ))}
-                            
+                            {selectedExp.description.length > 1 ? (
+                                <ul>
+                                    {selectedExp.description.map((desc, index) => (
+                                        <li key={index}>
+                                            <Typography variant="subtitle1" sx={style.description}>
+                                                {desc.point1}
+                                            </Typography>
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <Typography variant="subtitle1" sx={style.description}>
+                                    {selectedExp.description[0].point1}
+                                </Typography>
+                            )}
                             <Box sx={style.devToolsContainer}>
                                 <Typography sx={style.devToolsText}>Development Tools : </Typography>
                                 {selectedExp.developmentTools && selectedExp.developmentTools.map((tool, index) => (

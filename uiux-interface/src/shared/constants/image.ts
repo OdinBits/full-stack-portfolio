@@ -36,7 +36,8 @@ import profile from '../../assets/profile.png';
 import circle from '../../assets/circle.svg';
 import logo from '../../assets/MyLogo.png';
 import dev from '../../assets/Dev.png';
-import MyPhoto from '../../assets/MyPhoto.jpeg'
+import MyPhoto from '../../assets/MyPhoto.jpeg';
+import companyLogo from '../../assets/tpl.png';
 
 import adidas from '../../assets/adidas.png';
 import amazon from '../../assets/amazon.png';
@@ -97,5 +98,6 @@ export const ConstImg = {
     spotify,
     bgWhite,
     bgIMG,
-    mongoDB
+    mongoDB,
+    companyLogo
 };

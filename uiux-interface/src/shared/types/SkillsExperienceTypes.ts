@@ -95,12 +95,12 @@ export const SkillsExperienceType = {
 
     expPorps : [
         {id:'1',
-            img:ConstImg.logo,
-            Title:'1 full-stack developer | PowerTools developer | Tableau developer', 
+            img:ConstImg.companyLogo,
+            Title:'Full-stack developer | PowerTools developer | Tableau developer', 
             workData: 'May 2023 - May 2024', 
             description:[
                 {point1:'I Started my career a as full stack dev'},
-                {point1:'I Started my career a as full stack dev'},
+                {point1:'I have developed full Stack web applications'},
                 {point1:'I Started my career a as full stack dev'},
         ], 
         developmentTools:[
@@ -109,16 +109,16 @@ export const SkillsExperienceType = {
             'Tablue',
             'PowerPlatform'
         ]},
-        {id:'2',
-            img:ConstImg.logo,
-            Title:'2 full-stack developer | PowerTools developer | Tableau developer', 
-            workData: 'May 2023 - May 2024', 
-            description:[
-                {point1:'I Started my career a as full stack dev'},
-                {point1:'I Started my career a as full stack dev'},
-                {point1:'I Started my career a as full stack dev'},
-        ], 
-        developmentTools:['React','Redux','Tablue','PowerPlatform']}
+        // {id:'2',
+        //     img:ConstImg.logo,
+        //     Title:'2 full-stack developer | PowerTools developer | Tableau developer', 
+        //     workData: 'May 2023 - May 2024', 
+        //     description:[
+        //         {point1:'I Started my career a as full stack dev'},
+        //         {point1:'I Started my career a as full stack dev'},
+        //         {point1:'I Started my career a as full stack dev'},
+        // ], 
+        // developmentTools:['React','Redux','Tablue','PowerPlatform']}
     ]
 
 };

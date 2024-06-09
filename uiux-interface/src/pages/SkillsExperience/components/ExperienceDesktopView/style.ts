@@ -2,7 +2,7 @@
 
 export const style = {
     content:{
-        width:{md:'70%'},
+        width:{md:'60%'},
         // border:'solid 2px blue',
         margin:'10px auto',
         display:'flex',
@@ -10,12 +10,13 @@ export const style = {
     },
     optionDiv: {
         // border:'solid 2px green',
-        width:'30%'
+        width:'25%'
     },
     img: {
         // border:'solid 2px brown',
-        width:'60%',
-        height:'60%'
+        width:'80%',
+        height:'80%',
+        background:'#f2f2f2'
     },
     expInfo: {
         borderLeft:'solid 2px #305c91',
@@ -39,7 +40,8 @@ export const style = {
         display:'flex',
         justifyContent:'flex-end',
         alignItems:'right',
-        margin:'5px 0px 0px 6px'
+        margin:'7px 6px',
+        
         // border:'solid 3px '
     },
     title: {
@@ -54,7 +56,7 @@ export const style = {
         fontStyle:'italic',
     },
     description: {
-        color:'#212529',
+        color:'#7a7d7b',
         letterSpacing:'0.5px',
         letterHeight:'1px',
         fontSize:'16px'
