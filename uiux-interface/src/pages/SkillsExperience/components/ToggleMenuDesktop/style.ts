@@ -21,7 +21,7 @@ export const style =  {
         borderRadius:'10px',
     },
     name: {
-        fontSize:'20px',
+        fontSize:'18px',
         padding:'5px',
         color:'#0e1015'
     }

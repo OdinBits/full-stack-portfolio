@@ -48,7 +48,7 @@ const ToggleMenuDesktop: React.FC<ISkillsExperience.IActivePage> = ({ isActive }
                     className='indicator'
                     sx={{
                         backgroundColor: '#3c52b2',
-                        height: '3px',
+                        height: '2.5px',
                         position: 'absolute',
                         bottom: 0,
                         left: indicatorStyle.left,

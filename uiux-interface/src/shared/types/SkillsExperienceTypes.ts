@@ -1,4 +1,7 @@
+
+import ExperienceDesktopView from "../../pages/SkillsExperience/components/ExperienceDesktopView";
 import Skills from "../../pages/SkillsExperience/components/Skills";
+import { ConstImg } from "../constants/image";
 
 export const SkillsExperienceType = {
     skillHeaders: [
@@ -7,7 +10,7 @@ export const SkillsExperienceType = {
             role: 'Front-end',
             code: [
                 {
-                    title: 'Technologies',
+                    title: 'Tech Stack',
                     points: [
                         'Single-page Applications (SPA)',
                         'React (https://reactjs.org/)',
@@ -36,13 +39,14 @@ export const SkillsExperienceType = {
             role: 'Back-end',
             code: [
                 {
-                    title: 'Server Technologies',
+                    title: 'Server Side',
                     points: [
                         'Node.js',
                         'Express.js',
                         'GraphQL',
                         'REST APIs',
                         'Database Management',
+                        'ASP.NET Core API',
                     ],
                 },
                 {
@@ -85,8 +89,13 @@ export const SkillsExperienceType = {
     routeMenu: [
         // { id: '1', name: 'SKILLS' , path: '*', element: Skills},
         { id: '1', name: 'SKILLS' , path:'SKILLS', element: Skills},
-        { id: '2', name: 'EXPERIIENCE' ,path:'EXPERIENCE', element: Skills},
+        { id: '2', name: 'EXPERIIENCE' ,path:'EXPERIENCE', element: ExperienceDesktopView},
         { id: '3', name: 'PROJECTS' , path:'PROJECTS', element: Skills},
     ],
+
+    expPorps : [
+        {id:'1',img:ConstImg.logo,Title:'1 full-stack developer | PowerTools developer | Tableau developer', workData: 'May 2023 - May 2024', description:'I started my carieer as a full-stack developer, for first 6 months i developed React applications , then started woking on No code low code Platforms for 3 months, then i worked on developer advanced full-stack web applications', developmentTools:['React','Redux','Tablue','PowerPlatform']},
+        {id:'2',img:ConstImg.logo,Title:'2 full-stack developer | PowerTools developer | Tableau developer', workData: 'May 2023 - May 2024', description:'I started my carieer as a full-stack developer, for first 6 months i developed React applications , then started woking on No code low code Platforms for 3 months, then i worked on developer advanced full-stack web applications', developmentTools:['React','Redux','Tablue','PowerPlatform']}
+    ]
 
 };

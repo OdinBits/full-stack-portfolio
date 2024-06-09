@@ -28,6 +28,7 @@ export const style = {
         flexDirection: 'column',
         justifyContent: 'center',
         // border: 'solid 1px',
+        ...globalStyle.textWrap
     },
     greet: {
         fontSize: '19px',
@@ -35,17 +36,18 @@ export const style = {
         letterSpacing: '0.5px',
         letterHeight:' 1px',
         fontWeight:100,
+        width:'100%',
         ...globalStyle.textWrap
     },
     brief: {
         color: '#212529',
-        fontSize: '35px',
+        fontSize: {xs:'30px',md:'35px'},
         lineHeight: 1.2,
         fontWeight: 300,
         letterSpacing: '0.3px',
         fontFamily: 'Fjalla One, sans-serif', 
         borderRadius: '5px',
-        margin:'0px auto',
+        // margin:'0px auto',
         ...globalStyle.textWrap,
         // border:'solid 2px',
         width:{xs:'100%',md:'65%'}

@@ -15,7 +15,7 @@ export const style = {
         // border: 'solid 1px blue',
         margin: '20px',
         height: '100%',
-        width: { xs: '100%', md: '60%' },
+        width: { xs: '100%', md: '70%' },
         flexDirection: { xs: 'column', md: 'row' }
     },
     rolesDiv: {
@@ -30,18 +30,18 @@ export const style = {
         // border: 'solid 2px',
         minWidth: 'fit-content',
         width: '100px',
-        padding: '5px',
-        textAlign: { xs: 'center', md: 'right' },
+        padding: '15px 10px',
+        textAlign:'center',
         background: '#305c91',
         color: 'white',
-        fontSize: '20px'
+        fontSize: '16px'
     },
     rolesDataContainer: {
         height: '100%',
         width: '100%',
         padding: '5px 5px 5px 20px',
-        borderLeft: { md: 'solid 3px #305c91' },
-        borderTop: { xs: 'solid 3px #305c91', md: 'none' },
+        borderLeft: { md: 'solid 2px #305c91' },
+        borderTop: { xs: 'solid 2px #305c91', md: 'none' },
         display: 'flex',
         flexDirection: 'column'
     },
@@ -50,7 +50,7 @@ export const style = {
         flexWrap: 'wrap'
     },
     codeItemTitle: {
-        fontSize: '26px',
+        fontSize: '24px',
         margin: '10px 0px',
         color: '#0e1015',
         fontFamily: 'Fjalla One, sans-serif',
