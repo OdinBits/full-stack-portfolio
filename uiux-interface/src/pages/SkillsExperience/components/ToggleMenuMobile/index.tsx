@@ -1,14 +1,27 @@
-import { Box, MenuItem, Select } from '@mui/material';
+import { Box, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import React, { useState } from 'react';
 import { SkillsExperienceType } from '../../../../shared/types/SkillsExperienceTypes';
 import { style } from './style';
 import { ISkillsExperience } from '../../../../shared/interfaces/ISkillsExperience';
+import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../../../store';
+import { setNavLink } from '../../../../store/slices/navigationSlice';
 
-const ToggleMenuMobile: React.FC<ISkillsExperience.IActivePage> = ({isActive}) => {
+const ToggleMenuMobile: React.FC<ISkillsExperience.IActivePage> = ({ isActive }) => {
   const [selectedValue, setSelectedValue] = useState('');
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setSelectedValue(event.target.value as string);
+  const handleNavLinkClick = (index: number, path: string) => {
+    dispatch(setNavLink(index));
+    navigate(path);
+  };
+
+  const handleChange = (event: SelectChangeEvent<string>) => {
+    const path = event.target.value as string;
+    setSelectedValue(path);
+    const index = SkillsExperienceType.routeMenu.findIndex(item => item.path === path);
+    handleNavLinkClick(index, path);
   };
 
   return (
@@ -17,12 +30,12 @@ const ToggleMenuMobile: React.FC<ISkillsExperience.IActivePage> = ({isActive}) =
         labelId="demo-simple-select-helper-label"
         id="demo-simple-select-helper"
         value={selectedValue}
-        placeholder={SkillsExperienceType.routeMenu[0]?.name}
+        displayEmpty
         sx={style.container}
-        // onChange={handleChange}
+        onChange={handleChange}
       >
-        {SkillsExperienceType.routeMenu.map((item, index) => (
-          <MenuItem key={item.id} value={item.name}>
+        {SkillsExperienceType.routeMenu.map((item) => (
+          <MenuItem key={item.id} value={item.path}>
             {item.name}
           </MenuItem>
         ))}

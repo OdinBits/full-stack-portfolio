@@ -6,7 +6,7 @@ export const style = {
     container: {
         width: {md:'100%'},
         height: '100%',
-        // border:'solid 2px',
+        border:'solid 2px',
         padding:{xs:'0px 20px',md:'0px 30px'},
         display:'flex',
         justifyContent:'center',
@@ -56,6 +56,7 @@ export const style = {
         width:{sm:'220px'},
         padding:'20px',
         border:'solid 1px #69757d',
+        textAlign:'center'
     },
     photo: {
         clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',

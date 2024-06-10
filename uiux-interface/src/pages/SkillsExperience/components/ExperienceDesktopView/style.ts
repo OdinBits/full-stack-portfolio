@@ -2,7 +2,7 @@
 
 export const style = {
     content:{
-        width:{md:'60%'},
+        width:{md:'75%'},
         // border:'solid 2px blue',
         margin:'10px auto',
         display:'flex',
@@ -40,7 +40,7 @@ export const style = {
         display:'flex',
         justifyContent:'flex-end',
         alignItems:'right',
-        margin:'7px 6px',
+        // margin:'7px 6px',
         
         // border:'solid 3px '
     },
@@ -56,21 +56,24 @@ export const style = {
         fontStyle:'italic',
     },
     description: {
-        color:'#7a7d7b',
         letterSpacing:'0.5px',
         letterHeight:'1px',
-        fontSize:'16px'
+        fontSize:'16px',
+        color:'#595856'
     },
     devToolsContainer: {
         display: 'flex', 
         // margin:'10px 0px',
-        borderRadius:'10px'
+        borderRadius:'10px',
+        // border:'solid 2px',
+        width:'fit-content'
     },
     devToolsText: {
         color:'#212529',
-        padding:'15px 5px',
         // border:'solid 2px',
         fontSize:'17px',
+        width:'200px',
+        margin:'auto '
     },
     devToolsPoints: {
         padding: '10px 10px', 
@@ -78,6 +81,17 @@ export const style = {
         background:'#abb8c3',
         color:'#284c77',
         fontSize:'17px',
+        // border:'solid 2px',
         
+    },
+    subTitle: {
+        margin:'10px 3px',
+        fontSize:'22px',
+        color: '#0e1015',
+    },
+    li: {
+        marginLeft:'50px',
+        color: '#305c91',
+
     }
 }

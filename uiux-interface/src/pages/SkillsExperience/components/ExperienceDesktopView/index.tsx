@@ -9,7 +9,7 @@ const ExperienceDesktopView = () => {
 
     const [selectedExp, setSelectedExp] = useState(validExpPoints[0] || {});
 
-    const handleImageClick = (exp:any) => {
+    const handleImageClick = (exp: any) => {
         setSelectedExp(exp);
     };
 
@@ -59,19 +59,24 @@ const ExperienceDesktopView = () => {
                         <Stack spacing={1.5} sx={style.expContainer}>
                             <Typography sx={style.title}>{selectedExp.Title}</Typography>
                             <Typography sx={style.date}>{selectedExp.workData}</Typography>
-                            {selectedExp.description.length > 1 ? (
-                                <ul>
-                                    {selectedExp.description.map((desc, index) => (
-                                        <li key={index}>
-                                            <Typography variant="subtitle1" sx={style.description}>
-                                                {desc.point1}
-                                            </Typography>
-                                        </li>
+                            {selectedExp.detailDesc.length > 1 ? (
+                                <ul >
+                                    {selectedExp.detailDesc.map((desc, index) => (
+                                        <React.Fragment key={index}>
+                                            <Typography sx={style.subTitle}>{desc.subTitle}</Typography>
+                                            {desc.points.map((points,index) => (
+                                                <li key={index} style={style.li}>
+                                                    <Typography variant="subtitle1" sx={style.description}>
+                                                        {points}
+                                                    </Typography>
+                                                </li>
+                                            ))}
+                                        </React.Fragment>
                                     ))}
                                 </ul>
                             ) : (
                                 <Typography variant="subtitle1" sx={style.description}>
-                                    {selectedExp.description[0].point1}
+                                    {selectedExp.detailDesc[0].points}
                                 </Typography>
                             )}
                             <Box sx={style.devToolsContainer}>

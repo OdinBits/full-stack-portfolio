@@ -21,16 +21,14 @@ const MenuBlock: React.FC<INav.toogleHandler> = ({ handleToggle }) => {
                     </IconButton>
                 </Box>
                 {NavTypes.navItems.map((item: any, index: any) => (
-                    <Box
-                        component='a'
-                        href={`#${item?.name}`}
+                    <Button
                         key={item?.id + index}
+                        href={`#${item?.name}`}
+                        onClick={handleToggle}
                         sx={style.button}
                     >
-                        <Button key={item?.id} onClick={handleToggle} sx={{}}>
-                            {item?.name}
-                        </Button>
-                    </Box>
+                        {item?.name}
+                    </Button>
                 ))}
             </Stack>
 

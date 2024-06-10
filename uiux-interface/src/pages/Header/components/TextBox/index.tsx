@@ -11,7 +11,9 @@ const TextBox = () => {
                     I'm a full stack developer, specialized in development of web
                     applications using React,Node.js,Typescript & more
                 </Typography>
-                <Button sx={style.button}> FIND OUT MORE </Button>
+                    <Button  href={`#ABOUT`} sx={style.button}>
+                        FIND OUT MORE
+                    </Button>
             </Stack>
             <Card id='Photo' sx={style.photoContainer}>
                 <CardMedia component='img' src={ConstImg.myPhoto} alt='photo' sx={style.photo} />

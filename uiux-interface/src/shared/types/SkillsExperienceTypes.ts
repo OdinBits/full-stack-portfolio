@@ -89,8 +89,7 @@ export const SkillsExperienceType = {
     routeMenu: [
         // { id: '1', name: 'SKILLS' , path: '*', element: Skills},
         { id: '1', name: 'SKILLS' , path:'SKILLS', element: Skills},
-        { id: '2', name: 'EXPERIIENCE' ,path:'EXPERIENCE', element: ExperienceDesktopView},
-        { id: '3', name: 'PROJECTS' , path:'PROJECTS', element: Skills},
+        { id: '2', name: 'EXPERIENCE' ,path:'EXPERIENCE', element: ExperienceDesktopView},
     ],
 
     expPorps : [
@@ -98,10 +97,10 @@ export const SkillsExperienceType = {
             img:ConstImg.companyLogo,
             Title:'Full-stack developer | PowerTools developer | Tableau developer', 
             workData: 'May 2023 - May 2024', 
-            description:[
-                {point1:'I Started my career a as full stack dev'},
-                {point1:'I have developed full Stack web applications'},
-                {point1:'I Started my career a as full stack dev'},
+            detailDesc:[
+                {subTitle:'Full-stack developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+                {subTitle:'PowerTools developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+                {subTitle:'Tableau developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
         ], 
         developmentTools:[
             'React',
