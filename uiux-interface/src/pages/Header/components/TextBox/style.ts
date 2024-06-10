@@ -6,7 +6,7 @@ export const style = {
     container: {
         width: {md:'100%'},
         height: '100%',
-        border:'solid 2px',
+        // border:'solid 2px',
         padding:{xs:'0px 20px',md:'0px 30px'},
         display:'flex',
         justifyContent:'center',

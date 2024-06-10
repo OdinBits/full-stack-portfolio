@@ -8,7 +8,7 @@ import { useAppDispatch } from '../../../../store';
 import { setNavLink } from '../../../../store/slices/navigationSlice';
 
 const ToggleMenuMobile: React.FC<ISkillsExperience.IActivePage> = ({ isActive }) => {
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState(SkillsExperienceType.routeMenu[0]?.path || '');
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ const ToggleMenuMobile: React.FC<ISkillsExperience.IActivePage> = ({ isActive })
         sx={style.container}
         onChange={handleChange}
       >
-        {SkillsExperienceType.routeMenu.map((item) => (
+        {SkillsExperienceType.routeMenu.map((item: any) => (
           <MenuItem key={item.id} value={item.path}>
             {item.name}
           </MenuItem>

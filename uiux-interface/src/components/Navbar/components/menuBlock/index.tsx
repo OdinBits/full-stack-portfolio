@@ -7,6 +7,17 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 
 const MenuBlock: React.FC<INav.toogleHandler> = ({ handleToggle }) => {
+    const handleClick = (event:any, id:any) => {
+        event.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+        handleToggle(); // Close the menu after clicking a link
+    };
 
     useEffect(() => {
         gsap.fromTo('#MenuBlock', { x: '-100%' }, { x: '0%', duration: 0.5, ease: 'power3.out' });
@@ -23,17 +34,15 @@ const MenuBlock: React.FC<INav.toogleHandler> = ({ handleToggle }) => {
                 {NavTypes.navItems.map((item: any, index: any) => (
                     <Button
                         key={item?.id + index}
-                        href={`#${item?.name}`}
-                        onClick={handleToggle}
+                        onClick={(e) => handleClick(e, item?.name)}
                         sx={style.button}
                     >
                         {item?.name}
                     </Button>
                 ))}
             </Stack>
-
         </Box>
-    )
-}
+    );
+};
 
-export default MenuBlock
+export default MenuBlock;

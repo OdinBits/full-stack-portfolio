@@ -4,11 +4,10 @@ import { globalStyle } from "../../app/globalStyle";
 export const style = {
     container: {
         width:'100%',
-        height:'35%',
-        
     },
     content: {
-        // ...globalStyle.maxStrech
+        // ...globalStyle.maxStrech,
+        height:{xs:'70px',md:'35%'}
     },
     backdrop: {
         backdropFilter: 'blur(1.5px)',
