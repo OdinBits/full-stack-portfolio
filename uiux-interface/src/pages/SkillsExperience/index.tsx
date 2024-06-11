@@ -11,6 +11,7 @@ import AppWrap from '../../wrapper/AppWrap';
 import { NavTypes } from '../../shared/types/NavTypes';
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
+import skillsThunk from '../../store/thunks/skillsThunk';
 
 const SkillsExperience = () => {
     const { ref, inView } = useInView({
@@ -37,6 +38,8 @@ const SkillsExperience = () => {
         navigate(path);
 
         dispatch(updateHistory(path));
+        dispatch(skillsThunk());
+
         }, [navigate, isActive, dispatch]);
 
 

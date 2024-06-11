@@ -4,11 +4,13 @@ import storage from 'redux-persist/lib/storage';
 import personSlice from './slices/personSlice';
 import aboutSlice from './slices/aboutSlice';
 import navigationSlice from './slices/navigationSlice';
+import skillsSlice from './slices/skillsSlice';
 
 const rootReducer = combineReducers({
     person: personSlice,
     about : aboutSlice,
     navLinkStates: navigationSlice,
+    SkillsExp: skillsSlice
 })
 
 const persistConfig = {

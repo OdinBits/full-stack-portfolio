@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Box, Button, Collapse, Stack, Typography } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { style } from './style';
-import { SkillsExperienceType } from '../../../../shared/types/SkillsExperienceTypes';
-const CustomDropdown = () => {
-    const expPoints = SkillsExperienceType.expPorps;
-    const validExpPoints = Array.isArray(expPoints) ? expPoints : [];
+import { urlFor } from '../../../../shared/config/clientConfig';
+import { format, parseISO } from 'date-fns';
+
+const CustomDropdown = ({validExpPoints}:any) => {
 
     // Initialize selectedExp state with the first item selected by default
     const [selectedExp, setSelectedExp] = useState(
-        validExpPoints.map((_, index) => index === 0)
+        validExpPoints.map((_: any, index: number) => index === 0)
     );
 
     const handleImageClick = (index: number) => {
@@ -18,9 +18,15 @@ const CustomDropdown = () => {
         setSelectedExp(newSelectedExp);
     };
 
+    const formatDate = (dateString: string) => {
+        const date = parseISO(dateString);
+        return format(date, 'yyyy - MMM');
+    };
+
+
     return (
         <Box sx={{ width: '100%', padding: '10px 30px', display: { xs: 'block', md: 'none' } }}>
-            {validExpPoints.map((item, index) => (
+            {validExpPoints.map((item:any, index:any) => (
                 <Box sx={style.content} key={index}>
                     <Button
                         aria-controls={`custom-dropdown-menu-${index}`}
@@ -45,7 +51,7 @@ const CustomDropdown = () => {
                         }}
                     >
                         <Box sx={{ width: '150px', height: '50px' }}>
-                            <Box component="img" src={item.img} sx={style.img} />
+                            <Box component="img" src={urlFor(item.img)} sx={style.img} />
                         </Box>
                         <ArrowDropDownIcon sx={{ fontSize: '26px' }} />
                     </Button>
@@ -53,14 +59,14 @@ const CustomDropdown = () => {
                     <Collapse in={selectedExp[index]} timeout="auto" unmountOnExit>
                         <Box data-id="exp info" sx={style.expInfo}>
                             <Stack spacing={1.5} sx={style.expContainer}>
-                                <Typography sx={style.title}>{item.Title}</Typography>
-                                <Typography sx={style.date}>{item.workData}</Typography>
+                                <Typography sx={style.title}>{item.title}</Typography>
+                                <Typography sx={style.date}>{formatDate(item.startDate)} to {formatDate(item.endDate)}</Typography>
                                 {item.detailDesc.length > 1 ? (
                                     <ul style={{ width: '100%' }}>
-                                        {item.detailDesc.map((desc, descIndex) => (
+                                        {item.detailDesc.map((desc:any, descIndex:any) => (
                                             <Box key={descIndex} sx={{ margin: 'auto', width: '100%' }}>
                                                 <Typography sx={style.subTitle}>{desc.subTitle}</Typography>
-                                                {desc.points.map((points, j) => (
+                                                {desc.points.map((points:any, j:any) => (
                                                     <li key={j} style={style.li}>
                                                         <Typography variant="subtitle1" sx={style.description}>
                                                             {points}
@@ -77,7 +83,7 @@ const CustomDropdown = () => {
                                 )}
                                 <Box sx={style.devToolsContainer}>
                                     <Typography sx={style.devToolsText}>Development Tools : </Typography>
-                                    {item.developmentTools && item.developmentTools.map((tool, i) => (
+                                    {item.developmentTools && item.developmentTools.map((tool:any, i:any) => (
                                         <Typography key={i} sx={style.devToolsPoints}>{tool}</Typography>
                                     ))}
                                 </Box>

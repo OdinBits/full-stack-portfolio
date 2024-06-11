@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 import { style } from './style';
 import { SkillsExperienceType } from '../../../../shared/types/SkillsExperienceTypes';
-import ExperienceContent from '../ExperienceContent/ExperienceContent';
 import CustomDropdown from '../ExperienceMobileView';
 import ExperienceDesktopView from '../ExperienceDesktopView';
+import { useAppDispatch, useAppSelector } from '../../../../store';
 
 const ExperienceResponsive = () => {
-    const expPoints = SkillsExperienceType.expPorps;
-    const validExpPoints = Array.isArray(expPoints) ? expPoints : [];
 
-    const [selectedExp, setSelectedExp] = useState(validExpPoints[0] || {});
+    
+        const {expData} = useAppSelector((state) => state.SkillsExp)
 
-    const handleImageClick = (exp: any) => {
-        setSelectedExp(exp);
-    };
-
+        const validExpPoints = expData ? expData.experiences : SkillsExperienceType.expProps;
+    
+        const [selectedExp, setSelectedExp] = useState(validExpPoints[0] || {});
+    
+        const handleImageClick = (exp: any) => {
+            setSelectedExp(exp);
+            };
     return (
         <Box id="Experience container">
             <Box
@@ -38,7 +40,7 @@ const ExperienceResponsive = () => {
                     handleImageClick={handleImageClick}
                 />
 
-                <CustomDropdown />
+                <CustomDropdown validExpPoints={validExpPoints}/>
 
             </Box>
         </Box>

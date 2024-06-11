@@ -1,14 +1,16 @@
 import { Box } from '@mui/material';
 import React from 'react'
 import { style } from './style';
-import ExperienceContent from '../ExperienceContent/ExperienceContent';
+import ExperienceContent from '../ExperienceContent';
+import { urlFor } from '../../../../shared/config/clientConfig';
 
 const ExperienceDesktopView = ({validExpPoints,selectedExp,handleImageClick}:any) => {
+
     return (
         <>
             <Box data-id="option div" sx={style.optionDiv}>
                     {validExpPoints.map((item:any, index:any) => {
-                        const isSelected = item === selectedExp;
+                        const isSelected = item.id === selectedExp.id;
                         return (
                             <Box key={index}>
                                 <Box sx={{ width: '100%', display: { xs: 'none', md: 'block' } }}>
@@ -18,7 +20,7 @@ const ExperienceDesktopView = ({validExpPoints,selectedExp,handleImageClick}:any
                                         onClick={() => handleImageClick(item)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        <Box component="img" src={item.img} sx={style.img} />
+                                        <Box component="img" src={urlFor(item.img)} sx={style.img} />
                                     </Box>
                                     <Box
                                         data-id="indicator"

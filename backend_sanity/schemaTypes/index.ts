@@ -8,6 +8,8 @@ import workExpType from "./workExpType";
 import workType from "./workType";
 import filtersType from "./filtersType";
 import personType from "./personType";
+import newExperienceType from "./newExperienceType";
+import newSkill from "./newSkill";
 
 export const schemaTypes = [
     aboutType,
@@ -19,5 +21,7 @@ export const schemaTypes = [
     workExpType,
     workType,
     filtersType,
-    personType
+    personType,
+    newExperienceType,
+    newSkill
 ]

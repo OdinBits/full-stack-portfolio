@@ -2,6 +2,7 @@
 import ExperienceResponsive from "../../pages/SkillsExperience/components/ExperienceResponsive";
 import Skills from "../../pages/SkillsExperience/components/Skills";
 import { ConstImg } from "../constants/image";
+import { ISkillsExperience } from "../interfaces/ISkillsExperience";
 
 export const SkillsExperienceType = {
     skillHeaders: [
@@ -93,7 +94,7 @@ export const SkillsExperienceType = {
         // { id: '2', name: 'EXPERIENCE' ,path:'EXPERIENCE', element: ExperienceResponsive},
     ],
 
-    expPorps : [
+    expProps : [
         {id:'1',
             img:ConstImg.companyLogo,
             Title:'Full-stack developer | PowerTools developer | Tableau developer', 
@@ -149,6 +150,11 @@ export const SkillsExperienceType = {
         //         {point1:'I Started my career a as full stack dev'},
         // ], 
         // developmentTools:['React','Redux','Tablue','PowerPlatform']}
-    ]
-
+    ],
+        expThunkState: {
+            expLoading: false,
+            expMessage: "",
+            expError: "" ,
+            expData: undefined,
+        } as ISkillsExperience.ThunkState
 };
