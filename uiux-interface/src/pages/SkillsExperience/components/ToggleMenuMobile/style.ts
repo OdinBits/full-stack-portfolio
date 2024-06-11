@@ -2,7 +2,7 @@
 
 export const style = {
     container: {
-        display:{xs:'block',md:'none'},
+        display:{xs:'flex',md:'none'},
         margin:'auto',
         width:'80%'
     }

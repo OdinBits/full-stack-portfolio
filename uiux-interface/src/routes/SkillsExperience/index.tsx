@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { SkillsExperienceType } from '../../shared/types/SkillsExperienceTypes';
+import { Box } from '@mui/material';
 
 const SkillsExperienceRoutes = () => {
   const location = useLocation();
@@ -16,17 +17,17 @@ const SkillsExperienceRoutes = () => {
       );
     }, routeContainerRef);
 
-    return () => ctx.revert(); // Clean up the animation context when the component unmounts or location changes
+    return () => ctx.revert(); 
   }, [location]);
 
   return (
-    <div ref={routeContainerRef}>
+    <Box ref={routeContainerRef} >
       <Routes location={location}>
         {SkillsExperienceType.routeMenu.map(({ id, path, element: Component }) => (
           <Route key={id} path={path} element={<Component />} />
         ))}
       </Routes>
-    </div>
+    </Box>
   );
 }
 

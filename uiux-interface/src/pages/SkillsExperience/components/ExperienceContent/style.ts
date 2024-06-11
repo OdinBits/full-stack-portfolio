@@ -1,33 +1,36 @@
+import { globalStyle } from "../../../../app/globalStyle";
 
 
 export const style = {
     content:{
-        width:{md:'60%'},
-        // border:'solid 2px blue',
+        width:{md:'30%'},
+        borderRadius:'10px',
+        border:'solid 1.5px #a0a1a3',
         margin:'10px auto',
-        display:'flex',
-        flexDirection:{md:'row'},
-        padding:'10px'
+        padding:'5px'
     },
-    optionDiv: {
-        // border:'solid 2px green',
-        width:{xs:'100%',md:'25%'},
-        display:{xs:'none',md:'block'}
+    selectDiv : {
+        border:'solid 2px green',
+        width:'60%',
+        margin:'auto'
     },
     img: {
         // border:'solid 2px brown',
-        width:'80%',
-        height:'80%',
-        background:'#f2f2f2'
+        width:'100%',
+        height:'100%',
+        background:'#f2f2f2',
+        borderRadius:'10px'
     },
     expInfo: {
-        borderLeft:'solid 2px #305c91',
+
         width:'100%',
-        padding:'10px',
-        display:{xs:'none',md:'flex'}
+        padding:'5px',
     },
     expContainer: {
-        padding:'0px 5px'
+        width:'100%',
+        height:'100%',
+        padding:'10px 5px',
+        
     },
     expBox: {
         border:'solid 2px red',
@@ -48,7 +51,7 @@ export const style = {
         // border:'solid 3px '
     },
     title: {
-        fontSize: '26px',
+        fontSize: '21px',
         fontFamily: 'Fjalla One, sans-serif',
         color: '#0e1015',
     },
@@ -69,7 +72,9 @@ export const style = {
         // margin:'10px 0px',
         borderRadius:'10px',
         // border:'solid 2px',
-        width:'fit-content'
+        width:'fit-content',
+        height:'100%',
+        flexWrap:'wrap'
     },
     devToolsText: {
         color:'#212529',
@@ -85,15 +90,15 @@ export const style = {
         color:'#284c77',
         fontSize:'17px',
         // border:'solid 2px',
-        
+        flexWrap:'wrap'
     },
     subTitle: {
-        margin:'10px 3px',
+        margin:'10px 0px',
         fontSize:'22px',
         color: '#0e1015',
     },
     li: {
-        marginLeft:'50px',
+        marginLeft:'10px',
         color: '#305c91',
 
     }

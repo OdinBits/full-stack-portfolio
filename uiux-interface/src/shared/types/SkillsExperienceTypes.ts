@@ -1,6 +1,5 @@
 
-import ExperienceDesktopView from "../../pages/SkillsExperience/components/ExperienceDesktopView";
-import ExperienceMobileView from "../../pages/SkillsExperience/components/ExperienceMobileView";
+import ExperienceResponsive from "../../pages/SkillsExperience/components/ExperienceResponsive";
 import Skills from "../../pages/SkillsExperience/components/Skills";
 import { ConstImg } from "../constants/image";
 
@@ -90,8 +89,8 @@ export const SkillsExperienceType = {
     routeMenu: [
         // { id: '1', name: 'SKILLS' , path: '*', element: Skills},
         { id: '1', name: 'SKILLS' , path:'SKILLS', element: Skills},
-        { id: '2', name: 'EXPERIENCE' ,path:'EXPERIENCE', element: ExperienceMobileView},
-        // { id: '2', name: 'EXPERIENCE' ,path:'EXPERIENCE', element: ExperienceDesktopView},
+        { id: '2', name: 'EXPERIENCE' ,path:'EXPERIENCE', element: ExperienceResponsive},
+        // { id: '2', name: 'EXPERIENCE' ,path:'EXPERIENCE', element: ExperienceResponsive},
     ],
 
     expPorps : [
@@ -110,21 +109,36 @@ export const SkillsExperienceType = {
             'Tablue',
             'PowerPlatform'
         ]},
-        {id:'2',
-            img:ConstImg.companyLogo,
-            Title:'Full-stack developer | PowerTools developer | Tableau developer', 
-            workData: 'May 2023 - May 2024', 
-            detailDesc:[
-                {subTitle:'Full-stack developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
-                {subTitle:'PowerTools developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
-                {subTitle:'Tableau developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
-        ], 
-        developmentTools:[
-            'React',
-            'Redux',
-            'Tablue',
-            'PowerPlatform'
-        ]},
+        // {id:'2',
+        //     img:ConstImg.companyLogo,
+        //     Title:'2 Full-stack developer | PowerTools developer | Tableau developer', 
+        //     workData: 'May 2023 - May 2024', 
+        //     detailDesc:[
+        //         {subTitle:'Full-stack developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+        //         {subTitle:'PowerTools developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+        //         {subTitle:'Tableau developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+        // ], 
+        // developmentTools:[
+        //     'React',
+        //     'Redux',
+        //     'Tablue',
+        //     'PowerPlatform'
+        // ]},
+        // {id:'3',
+        //     img:ConstImg.companyLogo,
+        //     Title:'3 Full-stack developer | PowerTools developer | Tableau developer', 
+        //     workData: 'May 2023 - May 2024', 
+        //     detailDesc:[
+        //         {subTitle:'Full-stack developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+        //         {subTitle:'PowerTools developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+        //         {subTitle:'Tableau developer',points:['I worked as react dev','develped responsive web designs','debugged syntax and logic erros']},
+        // ], 
+        // developmentTools:[
+        //     'React',
+        //     'Redux',
+        //     'Tablue',
+        //     'PowerPlatform'
+        // ]},
         // {id:'2',
         //     img:ConstImg.logo,
         //     Title:'2 full-stack developer | PowerTools developer | Tableau developer', 

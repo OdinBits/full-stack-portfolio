@@ -14,7 +14,7 @@ import React from 'react';
 
 const SkillsExperience = () => {
     const { ref, inView } = useInView({
-        threshold: 0.6, // Adjust the threshold as needed
+        threshold: 0.6, 
     });
     const dispatch = useAppDispatch();
 
@@ -38,6 +38,9 @@ const SkillsExperience = () => {
 
         dispatch(updateHistory(path));
         }, [navigate, isActive, dispatch]);
+
+
+        
         
 
     return (
