@@ -2,15 +2,14 @@ import { useEffect, useRef } from 'react';
 import { Box } from '@mui/material';
 import { gsap } from 'gsap';
 import { useInView } from 'react-intersection-observer';
-
-import NavDots from '../components/NavDots';
 import { IAppWrap } from '../shared/interfaces/IAppWrap';
+import { NavDots } from '../components';
 
 const AppWrap = ({ Component, idName }: IAppWrap) => function HOC() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [ref, inView] = useInView({
-        threshold: 0.1, // Adjust the threshold as needed
-        triggerOnce: false, // Ensures the animation can trigger multiple times
+        threshold: 0.1,
+        triggerOnce: false, 
     });
 
     useEffect(() => {

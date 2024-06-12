@@ -10,4 +10,8 @@ export namespace INav {
         activePage: any;
         history: string[];
     }
+
+    export interface NavDots {
+        idName:string;
+    }
 }

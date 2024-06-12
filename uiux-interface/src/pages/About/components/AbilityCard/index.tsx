@@ -10,14 +10,14 @@ import { EffectCards } from 'swiper/modules';
 
 const AbilityCard: React.FC<IAbout.AboutItemProps> = ({ about }) => {
     const slides = React.useMemo(() => (
-        Array.isArray(about) && about.map((item: any, index: number) => (
+        Array.isArray(about) && about.map((item: any) => (
             <SwiperSlide 
                 style={{ 
                     boxShadow: '0 7px 18px 0 rgba(2,118,179,0.13)',
                     borderRadius: '10px',
                     flexGrow:1
                 }} 
-                key={index}
+                key={`about-${item.title}}`}
             >
                 <Card sx={style.cardContainer} className="card">
                     <CardMedia

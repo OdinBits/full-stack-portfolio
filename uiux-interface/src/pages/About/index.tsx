@@ -12,9 +12,10 @@ import AppWrap from '../../wrapper/AppWrap';
 import { useInView } from 'react-intersection-observer';
 import { setActiveSection } from '../../store/slices/navigationSlice';
 
-const About = () => {
+const About: React.FC = () => {
+    
     const { ref, inView } = useInView({
-        threshold: 0.6, // Adjust the threshold as needed
+        threshold: 0.6, 
     });
     const dispatch = useAppDispatch();
 

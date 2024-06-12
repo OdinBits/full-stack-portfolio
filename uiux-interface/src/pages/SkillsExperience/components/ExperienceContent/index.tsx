@@ -2,14 +2,14 @@ import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { style } from './style';
 import { format, parseISO } from 'date-fns';
+import { ISkillsExperience } from '../../../../shared/interfaces/ISkillsExperience';
 
-const ExperienceContent = ({ selectedExp }: any) => {
+const ExperienceContent: React.FC<ISkillsExperience.ExpComponent> = ({ selectedExp }) => {
 
     const formatDate = (dateString: string) => {
         const date = parseISO(dateString);
         return format(date, 'yyyy - MMM');
     };
-
 
     return (
         <Stack spacing={1.5} sx={style.expContainer}>
@@ -17,11 +17,11 @@ const ExperienceContent = ({ selectedExp }: any) => {
             <Typography sx={style.date}>{formatDate(selectedExp.startDate)} to {formatDate(selectedExp.endDate)}</Typography>
             {selectedExp.detailDesc ? (
                 <ul>
-                    {selectedExp.detailDesc.map((desc: any, index: any) => (
-                        <React.Fragment key={index}>
+                    {selectedExp.detailDesc.map((desc: any) => (
+                        <React.Fragment key={`desc-${desc.subTitle}`}>
                             <Typography sx={style.subTitle}>{desc.subTitle}</Typography>
-                            {desc.points.map((point: any, pointIndex: any) => (
-                                <li key={pointIndex} style={style.li}>
+                            {desc.points.map((point: any) => (
+                                <li key={`desc-point-${point}`} style={style.li}>
                                     <Typography variant="subtitle1" sx={style.description}>
                                         {point}
                                     </Typography>
@@ -37,8 +37,8 @@ const ExperienceContent = ({ selectedExp }: any) => {
             )}
             <Box sx={style.devToolsContainer}>
                 <Typography sx={style.devToolsText}>Development Tools :</Typography>
-                {selectedExp.developmentTools && selectedExp.developmentTools.map((tool: any, index: any) => (
-                    <Typography key={index} sx={style.devToolsPoints}>{tool}</Typography>
+                {selectedExp.developmentTools?.map((tool: any) => (
+                    <Typography key={`tools-${tool}`} sx={style.devToolsPoints}>{tool}</Typography>
                 ))}
             </Box>
         </Stack>

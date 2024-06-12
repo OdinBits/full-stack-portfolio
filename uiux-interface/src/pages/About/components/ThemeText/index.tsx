@@ -1,8 +1,9 @@
 import { Box, Typography } from '@mui/material';
 import { style } from './style';
 import { AboutTypes } from '../../../../shared/types/AboutTypes';
+import React from 'react';
 
-const ThemeText = () => {
+const ThemeText: React.FC = () => {
     return (
         <Box sx={style.container}>
             <Box sx={style.content}>

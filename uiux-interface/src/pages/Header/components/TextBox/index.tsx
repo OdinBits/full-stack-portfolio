@@ -4,7 +4,7 @@ import { ConstImg } from '../../../../shared/constants/image';
 import { useEffect } from 'react';
 import gsap from 'gsap';
 
-const TextBox = () => {
+const TextBox: React.FC = () => {
     const handleClick = (event:any, id:any) => {
         event.preventDefault();
         const element = document.getElementById(id);

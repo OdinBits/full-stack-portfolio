@@ -13,4 +13,12 @@ export namespace ISkillsExperience {
         expError: string | undefined;
         expData: any;
     }
+
+    export interface ExpComponent {
+        selectedExp: any;
+        validExpPoints: any;
+        handleImageClick: any;
+    }
+
+    
 }

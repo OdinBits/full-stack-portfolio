@@ -1,4 +1,3 @@
-import { globalStyle } from "../../../../app/globalStyle";
 
 export const style = {
     container: {
@@ -60,15 +59,21 @@ export const style = {
         paddingRight: '14px', 
         fontSize:'16px',
         color:'#212529',
-        marginRight:'7px',// Adjust for bullet space
+        marginRight:'7px',
         '&::after': {
-            content: '"\\2022"', // Unicode for bullet
-            color: '#305c91', // Bullet color
-            fontSize: '25px', // Increase bullet size
+            content: '"\\2022"', 
+            color: '#305c91', 
+            fontSize: '25px', 
             position: 'absolute',
             right: '0',
             top: '50%',
             transform: 'translateY(-50%)',
         }
+    },
+    circleProgression: {
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100%' 
     }
 }

@@ -7,7 +7,6 @@ import { format, parseISO } from 'date-fns';
 
 const CustomDropdown = ({validExpPoints}:any) => {
 
-    // Initialize selectedExp state with the first item selected by default
     const [selectedExp, setSelectedExp] = useState(
         validExpPoints.map((_: any, index: number) => index === 0)
     );
@@ -27,28 +26,12 @@ const CustomDropdown = ({validExpPoints}:any) => {
     return (
         <Box sx={{ width: '100%', padding: '10px 30px', display: { xs: 'block', md: 'none' } }}>
             {validExpPoints.map((item:any, index:any) => (
-                <Box sx={style.content} key={index}>
+                <Box sx={style.content} key={`validExp-${item.id}`}>
                     <Button
                         aria-controls={`custom-dropdown-menu-${index}`}
                         aria-haspopup="true"
                         onClick={() => handleImageClick(index)}
-                        sx={{
-                            borderRadius: '10px',
-                            justifyContent: 'space-between',
-                            padding: '0px 15px',
-                            width: '100%',
-                            height: '80px',
-                            backgroundColor: 'transparent',
-                            '&:hover': {
-                                backgroundColor: 'transparent',
-                            },
-                            '&:focus': {
-                                backgroundColor: 'transparent',
-                            },
-                            '&:active': {
-                                backgroundColor: 'transparent',
-                            },
-                        }}
+                        sx={style.button}
                     >
                         <Box sx={{ width: '150px', height: '50px' }}>
                             <Box component="img" src={urlFor(item.img)} sx={style.img} />
@@ -63,11 +46,11 @@ const CustomDropdown = ({validExpPoints}:any) => {
                                 <Typography sx={style.date}>{formatDate(item.startDate)} to {formatDate(item.endDate)}</Typography>
                                 {item.detailDesc.length > 1 ? (
                                     <ul style={{ width: '100%' }}>
-                                        {item.detailDesc.map((desc:any, descIndex:any) => (
-                                            <Box key={descIndex} sx={{ margin: 'auto', width: '100%' }}>
+                                        {item.detailDesc.map((desc:any) => (
+                                            <Box key={`detail-desc-${desc.subTitle}`} sx={{ margin: 'auto', width: '100%' }}>
                                                 <Typography sx={style.subTitle}>{desc.subTitle}</Typography>
-                                                {desc.points.map((points:any, j:any) => (
-                                                    <li key={j} style={style.li}>
+                                                {desc.points.map((points:any) => (
+                                                    <li key={`points-${points}`} style={style.li}>
                                                         <Typography variant="subtitle1" sx={style.description}>
                                                             {points}
                                                         </Typography>
@@ -83,8 +66,8 @@ const CustomDropdown = ({validExpPoints}:any) => {
                                 )}
                                 <Box sx={style.devToolsContainer}>
                                     <Typography sx={style.devToolsText}>Development Tools : </Typography>
-                                    {item.developmentTools && item.developmentTools.map((tool:any, i:any) => (
-                                        <Typography key={i} sx={style.devToolsPoints}>{tool}</Typography>
+                                    {item.developmentTools?.map((tool:any) => (
+                                        <Typography key={`tools-${tool}`} sx={style.devToolsPoints}>{tool}</Typography>
                                     ))}
                                 </Box>
                             </Stack>

@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { SkillsExperienceType } from '../../shared/types/SkillsExperienceTypes';
 import { Box } from '@mui/material';
 
-const SkillsExperienceRoutes = () => {
+const SkillsExperienceRoutes: React.FC = () => {
   const location = useLocation();
   const routeContainerRef = useRef(null);
 

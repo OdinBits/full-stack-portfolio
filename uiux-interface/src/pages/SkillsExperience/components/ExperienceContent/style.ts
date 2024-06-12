@@ -10,7 +10,7 @@ export const style = {
         padding:'5px'
     },
     selectDiv : {
-        border:'solid 2px green',
+        // border:'solid 2px green',
         width:'60%',
         margin:'auto'
     },

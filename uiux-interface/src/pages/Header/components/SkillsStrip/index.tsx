@@ -2,7 +2,7 @@ import { Box, CardMedia } from '@mui/material';
 import { style } from './style';
 import { HeaderTypes } from '../../../../shared/types/HeaderTypes';
 
-const SkillsStrip = () => {
+const SkillsStrip: React.FC = () => {
     return (
         <Box sx={style.container}>
             <Box sx={style.content}>

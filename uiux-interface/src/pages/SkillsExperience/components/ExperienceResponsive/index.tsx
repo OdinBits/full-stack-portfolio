@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Box } from '@mui/material';
 import { style } from './style';
 import { SkillsExperienceType } from '../../../../shared/types/SkillsExperienceTypes';
 import CustomDropdown from '../ExperienceMobileView';
 import ExperienceDesktopView from '../ExperienceDesktopView';
-import { useAppDispatch, useAppSelector } from '../../../../store';
+import { useAppSelector } from '../../../../store';
+
 
 const ExperienceResponsive = () => {
 
@@ -13,7 +14,7 @@ const ExperienceResponsive = () => {
 
         const validExpPoints = expData ? expData.experiences : SkillsExperienceType.expProps;
     
-        const [selectedExp, setSelectedExp] = useState(validExpPoints[0] || {});
+        const [selectedExp, setSelectedExp] = React.useState(validExpPoints[0] || {});
     
         const handleImageClick = (exp: any) => {
             setSelectedExp(exp);

@@ -16,7 +16,7 @@ const MenuBlock: React.FC<INav.toogleHandler> = ({ handleToggle }) => {
                 block: 'start',
             });
         }
-        handleToggle(); // Close the menu after clicking a link
+        handleToggle(); 
     };
 
     useEffect(() => {

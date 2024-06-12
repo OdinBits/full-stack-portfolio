@@ -5,7 +5,7 @@ import { SkillsExperienceType } from '../../../../shared/types/SkillsExperienceT
 import { NavLink } from 'react-router-dom';
 import { ISkillsExperience } from '../../../../shared/interfaces/ISkillsExperience';
 import { useAppDispatch } from '../../../../store';
-import { setNavLink } from '../../../../store/slices/navigationSlice';
+import { setActiveSection, setNavLink } from '../../../../store/slices/navigationSlice';
 
 const ToggleMenuDesktop: React.FC<ISkillsExperience.IActivePage> = ({ isActive }) => {
     const dispatch = useAppDispatch();
@@ -24,8 +24,9 @@ const ToggleMenuDesktop: React.FC<ISkillsExperience.IActivePage> = ({ isActive }
         }
     }, [isActive]);
 
-    const handleNavLinkClick = (index: number) => {
+    const handleNavLinkClick = (index: number, name: string) => {
         dispatch(setNavLink(index));
+        dispatch(setActiveSection(name));
     };
 
     return (
@@ -35,9 +36,9 @@ const ToggleMenuDesktop: React.FC<ISkillsExperience.IActivePage> = ({ isActive }
                     <NavLink
                         key={item?.id}
                         className={`nav-link ${isActive === index ? 'active' : ''}`}
-                        onClick={() => handleNavLinkClick(index)}
+                        onClick={() => handleNavLinkClick(index, item?.name)}
                         to={item.path}
-                        style={{margin:'5px'}}
+                        style={{ margin: '5px' }}
                     >
                         <Button sx={style.buttons} id={`button-${item.id}`}>
                             <Typography sx={style.name}>{item?.name}</Typography>

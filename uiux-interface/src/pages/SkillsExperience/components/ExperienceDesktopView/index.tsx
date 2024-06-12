@@ -7,6 +7,7 @@ import { urlFor } from '../../../../shared/config/clientConfig';
 const ExperienceDesktopView = ({validExpPoints,selectedExp,handleImageClick}:any) => {
 
     return (
+     // !! Adding div/Box component corrupts the component
         <>
             <Box data-id="option div" sx={style.optionDiv}>
                     {validExpPoints.map((item:any, index:any) => {
@@ -38,7 +39,7 @@ const ExperienceDesktopView = ({validExpPoints,selectedExp,handleImageClick}:any
                 </Box>
 
                 <Box data-id="exp info" sx={style.expInfo}>
-                    {selectedExp && <ExperienceContent selectedExp={selectedExp}/>}
+                    {selectedExp && <ExperienceContent selectedExp={selectedExp} validExpPoints={undefined} handleImageClick={undefined}/>}
                 </Box>
         </>
     )

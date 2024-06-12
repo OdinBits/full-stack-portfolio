@@ -5,8 +5,7 @@ import NavbarMobile from './components/mobile';
 import MenuBlock from './components/menuBlock';
 import { useState } from 'react';
 
-
-const Navbar = () => {
+const Navbar: React.FC = () => {
 
   const [mobileOpen, setMobileOpen] = useState(false);
 

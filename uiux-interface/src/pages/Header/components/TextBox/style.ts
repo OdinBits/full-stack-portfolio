@@ -7,10 +7,11 @@ export const style = {
         width: {md:'100%'},
         height: '100%',
         // border:'solid 2px',
-        padding:{xs:'0px 20px',md:'0px 30px'},
+        padding:{xs:'35px 20px',md:'0px 30px'},
         display:'flex',
         justifyContent:'center',
-        flexDirection:{xs:'column',md:'row'}
+        flexDirection:{xs:'column',md:'row'},
+        marginTop:{md:'55px'}
     },
     photoContainer: {
             width: { xs: '100%', md: '570px', lg: '600px' },

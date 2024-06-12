@@ -18,7 +18,9 @@ export const style = {
         // border:'solid 2px brown',
         width:'80%',
         height:'80%',
-        background:'#f2f2f2'
+        background:'#f2f2f2',
+        borderRadius:'10px',
+        margin:'2px'
     },
     expInfo: {
         borderLeft:'solid 2px #305c91',

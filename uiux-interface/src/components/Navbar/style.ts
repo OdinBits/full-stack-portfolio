@@ -7,6 +7,7 @@ export const style = {
     },
     content: {
         // ...globalStyle.maxStrech,
+        // border:'solid 2px',
         height:{xs:'70px',md:'35%'}
     },
     backdrop: {

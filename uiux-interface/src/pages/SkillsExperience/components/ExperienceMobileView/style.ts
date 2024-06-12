@@ -1,5 +1,3 @@
-import { globalStyle } from "../../../../app/globalStyle";
-
 
 export const style = {
     content:{
@@ -99,6 +97,22 @@ export const style = {
     li: {
         marginLeft:'10px',
         color: '#305c91',
-
+    },
+    button: {
+        borderRadius: '10px',
+                            justifyContent: 'space-between',
+                            padding: '0px 15px',
+                            width: '100%',
+                            height: '80px',
+                            backgroundColor: 'transparent',
+                            '&:hover': {
+                                backgroundColor: 'transparent',
+                            },
+                            '&:focus': {
+                                backgroundColor: 'transparent',
+                            },
+                            '&:active': {
+                                backgroundColor: 'transparent',
+                            },
     }
 }

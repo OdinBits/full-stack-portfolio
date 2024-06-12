@@ -1,11 +1,13 @@
-
 import { Box } from '@mui/material';
 import { style } from './style';
 import { NavTypes } from '../../shared/types/NavTypes';
 import { useEffect } from 'react';
 import gsap from 'gsap';
+import { INav } from '../../shared/interfaces/INav';
 
-const NavDots = ({ idName }: any) => {
+
+
+const NavDots: React.FC<INav.NavDots> = ({ idName }) => {
 
     const handleClick = (event:any, id:any) => {
         event.preventDefault();
@@ -24,7 +26,7 @@ const NavDots = ({ idName }: any) => {
 
     return (
         <Box id='navigaiton-dots' sx={style.container}>
-            {NavTypes.navItems.map((item, index) => (
+            {NavTypes.navDots.map((item, index) => (
                 <Box
                     component='a'
                     href={`#${item.name}`}
