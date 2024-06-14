@@ -34,7 +34,7 @@ const MenuBlock: React.FC<INav.toogleHandler> = ({ handleToggle }) => {
                 {NavTypes.navItems.map((item: any, index: any) => (
                     <Button
                         key={item?.id + index}
-                        onClick={(e) => handleClick(e, item?.name)}
+                        onClick={(e) => handleClick(e, item?.pathName)}
                         sx={style.button}
                     >
                         {item?.name}

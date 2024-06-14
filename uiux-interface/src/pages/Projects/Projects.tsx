@@ -12,15 +12,13 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { GitHub } from '@mui/icons-material';
 
 const Projects: React.FC = () => {
-
     const { ref, inView } = useInView({
         threshold: 0.6,
     });
     const dispatch = useAppDispatch();
 
     React.useEffect(() => {
-
-        dispatch(workThunk())
+        dispatch(workThunk());
 
         if (inView) {
             dispatch(setActiveSection(NavTypes.navItems[2].name));
@@ -29,7 +27,7 @@ const Projects: React.FC = () => {
 
     const { projData } = useAppSelector((state) => state.project);
 
-    const validData = projData?.works || ProjectTypes?.projectSkillsDefault
+    const validData = projData?.works || ProjectTypes?.projectSkillsDefault;
 
     return (
         <Box ref={ref} id='PROJECTS' sx={style.container}>
@@ -41,12 +39,20 @@ const Projects: React.FC = () => {
                     <Box key={`projects-${item?.title}`} sx={style.contentBox}>
                         {/* Image Container */}
                         <Box data-id='img-container' sx={style.imgContainer}>
-                            {/* <Box component='a' href={item?.codeLink} sx={style.iconContainer}>
-                                <Typography sx={style.gitHub}>
-                                    <GitHub />
-                                </Typography>
-                            </Box> */}
-                            <Box component='img' alt={item?.title} src={urlFor(item?.imgUrl)} sx={style.img}></Box>
+                            <Box 
+                                component='img' 
+                                alt={item?.title} 
+                                src={urlFor(item?.imgUrl)} 
+                                sx={{
+                                    ...style.img, 
+                                    filter: item?.isConfidential ? 'blur(15px)' : 'none'
+                                }}
+                            />
+                            {item?.isConfidential && (
+                                <Box sx={style.confidentialOverlay}>
+                                    <Typography sx={style.confidentialText}> Confidential Project </Typography>
+                                </Box>
+                            )}
                         </Box>
                         {/* Description container */}
                         <Stack spacing={4} data-id='description-container' sx={style.descContainer}>
@@ -58,7 +64,7 @@ const Projects: React.FC = () => {
                             <Stack data-id='dev-tools-box' sx={style.devToolsBox}>
                                 {/* Title */}
                                 <Box data-id='dev-tools-title'>
-                                    <Typography sx={style.devToolsTitle}> DEVELOPMENT TOOLS </Typography>
+                                    <Typography sx={style.devToolsTitle}> DEVELOPMENT TOOLS : </Typography>
                                 </Box>
                                 {/* Points Box */}
                                 <Box component='ul' data-id='point-box' sx={style.pointsBox}>
@@ -66,7 +72,9 @@ const Projects: React.FC = () => {
                                         <Typography component='li' key={`points-${points}`} sx={style.points}>{points}</Typography>
                                     ))}
                                 </Box>
-                                <Typography component='a' href={item?.codeLink} sx={style.codeLink}>Go to Code...</Typography>
+                                {!item?.isConfidential && (
+                                    <Typography component='a' href={item?.codeLink} sx={style.codeLink}>Go to Code...</Typography>
+                                )}
                             </Stack>
                         </Stack>
                     </Box>

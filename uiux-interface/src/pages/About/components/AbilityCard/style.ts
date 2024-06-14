@@ -22,7 +22,7 @@ export const style = {
         // flex: 1,
         // border: 'solid 2px',
         width:'100%',
-        height:{md:'300px',lg:'410px'},
+        height:{xs:'300px',md:'310px',lg:'410px'},
         // margin: '10px 20px',
         // transition: 'transform 0.5s, opacity 0.5s'
     },

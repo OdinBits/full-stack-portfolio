@@ -6,7 +6,7 @@ import { persistor } from '../store/store';
 import { theme } from './globalStyle';
 import { Navbar } from '../components';
 import { BrowserRouter } from 'react-router-dom';
-import { About, Header, Projects, SkillsExperience } from '../pages';
+import { About, Contact, Header, Projects, SkillsExperience, Footer } from '../pages';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +20,8 @@ const App: React.FC = () => {
             <About />
             <SkillsExperience />
             <Projects/>
+            <Contact/>
+            <Footer/>
           </BrowserRouter>
         </ThemeProvider>
       </PersistGate>

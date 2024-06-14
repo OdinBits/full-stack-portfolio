@@ -6,15 +6,17 @@ import React from "react";
 const TextBuilder: React.FC<IText> = ({ data, defaultStyle, highLightStyle }) => {
     return (
         <Box data-id='text-container' sx={style.textContainer}>
-            <Box data-id='text-content'  sx={style.textContent}>
+            <Box data-id='text-content' sx={style.textContent}>
                 {data?.map((message: any) => (
-                    <Typography
-                        key={message.id}
-                        component="span"
-                        sx={message.isColored ? highLightStyle : defaultStyle}
-                    >
-                        {message.text}
-                    </Typography>
+                    <React.Fragment key={`message-${message.id}`}>
+                        <Typography
+                            component="span"
+                            sx={message.isColored ? highLightStyle : defaultStyle}
+                        >
+                            {message.text}
+                        </Typography>
+                        <br />
+                    </React.Fragment>
                 ))}
             </Box>
         </Box>

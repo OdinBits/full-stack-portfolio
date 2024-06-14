@@ -10,10 +10,14 @@ export const style = {
         fontSize: {xs:'10px',md:'28px'},
         padding: '5px',
         boxSizing: 'border-box',
-        minHeight: '150px',
+        minHeight: 'fit-content',
         ...globalStyle.centerDiv
     },
     textContent: {
-        width: 'fit-content'
+        width: {xs:'100%',md:'47%'},
+        padding:'5px 10px',
+        lineHeight:2,
+        marginBottom:5
+        // border:'solid 2px'
     }
 }

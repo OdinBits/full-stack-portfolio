@@ -53,5 +53,11 @@ export default {
                 }
             ]
         },
+        {
+            name: 'isConfidential',
+            title: 'Is Confidential',
+            type: 'boolean',
+            description: 'Mark this as true if the project is confidential',
+        },
     ],
 };

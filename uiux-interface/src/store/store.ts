@@ -2,13 +2,15 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { aboutSlice, navigationSlice, personSlice, skillsSlice, workSlice } from '.';
+import submissionSlice from './slices/submissionSlice';
 
 const rootReducer = combineReducers({
     person: personSlice,
     about : aboutSlice,
     navLinkStates: navigationSlice,
     SkillsExp: skillsSlice,
-    project: workSlice
+    project: workSlice,
+    submission: submissionSlice
 })
 
 const persistConfig = {
