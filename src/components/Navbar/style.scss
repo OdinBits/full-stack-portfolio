@@ -9,7 +9,7 @@
     justify-center
     items-center 
     z-10 
-    padding-x
+    
 }
 
 .navDiv {
@@ -17,6 +17,7 @@
     flex
     items-center 
     h-full
+    padding-x
 }
 
 @screen xs {
@@ -35,7 +36,7 @@
 
 .ulMdDiv {
     @apply
-    gap-10
+    gap-5
     hidden
     md:flex
 }
@@ -43,12 +44,12 @@
 .navIconButton {
     @apply
     md:hidden
-    bg-blue-200
 }
 
 .xsDiv {
     @apply
     h-4/6
+    w-36
     m-auto
 }
 

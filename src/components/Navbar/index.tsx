@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     );
 
     return (
-        <header className="headerDiv">
+        <header id='navbar' className="headerDiv">
             <nav className="navDiv">
                 <ul className="ulMdDiv">
                     {navLinks.map((item) => (

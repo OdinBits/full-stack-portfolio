@@ -1,0 +1,48 @@
+@import '../../index.scss';
+
+.header-content-container {
+    @apply
+    border-2
+    border-red-950
+}
+
+.text-box-container {
+    @apply
+    border-2
+    border-blue-950
+}
+
+.greet-info {
+    @apply
+    border-2
+    border-red-950
+}
+
+.intro {
+    @apply
+    border-2
+    border-blue-950
+}
+
+.description {
+    @apply
+    border-2
+    border-black
+}
+
+.find-button {
+    @apply
+    bg-blue-900
+}
+
+.person-photo {
+    @apply
+    border-2
+    border-green-900
+}
+
+.skills-image-container {
+    @apply
+    border-2
+    border-purple-950
+}
