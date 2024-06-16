@@ -1,0 +1,61 @@
+@import '../../index.scss';
+
+.headerDiv {
+    @apply
+    w-full
+    h-16
+    absolute 
+    flex-col
+    justify-center
+    items-center 
+    z-10 
+    padding-x
+}
+
+.navDiv {
+    @apply
+    flex
+    items-center 
+    h-full
+}
+
+@screen xs {
+    .navDiv{
+        @apply
+        justify-end 
+    }
+}
+
+@screen md {
+    .navDiv{
+        @apply
+        justify-center
+    }
+}
+
+.ulMdDiv {
+    @apply
+    gap-10
+    hidden
+    md:flex
+}
+
+.navIconButton {
+    @apply
+    md:hidden
+    bg-blue-200
+}
+
+.xsDiv {
+    @apply
+    h-4/6
+    m-auto
+}
+
+.navButton {
+    @apply
+    h-8
+    px-5
+    text-stone-500
+}
+
