@@ -5,6 +5,6 @@ export const PersonTypes = {
         personLoading: false,
         personMessage: "",
         personError: "",
-        personData: null
+        personData: {}
     } as IPerson.ThunkState
 }

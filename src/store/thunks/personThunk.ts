@@ -1,10 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { clientConfig } from "../../shared/config/clientConfig";
 
-export const personThunk = createAsyncThunk(
-    'person/fetchPersonData', async () => {
+export const personThunk = createAsyncThunk('portfolio/person', async () => {
         try {
-            const res = await axios.get('*[_type == "abouts"]')
+            const res = await clientConfig.fetch('*[_type == "person"]')
             return res;
         }
         catch (error) {

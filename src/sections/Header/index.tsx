@@ -1,24 +1,24 @@
-import { Button, Typography } from '@mui/material'
-import React from 'react'
-import { useAppDispatch, useAppSelector } from '../../store'
+import React from 'react';
+import { Button, Typography } from '@mui/material';
+import { useAppDispatch, useAppSelector } from '../../store';
 import { personThunk } from '../../store/thunks/personThunk';
 import { urlFor } from '../../shared/config/clientConfig';
+import './style.scss';
 
-const Header = () => {
+const Header: React.FC = () => {
 
   const dispatch = useAppDispatch();
+
+  const { personData } = useAppSelector((state) => state.person);
 
   React.useEffect(() => {
     dispatch(personThunk())
   }, [dispatch])
 
-  const { personData } = useAppSelector((state) => state.person);
-
   return (
-    <section id='header'>
-      {personData.map((items: any) => (
+    <section id='header' className='header-container'>
+      {personData?.map((items: any) => (
         <div className='header-content-container' key={`person-${items.name}`}>
-
           <div className='text-box-container'>
             <div className='greet-info'>
               <p className='intro'>{items.intro}</p>
@@ -27,20 +27,16 @@ const Header = () => {
                 FIND OUT MORE
               </Button>
             </div>
-            <div className='person-photo'>
-              <img src={urlFor(items.image)} alt={items.name} />
+            <div className='person-img-container'>
+              {/* <img className='person-img' src={urlFor(items.img)} alt={items.name} /> */}
             </div>
           </div>
-
-
-          <div className='skills-image-container'>
-            {items.skills.map((skills: any) => (
+          {/* <div className='skills-image-container'>
+            {items?.skills?.map((skills: any) => (
               <img key={skills} src={urlFor(skills)} alt="skills" />
             ))}
-          </div>
-
+          </div> */}
         </div>
-
       ))}
     </section>
   )
