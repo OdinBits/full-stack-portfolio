@@ -21,7 +21,7 @@ export default {
       fontFamily: {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
-        fjalla: ['Fjalla One, sans-serif']
+        fjalla: ['Fjalla One']
       },
       colors: {
         primary: "#ECEEFF",

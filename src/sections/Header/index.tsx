@@ -16,26 +16,26 @@ const Header: React.FC = () => {
   }, [dispatch])
 
   return (
-    <section id='header' className='header-container'>
+    <section id='header'>
       {personData?.map((items: any) => (
         <div className='header-content-container' key={`person-${items.name}`}>
-          <div className='text-box-container'>
+          <div className='text-container'>
             <div className='greet-info'>
-              <p className='intro'>{items.intro}</p>
+              <Typography className='intro'>{items.intro}</Typography>
               <p className='description'>{items.description}</p>
-              <Button className='find-button'>
+              <Button component='a' href='#About' className='find-button'>
                 FIND OUT MORE
               </Button>
             </div>
             <div className='person-img-container'>
-              {/* <img className='person-img' src={urlFor(items.img)} alt={items.name} /> */}
+              <img className='person-img' src={urlFor(items.img)} alt={items.name} />
             </div>
           </div>
-          {/* <div className='skills-image-container'>
+          <div className='skills-image-container'>
             {items?.skills?.map((skills: any) => (
-              <img key={skills} src={urlFor(skills)} alt="skills" />
+              <img className='skills-img' key={skills} src={urlFor(skills)} alt="skills" />
             ))}
-          </div> */}
+          </div>
         </div>
       ))}
     </section>
