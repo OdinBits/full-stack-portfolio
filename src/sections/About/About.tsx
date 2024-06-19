@@ -18,7 +18,7 @@ const About: React.FC = () => {
 
     React.useEffect(() => {
         dispatch(aboutThunk());
-    }, [])
+    }, [dispatch])
 
     return (
         <section id='About'>
@@ -26,7 +26,7 @@ const About: React.FC = () => {
                 <div className='content-container' key={`about-${items.name}`}>
                     <Typography className='title'>About</Typography>
                     <p className='aboutDescription'>{items.about}</p>
-                    <Typography className='card-title'>I Know Thata <span className='text-purple-500'>Good Design</span> Means <span className='text-purple-500'>Good Bussiess</span></Typography>
+                    <Typography className='card-title'>I Know That <span className='text-purple-500'>Good Design</span> Means <span className='text-purple-500'>Good Bussiess</span></Typography>
                     <Swiper
                         className='swiper-cards-container'
                         effect={'cards'}

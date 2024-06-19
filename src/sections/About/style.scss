@@ -2,181 +2,138 @@
 
 
 .content-container {
-    @apply
-    py-16
-    px-5
+    @apply 
+    py-12 
+    px-5;
 }
 
 .title {
-    @apply
-    text-center
-    py-10
-    w-full
-    font-fjalla
+    @apply 
+    text-center 
+    py-10 
+    w-full 
+    font-fjalla 
     leading-tight 
-    tracking-tight
-    text-gray-900
-    text-4xl
+    tracking-tight 
+    text-gray-900 
+    text-4xl;
+
+    @screen xs {
+        @apply 
+        text-[40px];
+    }
 }
 
+.card-container {
+    @apply 
+    w-full 
+    h-full;
+}
 
-// Screen size xs 
-@screen xs {
-    .title {
-        @apply
-        text-[40px]
+.card-img {
+    @apply 
+    object-cover 
+    h-52;
+}
+
+.aboutDescription {
+    @apply 
+    w-full 
+    text-[20px];
+
+    @screen xs {
+        @apply 
+        px-2;
     }
-    .card-container {
-        @apply
-        w-full
-        h-full
+
+    @screen md {
+        @apply 
+        px-10 
+        text-[25px];
     }
-    .card-img{
-        @apply
-        object-cover
-        h-52
+
+    @screen lg {
+        @apply 
+        px-36 
+        text-[21px];
     }
-    
-    .aboutDescription {
+
+    @screen xl {
         @apply
-        w-full
-        px-5
+        px-52
         text-[20px]
     }
+}
 
-    .swiper-cards-container {
-        @apply
-        w-full
-        h-[400px]
-        py-4
-        px-10
+.swiper-cards-container {
+    @apply 
+    w-full 
+    py-4;
+
+    @screen xs {
+        @apply 
+        h-[400px] 
+        px-10;
     }
 
-    .card-content {
-        @apply
-        h-full
-        flex
-        flex-col
-        gap-2
+    @screen md {
+        @apply 
+        w-[460px] 
+        h-[390px] 
+        px-14;
     }
 
-    .swiper-sliders {
-        @apply
-        w-28
-        rounded-md
-        shadow-elegant
-    }
-
-    .card-title {
-        @apply
-        w-full
-        text-center
-        text-2xl
-        py-6
-        px-6
+    @screen xl {
+        @apply 
+        w-[400px] 
+        h-[380px];
     }
 }
 
-// Screen size md
-@screen md {
-    .card-container {
-        @apply
-        w-full
-        h-full
-    }
-    .card-img{
-        @apply
-        object-cover
-        h-52
-    }
-    
-    .aboutDescription {
-        @apply
-        w-full
-        px-10
-        text-[25px]
+.card-content {
+    @apply 
+    h-full 
+    flex 
+    flex-col 
+    gap-2;
+}
+
+.swiper-sliders {
+    @apply 
+    rounded-md 
+    shadow-elegant;
+
+    @screen xs {
+        @apply 
+        w-28;
     }
 
-    .swiper-cards-container {
-        @apply
-        w-[460px]
-        h-[390px]
-        py-4
-        px-14
-    }
-
-    .card-content {
-        @apply
-        h-full
-        flex
-        flex-col
-        gap-2
-    }
-
-    .swiper-sliders {
-        @apply
-        w-fit
-        rounded-md
-        shadow-elegant
-    }
-
-    .card-title {
-        @apply
-        w-full
-        text-center
-        text-3xl
-        py-6
+    @screen md {
+        @apply 
+        w-fit;
     }
 }
 
+.card-title {
+    @apply 
+    w-full 
+    text-center 
+    py-6;
 
-// Screen size xl
-@screen xl {
-    .card-container {
-        @apply
-        w-full
-        h-full
-    }
-    .card-img{
-        @apply
-        object-cover
-        h-52
-    }
-    
-    .aboutDescription {
-        @apply
-        w-full
-        px-48
-        text-[21px]
+    @screen xs {
+        @apply 
+        text-2xl 
+        px-6;
     }
 
-    .swiper-cards-container {
-        @apply
-        w-[400px]
-        h-[380px]
-        
+    @screen md {
+        @apply 
+        text-3xl;
     }
 
-    .card-content {
-        @apply
-        h-full
-        flex
-        flex-col
-        gap-2
-    }
-
-    .swiper-sliders {
-        @apply
-        w-fit
-        rounded-md
-        shadow-elegant
-    }
-
-    .card-title {
-        @apply
-        w-full
-        text-center
-        text-3xl
-        py-10
+    @screen xl {
+        @apply 
+        text-3xl 
+        py-10;
     }
 }

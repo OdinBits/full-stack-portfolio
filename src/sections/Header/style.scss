@@ -1,193 +1,186 @@
 @import '../../index.scss';
 
-
+/* Common Classes */
 .person-img {
-    @apply
+    @apply 
     object-cover
 }
 
 .intro {
-    @apply
-    text-xl
+    @apply 
+    text-xl 
     text-gray-600
 }
 
 .description {
-    @apply
-    font-fjalla
-    text-[35px]
+    @apply 
+    font-fjalla 
+    text-[35px] 
     leading-tight 
-    tracking-tight
-    w-4/5
+    tracking-tight 
+    w-4/5 
     text-gray-800
 }
 
 .skills-image-container {
-    @apply
-    flex
-    justify-center
-    gap-8
-    py-5
-    flex-wrap
+    @apply 
+    flex 
+    justify-center 
+    gap-8 
+    py-5 
+    flex-wrap 
     bg-gray-200
 }
 
-
 .find-button {
-    @apply
-    border-solid
-    border
+    @apply 
+    border-solid 
+    border 
     border-gray-600
 }
 
-// Screen size xtra small
-@screen xs {
-    .text-container {
-        @apply
-        flex
-        flex-col
-        pt-[90px]
-        px-5
-    }
-    .greet-info {
-        @apply
-        gap-5
-        flex
-        flex-col
-    }
-    .find-button {
-        @apply
-        mb-5
-    }
-    .skills-image-container {
-        @apply
-        p-6
-    }
-    .description{
-        @apply
-        w-full
-    }
-    .skills-img {
-        @apply
-        w-8
-        h-8
-        object-cover
+/* Responsive Styles */
+.text-container {
+    @apply 
+    flex 
+    flex-col 
+    pt-[90px] 
+    px-5;
+
+    @screen md {
+        @apply 
+        flex-row 
+        pt-[80px] 
+        h-[70vh] 
+        border-2 px-6;
     }
 
-}
-
-
-// Screen size md 
-@screen md {
-    .header-content-container {
-        @apply
-        min-h-full
-    }
-    .text-container {
-        @apply
-        flex
-        flex-row
-        pt-[80px]
-        h-[70vh]
-        border-2
-        px-6
-    }
-    .person-img-container {
-        @apply
-        w-[50%]
-        flex
-        justify-center
-        relative
-    }
-
-    .person-img {
-        @apply
-        object-cover
-        absolute
-        bottom-0
-        h-full
-    }
-
-    .skills-img {
-        @apply
-        object-cover
-    }
-    .greet-info {
-        @apply
-        w-[50%]
-        flex
-        flex-col
-        gap-5
-        items-baseline
-        justify-center
-        p-2
-    }
-    .find-button {
-        @apply
-        py-5
-        px-4
-        w-52
+    @screen xl {
+        @apply 
+        pt-[86px] 
+        h-[100vh] 
+        border-2 
+        px-12;
     }
 }
 
-// Screen size xtra large
-@screen xl {
-    .header-content-container {
-        @apply
-        min-h-screen
-    }
-    .text-container {
-        @apply
-        flex
-        flex-row
-        pt-[86px]
-        h-[100vh]
-        border-2
-        px-12
-    }
-    .person-img-container {
-        @apply
-        w-[50%]
-        flex
-        justify-center
-        relative
+.greet-info {
+    @apply 
+    gap-5 
+    flex 
+    flex-col;
+
+    @screen md {
+        @apply 
+        w-[50%] 
+        items-baseline 
+        justify-center 
+        p-2;
     }
 
-    .person-img {
-        @apply
-        object-cover
-        absolute
-        bottom-0
-        h-full
-        rounded-[50%]
-    }
-
-    .skills-img {
-        @apply
-        object-cover
-    }
-
-    .description {
-        @apply
-        w-3/4
-    }
-
-    .greet-info {
-        @apply
-        w-[60%]
-        flex
-        flex-col
-        gap-5
-        items-baseline
-        justify-center
-        p-1
-    }
-    .find-button {
-        @apply
-        py-5
-        px-4
-        w-52
+    @screen xl {
+        @apply 
+        w-[60%] 
+        items-baseline 
+        justify-center 
+        p-1;
     }
 }
 
+.skills-image-container {
+    @apply 
+    p-6;
 
+    @screen md {
+        @apply 
+        p-6;
+    }
+}
+
+.skills-img {
+    @apply 
+    w-8 
+    h-8 
+    object-cover;
+
+    @screen md {
+        @apply 
+        object-cover;
+    }
+}
+
+.find-button {
+    @apply 
+    mb-5;
+
+    @screen md {
+        @apply 
+        py-5 
+        px-4 
+        w-52;
+    }
+}
+
+.description {
+    @apply 
+    w-full;
+
+    @screen md {
+        @apply 
+        w-4/5;
+    }
+
+    @screen xl {
+        @apply 
+        w-3/4;
+    }
+}
+
+.header-content-container {
+    @screen md {
+        @apply
+        min-h-full;
+    }
+
+    @screen xl {
+        @apply 
+        min-h-screen;
+    }
+}
+
+.person-img-container {
+    @screen md {
+        @apply 
+        w-[50%] 
+        flex 
+        justify-center 
+        relative;
+    }
+
+    @screen xl {
+        @apply 
+        w-[50%] 
+        flex 
+        justify-center 
+        relative;
+    }
+}
+
+.person-img {
+    @screen md {
+        @apply 
+        object-cover 
+        absolute 
+        bottom-0 
+        h-full;
+    }
+
+    @screen xl {
+        @apply 
+        object-cover 
+        absolute 
+        bottom-0 
+        h-full 
+        rounded-[50%];
+    }
+}
