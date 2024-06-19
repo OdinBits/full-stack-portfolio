@@ -1,0 +1,182 @@
+@import '../../index.scss';
+
+
+.content-container {
+    @apply
+    py-16
+    px-5
+}
+
+.title {
+    @apply
+    text-center
+    py-10
+    w-full
+    font-fjalla
+    leading-tight 
+    tracking-tight
+    text-gray-900
+    text-4xl
+}
+
+
+// Screen size xs 
+@screen xs {
+    .title {
+        @apply
+        text-[40px]
+    }
+    .card-container {
+        @apply
+        w-full
+        h-full
+    }
+    .card-img{
+        @apply
+        object-cover
+        h-52
+    }
+    
+    .aboutDescription {
+        @apply
+        w-full
+        px-5
+        text-[20px]
+    }
+
+    .swiper-cards-container {
+        @apply
+        w-full
+        h-[400px]
+        py-4
+        px-10
+    }
+
+    .card-content {
+        @apply
+        h-full
+        flex
+        flex-col
+        gap-2
+    }
+
+    .swiper-sliders {
+        @apply
+        w-28
+        rounded-md
+        shadow-elegant
+    }
+
+    .card-title {
+        @apply
+        w-full
+        text-center
+        text-2xl
+        py-6
+        px-6
+    }
+}
+
+// Screen size md
+@screen md {
+    .card-container {
+        @apply
+        w-full
+        h-full
+    }
+    .card-img{
+        @apply
+        object-cover
+        h-52
+    }
+    
+    .aboutDescription {
+        @apply
+        w-full
+        px-10
+        text-[25px]
+    }
+
+    .swiper-cards-container {
+        @apply
+        w-[460px]
+        h-[390px]
+        py-4
+        px-14
+    }
+
+    .card-content {
+        @apply
+        h-full
+        flex
+        flex-col
+        gap-2
+    }
+
+    .swiper-sliders {
+        @apply
+        w-fit
+        rounded-md
+        shadow-elegant
+    }
+
+    .card-title {
+        @apply
+        w-full
+        text-center
+        text-3xl
+        py-6
+    }
+}
+
+
+// Screen size xl
+@screen xl {
+    .card-container {
+        @apply
+        w-full
+        h-full
+    }
+    .card-img{
+        @apply
+        object-cover
+        h-52
+    }
+    
+    .aboutDescription {
+        @apply
+        w-full
+        px-48
+        text-[21px]
+    }
+
+    .swiper-cards-container {
+        @apply
+        w-[400px]
+        h-[380px]
+        
+    }
+
+    .card-content {
+        @apply
+        h-full
+        flex
+        flex-col
+        gap-2
+    }
+
+    .swiper-sliders {
+        @apply
+        w-fit
+        rounded-md
+        shadow-elegant
+    }
+
+    .card-title {
+        @apply
+        w-full
+        text-center
+        text-3xl
+        py-10
+    }
+}

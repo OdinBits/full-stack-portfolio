@@ -32,6 +32,7 @@ export default {
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)',
+        'elegant': '0 7px 18px 0 rgba(2, 118, 179, 0.13)',
       },
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",

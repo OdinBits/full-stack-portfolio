@@ -1,0 +1,24 @@
+@import '../../index.scss';
+
+.text-container {
+    @apply
+    w-full
+    text-center
+    font-bold
+    text-3xl
+    p-5
+    box-border
+    h-fit
+    flex
+    justify-center
+    items-center
+}
+
+.content-container {
+    @apply
+    w-full
+    py-5
+    px-10
+    leading-tight
+    mb-5
+}
