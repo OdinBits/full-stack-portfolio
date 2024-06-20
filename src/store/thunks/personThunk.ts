@@ -6,7 +6,9 @@ export const personThunk = createAsyncThunk('portfolio/person', async () => {
             const res = await clientConfig.fetch('*[_type == "person"]')
             return res;
         }
-        catch (error) {
+        catch(error) {
+            console.error(error);
+            throw error; // Re-throw the error to propagate it to the caller
         }
     }
 )

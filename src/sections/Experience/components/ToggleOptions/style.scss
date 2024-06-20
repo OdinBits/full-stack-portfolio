@@ -1,0 +1,49 @@
+@import '../../../../index.scss';
+
+.options-div-container {
+    @apply 
+    w-full
+    h-fit
+    flex
+    justify-center
+    items-center
+    gap-5
+    relative
+    py-4
+    padding-x;
+}
+
+.option-buttons {
+    @apply
+    hidden
+    text-xl
+    text-gray-700;
+
+    @screen md {
+        @apply
+        block
+        p-4;
+    }
+}
+
+
+.option-selects {
+    @apply
+    border-solid
+    border
+    border-green-900;
+
+    @screen xs {
+        @apply
+        w-72
+        h-fit
+        text-2xl
+        
+        block;
+    }
+
+    @screen md {
+        @apply
+        hidden;
+    }
+}

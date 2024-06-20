@@ -101,7 +101,8 @@
     @apply 
     w-8 
     h-8 
-    object-cover;
+    object-cover
+    cursor-pointer;
 
     @screen md {
         @apply 
@@ -164,6 +165,16 @@
         justify-center 
         relative;
     }
+}
+
+.skill-link {
+    @apply
+    relative 
+    overflow-hidden 
+    transition-transform 
+    duration-300 
+    transform 
+    hover:scale-95
 }
 
 .person-img {

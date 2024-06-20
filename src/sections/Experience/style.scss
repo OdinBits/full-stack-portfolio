@@ -1,0 +1,26 @@
+@import '../../index.scss';
+
+.content-div {
+    @apply
+    py-10
+    px-5
+    flex
+    justify-center
+}
+
+.exp-container {
+    @apply
+    bg-soft
+    w-full
+    pt-32;
+
+    @screen xs {
+        @apply 
+        h-full;
+    }
+
+    @screen md {
+        @apply
+        min-h-screen;
+    }
+}

@@ -5,6 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { store } from './store'
 import { persistor } from './store/store'
 import About from './sections/About/About'
+import Experience from './sections/Experience'
 
 const App: React.FC = () => {
 
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Navbar />
           <Header />
           <About/>
+          <Experience/>
         </main>
       </PersistGate>
     </Provider>

@@ -3,7 +3,7 @@
 
 .content-container {
     @apply 
-    py-12 
+    py-36
     px-5;
 }
 
@@ -39,7 +39,8 @@
 .aboutDescription {
     @apply 
     w-full 
-    text-[20px];
+    text-[20px]
+    text-center;
 
     @screen xs {
         @apply 
@@ -60,7 +61,7 @@
 
     @screen xl {
         @apply
-        px-52
+        px-64
         text-[20px]
     }
 }

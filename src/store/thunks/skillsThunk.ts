@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { clientConfig } from "../../shared/config/clientConfig";
 
-const skillsThunk = createAsyncThunk(
-    'portfolio/skills',
+const experienceThunk = createAsyncThunk(
+    'portfolio/experiences',
     async () => {
         try {
             const [experiences, skills] = await Promise.all([
@@ -14,9 +14,9 @@ const skillsThunk = createAsyncThunk(
         }
         catch(error) {
             console.error(error);
-            throw error; // Re-throw the error to propagate it to the caller
+            throw error;
         }
     }
 );
 
-export default skillsThunk;
+export default experienceThunk;

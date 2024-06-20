@@ -8,8 +8,8 @@ import './style.scss';
 const Header: React.FC = () => {
 
   const dispatch = useAppDispatch();
-
   const { personData } = useAppSelector((state) => state.person);
+  const [clickedSkill, setClickedSkill] = React.useState<number | null>(null);
 
   React.useEffect(() => {
     dispatch(personThunk())
@@ -17,23 +17,31 @@ const Header: React.FC = () => {
 
   return (
     <section id='header'>
-      {personData?.map((items: any) => (
-        <div className='header-content-container' key={`person-${items.name}`}>
+      {personData?.map((person: any) => (
+        <div className='header-content-container' key={`person-${person.name}`}>
           <div className='text-container'>
             <div className='greet-info'>
-              <Typography className='intro'>{items.intro}</Typography>
-              <p className='description'>{items.description}</p>
+              <Typography className='intro'>{person.intro}</Typography>
+              <p className='description'>{person.description}</p>
               <Button component='a' href='#About' className='find-button'>
                 FIND OUT MORE
               </Button>
             </div>
             <div className='person-img-container'>
-              <img className='person-img' src={urlFor(items.img)} alt={items.name} />
+              <img className='person-img' src={urlFor(person.img)} alt={person.name} />
             </div>
           </div>
           <div className='skills-image-container'>
-            {items?.skills?.map((skills: any) => (
-              <img className='skills-img' key={skills} src={urlFor(skills)} alt="skills" />
+            {person?.skills?.map((skill: any,index: number) => (
+              <a
+                key={`skill-${skill}`}
+                className={`skill-link ${clickedSkill === index ? 'scale-1/5' : ''}`}
+                href={skill.skillText}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img className='skills-img' src={urlFor(skill.skillImage)} alt={`Skill`} />
+              </a>
             ))}
           </div>
         </div>
@@ -42,4 +50,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header
+export default Header;

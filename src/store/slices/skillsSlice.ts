@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import skillsThunk from "../thunks/skillsThunk";
-import { SkillsExperienceType } from "../../shared/types/SkillsExperienceTypes";
+import { ExperienceType } from "../../shared/types/ExperienceTypes";
 
 
 const skillSlice = createSlice({
     name: 'skills',
-    initialState: SkillsExperienceType.expThunkState,
+    initialState: ExperienceType.expThunkState,
     reducers: {},
     extraReducers: (builder) => {
         builder

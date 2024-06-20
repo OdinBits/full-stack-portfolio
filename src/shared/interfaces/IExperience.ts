@@ -1,5 +1,5 @@
 
-export namespace ISkillsExperience {
+export namespace IExperience {
     export interface ISkill {
         skillPoints: any
     }
@@ -20,5 +20,4 @@ export namespace ISkillsExperience {
         handleImageClick: any;
     }
 
-    
 }

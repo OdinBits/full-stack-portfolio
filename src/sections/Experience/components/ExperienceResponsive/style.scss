@@ -1,0 +1,9 @@
+@import '../../../../index.scss';
+
+.responsive-container {
+    @apply
+    border-2
+    border-blue-800
+    w-96
+    h-96
+}
