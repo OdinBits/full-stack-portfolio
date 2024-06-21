@@ -29,11 +29,13 @@ export default {
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
-        soft:'#f2f2f2'
+        'gradeBlue': 'gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%',
+        soft:'#f2f2f2',
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)',
         'elegant': '0 7px 18px 0 rgba(2, 118, 179, 0.13)',
+        
       },
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",

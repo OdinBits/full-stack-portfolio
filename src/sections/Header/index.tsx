@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
   const dispatch = useAppDispatch();
   const { personData } = useAppSelector((state) => state.person);
-  const [clickedSkill, setClickedSkill] = React.useState<number | null>(null);
+  const [clickedSkill] = React.useState<number | null>(null);
 
   React.useEffect(() => {
     dispatch(personThunk())
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
           <div className='skills-image-container'>
             {person?.skills?.map((skill: any,index: number) => (
               <a
-                key={`skill-${skill}`}
+                key={`skill-${index}`}
                 className={`skill-link ${clickedSkill === index ? 'scale-1/5' : ''}`}
                 href={skill.skillText}
                 target='_blank'

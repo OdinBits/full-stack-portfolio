@@ -2,8 +2,119 @@
 
 .responsive-container {
     @apply
+    w-full
+    flex
+    justify-center
+    items-center
+}
+
+.data-container {
+    @apply
+    border-l-2
+    flex
+    flex-col
+    gap-4
+    p-3
+    border-blue-800;
+
+    @screen xs {
+        @apply
+        border-l-0
+    }
+}
+
+.mobile-button {
+    @apply
+    flex
+    items-center
+    justify-between
+    gap-5
     border-2
-    border-blue-800
-    w-96
-    h-96
+    w-full
+}
+
+.mobile-view {
+    @apply
+    border-2
+    border-blue-900
+    rounded-lg;
+    
+    @screen md {
+        @apply
+        hidden
+        
+    }
+}
+
+.company-img-desktop {
+    @apply
+    w-full
+    h-full
+}
+
+.company-img-mobile {
+    @apply
+    object-cover
+}
+
+.desktop-view {
+    @apply
+    hidden;
+
+    @screen md {
+        @apply
+        w-[60%]
+        flex
+        justify-center
+        m-auto
+    }
+}
+
+.devtools-container {
+    @apply
+    flex
+    flex-wrap
+}
+
+.exp-title {
+    @apply
+    text-2xl
+    font-fjalla
+    text-gray-800
+}
+
+.exp-date {
+    @apply
+    text-base
+    
+}
+
+.desktop-button-img {
+    @apply
+    w-full
+    border-2
+    border-red-600
+}
+
+.desktop-indicator {
+    @apply
+    h-[2px]
+    rounded-l-lg
+}
+
+.exp-ul {
+    @apply
+    pl-4; 
+}
+
+.exp-list {
+    @apply
+    list-disc
+    ml-10
+}
+
+.li-subTitle {
+    @apply
+    text-xl
+    my-4
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { useInView } from 'react-intersection-observer';
 import { setActiveSection, setNavLink } from '../../store/slices/navigationSlice';
@@ -16,13 +16,12 @@ const Experience: React.FC = () => {
     const dispatch = useAppDispatch();
     const { isActive } = useAppSelector(state => state.navlinks);
 
-    // Set default selected option based on the first item in routeMenu
     const defaultOption = ExperienceType.routeMenu[0]?.name || '';
-    const [selectedOption, setSelectedOption] = useState(defaultOption);
+    const [selectedOption, setSelectedOption] = React.useState(defaultOption);
 
-    const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, top: 0 });
+    const [indicatorStyle, setIndicatorStyle] = React.useState({ left: 0, width: 0, top: 0 });
 
-    useEffect(() => {
+    React.useEffect(() => {
         const updateIndicatorStyle = () => {
             const activeButton = document.querySelector('.option-buttons.active');
             if (activeButton) {
@@ -44,7 +43,7 @@ const Experience: React.FC = () => {
         return () => window.removeEventListener('resize', updateIndicatorStyle);
     }, [isActive, dispatch]);
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (ExperienceType.routeMenu.length > 0) {
             const firstItem = ExperienceType.routeMenu[0];
             dispatch(setNavLink(0));
