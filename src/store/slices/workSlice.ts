@@ -17,7 +17,7 @@ const workSlice = createSlice({
                 state.projData = action.payload;
                 state.projMessage = 'Successful';
             })
-            .addCase(workThunk.rejected, (state, action) => {
+            .addCase(workThunk.rejected, (state) => {
                 state.projLoading = false;
                 state.projMessage = 'Failed to load data';
             });

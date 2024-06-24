@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+.contacts-content-container {
+    @apply
+    flex
+    flex-col
+    items-center
+    gap-12
+    
+    py-20
+}

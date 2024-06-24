@@ -1,10 +1,14 @@
 @import '../../index.scss';
 
-
 .content-container {
-    @apply 
-    py-36
-    px-5;
+    @apply
+    px-5
+    py-12;
+
+    @screen md {
+        @apply
+        py-20
+    }
 }
 
 .title {

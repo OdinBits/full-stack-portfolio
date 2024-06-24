@@ -4,41 +4,35 @@ import { gsap } from 'gsap';
 import { useInView } from 'react-intersection-observer';
 import { IAppWrap } from '../shared/interfaces/IAppWrap';
 import NavDots from '../components/NavDots';
-
+import './style.scss';
 
 const AppWrap = ({ Component, idName }: IAppWrap) => function HOC() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [ref, inView] = useInView({
         threshold: 0.1,
-        triggerOnce: false, 
+        triggerOnce: false,
     });
 
-    // useEffect(() => {
-    //     const section = sectionRef.current;
+    useEffect(() => {
+        const section = sectionRef.current;
 
-    //     if (inView) {
-    //         gsap.to(section, {
-    //             opacity: 1,
-    //             y: 0,
-    //             duration: 1.0,
-    //             ease: 'power1.out',
-    //         });
-    //     } else {
-    //         gsap.set(section, { opacity: 0, y: 20 });
-    //     }
-    // }, [inView]);
+        if (inView) {
+            gsap.to(section, {
+                opacity: 1,
+                y: 0,
+                duration: 1.0,
+                ease: 'power1.out',
+            });
+        } else {
+            gsap.set(section, { opacity: 0, y: 20 });
+        }
+    }, [inView]);
 
     return (
-        <Box
+        <div
+            className='app-wrap-container'
             ref={ref}
             id={idName}
-            sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                width: '100%',
-                height: '100%',
-                position: 'relative',
-            }}
         >
             <Box
                 ref={sectionRef}
@@ -53,7 +47,7 @@ const AppWrap = ({ Component, idName }: IAppWrap) => function HOC() {
                 <Component />
             </Box>
             <NavDots idName={idName} />
-        </Box>
+        </div>
     );
 };
 

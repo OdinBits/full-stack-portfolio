@@ -25,6 +25,7 @@ export default {
       },
       colors: {
         primary: "#ECEEFF",
+        'coral-blue':'#305c91',
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
@@ -66,5 +67,13 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.clip-hexagon': {
+          'clip-path': 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
+        },
+      });
+    },
+  ],
 };

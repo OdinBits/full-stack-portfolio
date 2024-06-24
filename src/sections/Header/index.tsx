@@ -27,7 +27,7 @@ const Header: React.FC = () => {
                 FIND OUT MORE
               </Button>
             </div>
-            <div className='person-img-container'>
+            <div className='person-img-container clip-hexagon'>
               <img className='person-img' src={urlFor(person.img)} alt={person.name} />
             </div>
           </div>

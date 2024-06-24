@@ -6,20 +6,25 @@
     flex
     justify-center
     items-center
+    pt-6
 }
 
 .data-container {
     @apply
-    border-l-2
     flex
     flex-col
     gap-4
-    p-3
-    border-blue-800;
+    p-3;
 
     @screen xs {
         @apply
         border-l-0
+    }
+
+    @screen md {
+        @apply
+        border-l-2
+        border-coral-blue
     }
 }
 
@@ -36,7 +41,7 @@
 .mobile-view {
     @apply
     border-2
-    border-blue-900
+    border-coral-blue
     rounded-lg;
     
     @screen md {

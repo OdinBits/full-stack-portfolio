@@ -18,12 +18,12 @@ const submissionSlice = createSlice({
             .addCase(submissionThunk.pending, (state) => {
                 state.SubmissionLoading = true
             })
-            .addCase(submissionThunk.fulfilled, (state, action) => {
+            .addCase(submissionThunk.fulfilled, (state) => {
                 state.SubmissionLoading = false;
                 state.SubmissionMessage = 'Successful';
                 state.SubmissionStatus = true
             })
-            .addCase(submissionThunk.rejected, (state, action) => {
+            .addCase(submissionThunk.rejected, (state) => {
                 state.SubmissionLoading = false;
             });
     }

@@ -6,6 +6,8 @@ import experienceThunk from '../../store/thunks/skillsThunk';
 import { ExperienceType } from '../../shared/types/ExperienceTypes';
 import { SelectChangeEvent } from '@mui/material';
 import ToggleOptions from './components/ToggleOptions';
+import AppWrap from '../../wrapper/AppWrap';
+import { NavTypes } from '../../shared/types/NavTypes';
 import './style.scss';
 
 const Experience: React.FC = () => {
@@ -38,6 +40,10 @@ const Experience: React.FC = () => {
 
         updateIndicatorStyle();
         dispatch(experienceThunk());
+
+        if (inView) {
+            dispatch(setActiveSection(NavTypes.navItems[1].name));
+        }
 
         window.addEventListener('resize', updateIndicatorStyle);
         return () => window.removeEventListener('resize', updateIndicatorStyle);
@@ -91,4 +97,4 @@ const Experience: React.FC = () => {
     );
 };
 
-export default Experience;
+export default AppWrap({ Component: Experience, idName: 'Experience' });

@@ -5,8 +5,8 @@ import './style.scss';
 
 const TextBuilder: React.FC<IText> = ({ data, defaultStyle, highLightStyle }) => {
     return (
-        <div className='text-container'>
-            <div className="content-container">
+        <div className='text-builder-container'>
+            <div className="text-builder-content-container">
                 {data?.map((message: any) => (
                     <React.Fragment key={`message-${message.id}`}>
                         <Typography

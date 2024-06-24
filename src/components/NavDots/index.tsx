@@ -3,8 +3,6 @@ import { style } from './style';
 import { NavTypes } from '../../shared/types/NavTypes';
 import { INav } from '../../shared/interfaces/INav';
 
-
-
 const NavDots: React.FC<INav.NavDots> = ({ idName }) => {
 
     const handleClick = (event:any, id:any) => {

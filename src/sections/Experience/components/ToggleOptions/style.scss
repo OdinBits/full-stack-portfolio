@@ -29,18 +29,11 @@
 
 .option-selects {
     @apply
-    border-solid
-    border
-    border-green-900;
-
-    @screen xs {
-        @apply
-        w-72
-        h-fit
-        text-2xl
-        
-        block;
-    }
+    w-[90%]
+    h-fit
+    text-2xl
+    mb-10
+    block;
 
     @screen md {
         @apply

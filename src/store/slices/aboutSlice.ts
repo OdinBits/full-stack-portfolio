@@ -16,7 +16,7 @@ const aboutSlice = createSlice({
                 state.AboutData = action.payload;
                 state.AboutMessage = 'Successfull' 
             })
-            .addCase(aboutThunk.rejected, (state, action) => {
+            .addCase(aboutThunk.rejected, (state) => {
                 state.AboutLoading = false;
             });
     }

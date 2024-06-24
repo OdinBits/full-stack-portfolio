@@ -1,0 +1,136 @@
+@import '../../index.scss';
+
+
+.project-content {
+    @apply
+    w-full
+    py-12;
+
+    @screen md {
+        @apply
+        py-20
+    }
+}
+
+.project-Title {
+    @apply
+    font-fjalla
+    text-center
+    w-full
+    pb-10
+    text-[38px];
+}
+
+.img-container {
+    @apply
+    rounded-lg
+    overflow-hidden
+    
+    relative;
+
+    @screen xs {
+        @apply
+        w-full
+        h-[180px]
+    }
+
+    @screen md {
+        @apply
+        w-[90%]
+        h-[560px];
+    }
+}
+
+.project-data-container {
+    @apply    
+    w-full
+    my-14
+    gap-10
+    flex
+    flex-col
+    px-6;
+
+    @screen md {
+        @apply
+        flex-row
+        px-20
+    }
+}
+
+.project-img  {
+    @apply
+    w-full
+    h-full
+    object-cover
+    rounded-lg
+    relative;
+}
+
+.description-container {
+    @apply
+    flex
+    flex-col
+    gap-5
+    w-full
+
+    text-base
+    py-5;
+    
+    @screen md {
+        @apply
+        w-[40%]
+        py-2
+    }
+}
+
+.dev-tools-box {
+    @apply
+    flex
+    flex-col
+    gap-4
+}
+
+.ul-project-desc-container {
+    @apply
+    flex
+    flex-col
+    gap-4
+    h-52
+    px-4
+    py-2
+    flex-wrap;
+
+    @screen md {
+        @apply
+        w-2/4
+        h-48
+        px-0
+        py-0;
+    }
+}
+
+.confidential-container {
+    @apply
+    left-0
+    top-0
+    flex
+    items-center
+    w-full
+    h-full
+    text-center
+    absolute;
+
+}
+
+.confidential-text {
+    @apply
+    w-full
+    text-3xl;
+
+    @screen md {
+        @apply
+        text-4xl 
+        font-bold
+    }
+
+}

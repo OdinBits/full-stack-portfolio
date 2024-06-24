@@ -1,0 +1,9 @@
+@import '../../../../index.scss';
+
+.contact-form-container {
+    
+    @screen md {
+        @apply
+        w-96
+    }
+}

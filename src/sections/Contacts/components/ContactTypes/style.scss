@@ -1,0 +1,13 @@
+@import '../../../../index.scss';
+
+.email-container {
+    @apply
+    rounded-lg 
+    bg-pink-100
+    py-2
+    px-2
+    flex
+    justify-center
+    items-center
+    gap-4;
+}

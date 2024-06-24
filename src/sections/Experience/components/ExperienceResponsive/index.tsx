@@ -1,16 +1,14 @@
 import React from 'react';
-import { format, parseISO } from 'date-fns';
 import { Button, Collapse, Typography } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../../../store';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { urlFor } from '../../../../shared/config/clientConfig';
 import experienceThunk from '../../../../store/thunks/skillsThunk';
+import { formatDate } from '../../../../utils/formateDate';
 import './style.scss';
 
-const formatDate = (dateString: string) => {
-  const date = parseISO(dateString);
-  return format(date, 'yyyy - MMM');
-};
+
+
 
 const mainContent = ({ expData }: any) => {
   return (
@@ -40,7 +38,7 @@ const mainContent = ({ expData }: any) => {
       <div className='devtools-container'>
         <Typography variant='h5' className='py-2'>Development Tools:</Typography>
         {expData.developmentTools?.map((tools: any) => (
-          <Typography className='p-2 m-2 bg-blue-700' key={`tools-${tools}`}>{tools}</Typography>
+          <Typography className='p-2 m-2 bg-coral-blue' key={`tools-${tools}`}>{tools}</Typography>
         ))}
       </div>
     </div>

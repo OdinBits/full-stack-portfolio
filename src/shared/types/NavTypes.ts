@@ -10,10 +10,10 @@ export const NavTypes = {
         { id: '4', name: 'CONTACT' ,pathName:'CONTACT'},
     ], 
     navDots: [
-        { id: '1', name: 'ABOUT' },
-        { id: '2', name: 'SKILLS' },
-        { id: '3', name: 'PROJECTS' },
-        { id: '4', name: 'CONTACT' },
+        { id: '1', name: 'About' },
+        { id: '2', name: 'Experience' },
+        { id: '3', name: 'Projects' },
+        { id: '4', name: 'Contacts' },
     ], 
     initialActiveLink: {
         isActive: 0,

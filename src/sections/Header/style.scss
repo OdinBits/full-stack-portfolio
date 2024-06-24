@@ -29,7 +29,7 @@
     gap-8 
     py-5 
     flex-wrap 
-    bg-gray-200
+    bg-gray-100
 }
 
 .find-button {
@@ -45,6 +45,9 @@
     flex 
     flex-col 
     pt-[90px] 
+    flex
+    flex-col
+    gap-5
     px-5;
 
     @screen md {
@@ -66,7 +69,7 @@
 
 .greet-info {
     @apply 
-    gap-5 
+    gap-12
     flex 
     flex-col;
 
@@ -89,7 +92,8 @@
 
 .skills-image-container {
     @apply 
-    p-6;
+    py-12
+    px-5;
 
     @screen md {
         @apply 

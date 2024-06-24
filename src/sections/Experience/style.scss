@@ -2,7 +2,7 @@
 
 .content-div {
     @apply
-    py-10
+    py-5
     px-5
     flex
     justify-center
@@ -12,12 +12,8 @@
     @apply
     bg-soft
     w-full
-    pt-32;
-
-    @screen xs {
-        @apply 
-        h-full;
-    }
+    h-full
+    py-20;
 
     @screen md {
         @apply

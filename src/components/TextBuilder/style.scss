@@ -1,6 +1,6 @@
 @import '../../index.scss';
 
-.text-container {
+.text-builder-container {
     @apply
     w-full
     text-center
@@ -14,7 +14,7 @@
     items-center
 }
 
-.content-container {
+.text-builder-content-container {
     @apply
     w-full
     py-5

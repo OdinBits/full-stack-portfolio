@@ -1,11 +1,8 @@
 @import '../../../../index.scss';
 
 .skills-container {
-    
-    @screen xs {
-        @apply
-        px-5
-    }
+    @apply
+    px-5;
 
     @screen md {
         @apply
@@ -47,7 +44,7 @@
     @screen xs {
         @apply
         border-t-2
-        border-blue-900
+        border-coral-blue
         pt-5;
     }
 
@@ -62,12 +59,12 @@
 
 .role-block {
     @apply
-    bg-blue-700
+    bg-coral-blue
     text-center
-    text-lg
+    text-xl
     py-4
     px-5
-    w-fit
+    min-w-40
 }
 
 .tech-container {

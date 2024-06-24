@@ -8,10 +8,24 @@ import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import 'swiper/css';
 import './style.scss';
+import AppWrap from '../../wrapper/AppWrap';
+import { useInView } from 'react-intersection-observer';
+import { setActiveSection } from '../../store/slices/navigationSlice';
+import { NavTypes } from '../../shared/types/NavTypes';
 
 const About: React.FC = () => {
 
+    const { ref, inView } = useInView({
+        threshold: 0.6, 
+    });
     const dispatch = useAppDispatch();
+
+    React.useEffect(() => {
+        if (inView) {
+            dispatch(setActiveSection(NavTypes.navItems[0].name));
+        }
+    }, [inView, dispatch]);
+
 
     const { personData } = useAppSelector((state) => state.person);
     const { AboutData } = useAppSelector((state) => state.about);
@@ -21,7 +35,7 @@ const About: React.FC = () => {
     }, [dispatch])
 
     return (
-        <section id='About'>
+        <section ref={ref} id='About'>
             {personData.map((items: any) => (
                 <div className='content-container' key={`about-${items.name}`}>
                     <Typography className='title'>About</Typography>
@@ -59,4 +73,4 @@ const About: React.FC = () => {
     )
 }
 
-export default About
+export default AppWrap({ Component: About, idName: 'About' });
